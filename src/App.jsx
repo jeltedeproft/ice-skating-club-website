@@ -7,7 +7,7 @@ import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <div>
+    <div className="min-h-screen bg-gray-50">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
