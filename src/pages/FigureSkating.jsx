@@ -2,19 +2,27 @@ import React from 'react';
 
 function FigureSkating() {
   return (
-    <div className="py-16 px-4 max-w-6xl mx-auto">
-      <h1 className="text-4xl font-bold text-blue-800 text-center mb-8">Kunstschaatsen</h1>
-      <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-6">
-        Onze kunstschaatslessen zijn geschikt voor alle niveaus. Leer basisbewegingen, sprongen en spins onder begeleiding van ervaren coaches.
-      </p>
-      <div className="bg-white p-6 rounded-lg shadow-md">
-        <h2 className="text-2xl font-semibold text-blue-700 mb-4">Lesinformatie</h2>
-        <ul className="list-disc pl-6 text-gray-600">
-          <li>Beginners: Dinsdag 18:00 - 19:00</li>
-          <li>Gevorderden: Donderdag 19:00 - 20:30</li>
-          <li>Kosten: €50 per maand</li>
-        </ul>
-        <p className="mt-4">De website is in opbouw—neem contact op voor meer details.</p>
+    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-cyan-50 to-white animate-gradient">
+      <div className="relative w-full h-64 overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center opacity-50" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1350&q=80")', filter: 'blur(4px)' }} />
+        <div className="relative z-10 flex items-center justify-center h-full">
+          <h1 className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg bg-blue-900/50 p-4 rounded-lg">Kunstschaatsen</h1>
+        </div>
+      </div>
+      <div className="max-w-6xl mx-auto px-4 py-12">
+        <div className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-2xl">
+          <p className="text-lg text-gray-700 mb-6">
+            Leer basisbewegingen, sprongen en spins onder begeleiding van ervaren coaches.
+          </p>
+          <div className="mt-4">
+            <h2 className="text-xl font-bold text-blue-900 mb-2">Lesinformatie</h2>
+            <ul className="list-disc pl-6 text-gray-600">
+              <li>Beginners: Dinsdag 18:00 - 19:00</li>
+              <li>Gevorderden: Donderdag 19:00 - 20:30</li>
+              <li>Kosten: €50 per maand</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   );

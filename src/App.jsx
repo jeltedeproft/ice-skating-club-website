@@ -9,11 +9,10 @@ import Calendar from './pages/Calendar';
 import News from './pages/News';
 import Initiations from './pages/Initiations';
 import Contact from './pages/Contact';
-import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-cyan-50 to-white animate-gradient text-gray-800">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -26,7 +25,6 @@ function App() {
         <Route path="/initiations" element={<Initiations />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      <Footer />
     </div>
   );
 }
