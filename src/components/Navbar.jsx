@@ -2,13 +2,17 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <nav className="bg-blue-600 p-4">
-      <ul className="flex space-x-6 justify-center text-white">
-        <li><Link to="/" className="hover:underline">Home</Link></li>
-        <li><Link to="/about" className="hover:underline">About</Link></li>
-        <li><Link to="/schedule" className="hover:underline">Schedule</Link></li>
-        <li><Link to="/contact" className="hover:underline">Contact</Link></li>
-      </ul>
+    <nav className="bg-blue-700 text-white p-4 shadow-md">
+      <div className="max-w-6xl mx-auto flex justify-between items-center">
+        <Link to="/" className="text-2xl font-bold">Ice Diamonds Antwerp</Link>
+        <ul className="flex space-x-6">
+          <li><Link to="/" className="hover:underline">Home</Link></li>
+          <li><Link to="/figure-skating" className="hover:underline">Kunstschaatsen</Link></li>
+          <li><Link to="/synchronized-skating" className="hover:underline">Synchroonschaatsen</Link></li>
+          <li><Link to="/short-track" className="hover:underline">Shorttrack</Link></li>
+          <li><Link to="/contact" className="hover:underline">Contact</Link></li>
+        </ul>
+      </div>
     </nav>
   );
 }

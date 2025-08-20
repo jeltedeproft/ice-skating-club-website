@@ -1,18 +1,20 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
-import Schedule from './pages/Schedule';
-import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import FigureSkating from './pages/FigureSkating';
+import SynchronizedSkating from './pages/SynchronizedSkating';
+import ShortTrack from './pages/ShortTrack';
+import Contact from './pages/Contact';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/schedule" element={<Schedule />} />
+        <Route path="/figure-skating" element={<FigureSkating />} />
+        <Route path="/synchronized-skating" element={<SynchronizedSkating />} />
+        <Route path="/short-track" element={<ShortTrack />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>

@@ -1,42 +1,38 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-blue-200">
-      {/* Hero Section */}
-      <section className="py-16 px-4 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4">Welcome to the Ice Skating Club</h1>
-        <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-6">
-          Join our vibrant community of skaters! Whether you're a beginner or a seasoned pro, we offer lessons, events, and
-          a welcoming environment to glide into fun.
+    <div className="py-16 px-4 max-w-6xl mx-auto">
+      <section className="text-center mb-12">
+        <h1 className="text-4xl font-bold text-blue-800 mb-4">Welkom bij Ice Diamonds Antwerp</h1>
+        <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+          Wij zijn een kunstschaatsclub in Antwerpen met focus op kunstschaatsen, synchroonschaatsen en shorttrack. 
+          Word lid van onze community en ontdek de vreugde van het schaatsen!
         </p>
-        <Link
-          to="/schedule"
-          className="bg-blue-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700"
-        >
-          View Our Schedule
-        </Link>
       </section>
-
-      {/* Features Section */}
-      <section className="py-12 px-4 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-semibold text-blue-700 mb-6 text-center">Why Join Us?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <h3 className="text-xl font-bold text-blue-600 mb-2">Learn to Skate</h3>
-              <p className="text-gray-600">Expert-led classes for all ages and skill levels.</p>
-            </div>
-            <div className="text-center">
-              <h3 className="text-xl font-bold text-blue-600 mb-2">Community Events</h3>
-              <p className="text-gray-600">Join our ice shows, competitions, and socials.</p>
-            </div>
-            <div className="text-center">
-              <h3 className="text-xl font-bold text-blue-600 mb-2">Top Facilities</h3>
-              <p className="text-gray-600">Skate in our state-of-the-art ice rink.</p>
-            </div>
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold text-blue-700 text-center mb-6">Onze Disciplines</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-white p-6 rounded-lg shadow-md text-center">
+            <h3 className="text-xl font-bold text-blue-600 mb-2">Kunstschaatsen</h3>
+            <p className="text-gray-600">Leer elegante figuren en sprongen.</p>
           </div>
+          <div className="bg-white p-6 rounded-lg shadow-md text-center">
+            <h3 className="text-xl font-bold text-blue-600 mb-2">Synchroonschaatsen</h3>
+            <p className="text-gray-600">Schaats in perfecte harmonie met je team.</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md text-center">
+            <h3 className="text-xl font-bold text-blue-600 mb-2">Shorttrack</h3>
+            <p className="text-gray-600">Snelle races vol actie en strategie.</p>
+          </div>
+        </div>
+      </section>
+      <section className="text-center">
+        <h2 className="text-2xl font-semibold text-blue-700 mb-6">Onze Sponsoren</h2>
+        <div className="flex justify-center space-x-6">
+          <a href="https://www.trooper.be/nl/trooperverenigingen/schaatsclubakr" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Trooper</a>
+          <a href="https://shops.foodmaker.be/nl/foodmaker-deurne" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Foodmaker</a>
+          <a href="https://sportoase.be/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Sportoase</a>
         </div>
       </section>
     </div>
