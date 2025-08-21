@@ -9,6 +9,7 @@ import Calendar from './pages/Calendar';
 import News from './pages/News';
 import Initiations from './pages/Initiations';
 import Contact from './pages/Contact';
+import Policies from './pages/Policies';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/news" element={<News />} />
         <Route path="/initiations" element={<Initiations />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/policies" element={<Policies />} />
       </Routes>
     </div>
   );

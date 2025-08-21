@@ -28,6 +28,7 @@ function Navbar() {
           <li><Link to="/news" className="block text-white hover:text-blue-200 transition duration-200 py-2 md:py-0">Clubnieuws</Link></li>
           <li><Link to="/initiations" className="block text-white hover:text-blue-200 transition duration-200 py-2 md:py-0">Initiaties</Link></li>
           <li><Link to="/contact" className="block text-white hover:text-blue-200 transition duration-200 py-2 md:py-0">Contact</Link></li>
+          <li><Link to="/policies" className="block text-white hover:text-blue-200 transition duration-200 py-2 md:py-0">Beleid</Link></li>
         </ul>
       </div>
     </nav>
