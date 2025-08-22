@@ -47,9 +47,6 @@ function Home() {
                         <a href="https://www.thefoodmaker.com" target="_blank" rel="noopener noreferrer">
                             <img src="/foodmaker.png" alt="Foodmaker Logo" className="h-16 object-contain hover:scale-105 transition duration-200" />
                         </a>
-                        <a href="/" target="_blank" rel="noopener noreferrer">
-                            <img src="/IDALogo.jpg" alt="Ice Diamonds Logo" className="h-16 object-contain hover:scale-105 transition duration-200" />
-                        </a>
                     </div>
                 </div>
             </div>

@@ -85,7 +85,19 @@ function Navbar() {
     return (
         <nav className="bg-blue-800/90 backdrop-blur-md shadow-lg z-50 relative">
             <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-                <Link to="/" className="text-2xl font-extrabold text-white drop-shadow-md">Ice Diamonds Antwerp</Link>
+                {/* 🔹 Logo + Club Name */}
+                <Link to="/" className="flex items-center space-x-2">
+                    <img
+                        src="/IDALogo.jpg"
+                        alt="Ice Diamonds Logo"
+                        className="h-10 w-auto rounded-lg shadow-md"
+                    />
+                    <span className="text-2xl font-extrabold text-white drop-shadow-md">
+                        Ice Diamonds Antwerp
+                    </span>
+                </Link>
+
+                {/* 🔹 Mobile menu button */}
                 <div className="md:hidden">
                     <button onClick={() => setIsOpen(!isOpen)} className="text-white focus:outline-none">
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
