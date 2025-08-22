@@ -1,8 +1,7 @@
-// A simplified and more robust version of Navbar.jsx
-
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
+import { motion, AnimatePresence } from "framer-motion";
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -32,23 +31,54 @@ function Navbar() {
         setIsOpen(false);
     }, [location.pathname]);
 
-    const submenu = isDisciplinesOpen && (
-        createPortal(
-            <ul
-                ref={submenuRef}
-                className="fixed w-48 bg-blue-800 rounded-lg shadow-lg"
-                style={{
-                    top: disciplinesButtonRef.current ? disciplinesButtonRef.current.getBoundingClientRect().bottom + window.scrollY : 0,
-                    left: disciplinesButtonRef.current ? disciplinesButtonRef.current.getBoundingClientRect().left + window.scrollX : 0,
-                    zIndex: 9999, // ensure it's above everything
-                }}
-            >
-                <li><Link to="/figure-skating" className="block px-4 py-2 text-white hover:text-blue-200 hover:bg-blue-700/50 transition duration-200">Kunstschaatsen</Link></li>
-                <li><Link to="/synchronized-skating" className="block px-4 py-2 text-white hover:text-blue-200 hover:bg-blue-700/50 transition duration-200">Synchroonschaatsen</Link></li>
-                <li><Link to="/short-track" className="block px-4 py-2 text-white hover:text-blue-200 hover:bg-blue-700/50 transition duration-200">Shorttrack</Link></li>
-            </ul>,
-            document.body
-        )
+    const submenu = createPortal(
+        <AnimatePresence>
+            {isDisciplinesOpen && (
+                <motion.ul
+                    ref={submenuRef}
+                    className="fixed w-48 bg-blue-800 rounded-lg shadow-lg overflow-hidden"
+                    style={{
+                        top: disciplinesButtonRef.current
+                            ? disciplinesButtonRef.current.getBoundingClientRect().bottom + window.scrollY
+                            : 0,
+                        left: disciplinesButtonRef.current
+                            ? disciplinesButtonRef.current.getBoundingClientRect().left + window.scrollX
+                            : 0,
+                        zIndex: 9999,
+                    }}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                >
+                    <li>
+                        <Link
+                            to="/figure-skating"
+                            className="block px-4 py-2 text-white hover:text-blue-200 hover:bg-blue-700/50 transition duration-200"
+                        >
+                            Kunstschaatsen
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/synchronized-skating"
+                            className="block px-4 py-2 text-white hover:text-blue-200 hover:bg-blue-700/50 transition duration-200"
+                        >
+                            Synchroonschaatsen
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/short-track"
+                            className="block px-4 py-2 text-white hover:text-blue-200 hover:bg-blue-700/50 transition duration-200"
+                        >
+                            Shorttrack
+                        </Link>
+                    </li>
+                </motion.ul>
+            )}
+        </AnimatePresence>,
+        document.body
     );
 
 
