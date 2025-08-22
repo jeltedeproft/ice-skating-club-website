@@ -94,6 +94,7 @@ function Navbar() {
                     </button>
                 </div>
                 <ul className={`md:flex md:space-x-6 ${isOpen ? 'block' : 'hidden'} md:flex-row flex-col absolute md:static bg-blue-800/95 md:bg-transparent top-16 right-4 p-4 md:p-0 rounded-lg md:rounded-none shadow-md md:shadow-none z-40`}>
+                    <li><Link to="/" className="block text-white hover:text-blue-200 transition duration-200 py-2 md:py-0">Home</Link></li>
                     <li className="relative">
                         <button ref={disciplinesButtonRef} onClick={handleDisciplinesToggle} className="block text-white hover:text-blue-200 transition duration-200 py-2 md:py-0 focus:outline-none">
                             Disciplines
@@ -102,7 +103,6 @@ function Navbar() {
                             </svg>
                         </button>
                     </li>
-                    <li><Link to="/" className="block text-white hover:text-blue-200 transition duration-200 py-2 md:py-0">Home</Link></li>
                     <li><Link to="/schedule" className="block text-white hover:text-blue-200 transition duration-200 py-2 md:py-0">Weekrooster</Link></li>
                     <li><Link to="/calendar" className="block text-white hover:text-blue-200 transition duration-200 py-2 md:py-0">Kalender</Link></li>
                     <li><Link to="/news" className="block text-white hover:text-blue-200 transition duration-200 py-2 md:py-0">Clubnieuws</Link></li>
