@@ -65,6 +65,24 @@ function ClubCalendar() {
     setDate(newDate.toDate());
   };
 
+  const getToolbarTitle = () => {
+  switch (view) {
+    case Views.DAY:
+      return moment(date).format('dddd, D MMMM YYYY'); // e.g., Monday, 23 August 2025
+    case Views.WEEK: {
+      const startOfWeek = moment(date).startOf('week').format('D MMM');
+      const endOfWeek = moment(date).endOf('week').format('D MMM YYYY');
+      return `${startOfWeek} - ${endOfWeek}`; // e.g., 18 Aug - 24 Aug 2025
+    }
+    case Views.MONTH:
+      return moment(date).format('MMMM YYYY'); // e.g., August 2025
+    case Views.AGENDA:
+    default:
+      return 'Agenda';
+  }
+};
+
+
   const currentMonthYear = moment(date).format('MMMM YYYY');
 
   return (
@@ -102,7 +120,7 @@ function ClubCalendar() {
             components={{
               toolbar: (props) => (
                 <div className="rbc-toolbar bg-white/80 backdrop-blur-md p-4 rounded-t-xl flex flex-col items-center mb-4 border-b border-blue-200/50">
-                  <h2 className="text-2xl font-bold text-blue-900 mb-3">{currentMonthYear}</h2>
+                  <h2 className="text-2xl font-bold text-blue-900 mb-3">{getToolbarTitle()}</h2>
                   <div className="flex space-x-3 flex-wrap justify-center">
                     <button onClick={() => onNavigate('PREV')} className="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition duration-200">Vorige</button>
                     <button onClick={() => onNavigate('NEXT')} className="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition duration-200">Volgende</button>
