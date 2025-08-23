@@ -108,6 +108,305 @@ function FigureSkating() {
               <h3 className="text-xl font-bold text-blue-900 mb-2">Brevet 3</h3>
               <p className="text-gray-600">Download het PDF-document</p>
             </a>
+            <a
+              href="/assets/brevet-4.pdf"
+              download
+              className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center flex flex-col items-center"
+              aria-label="Download Brevet 4 PDF"
+            >
+              <svg
+                className="w-8 h-8 text-blue-900 mb-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+              <h3 className="text-xl font-bold text-blue-900 mb-2">Brevet 4</h3>
+              <p className="text-gray-600">Download het PDF-document</p>
+            </a>
+            <a
+              href="/assets/brevet-5.pdf"
+              download
+              className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center flex flex-col items-center"
+              aria-label="Download Brevet 5 PDF"
+            >
+              <svg
+                className="w-8 h-8 text-blue-900 mb-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+              <h3 className="text-xl font-bold text-blue-900 mb-2">Brevet 5</h3>
+              <p className="text-gray-600">Download het PDF-document</p>
+            </a>
+            <a
+              href="/assets/brevet-5plus.pdf"
+              download
+              className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center flex flex-col items-center"
+              aria-label="Download Brevet 5 Plus PDF"
+            >
+              <svg
+                className="w-8 h-8 text-blue-900 mb-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+              <h3 className="text-xl font-bold text-blue-900 mb-2">Brevet 5 Plus</h3>
+              <p className="text-gray-600">Download het PDF-document</p>
+            </a>
+            <a
+              href="/assets/brevet-6.pdf"
+              download
+              className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center flex flex-col items-center"
+              aria-label="Download Brevet 6 PDF"
+            >
+              <svg
+                className="w-8 h-8 text-blue-900 mb-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+              <h3 className="text-xl font-bold text-blue-900 mb-2">Brevet 6</h3>
+              <p className="text-gray-600">Download het PDF-document</p>
+            </a>
+            <a
+              href="/assets/brevet-6plus.pdf"
+              download
+              className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center flex flex-col items-center"
+              aria-label="Download Brevet 6 Plus PDF"
+            >
+              <svg
+                className="w-8 h-8 text-blue-900 mb-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+              <h3 className="text-xl font-bold text-blue-900 mb-2">Brevet 6 Plus</h3>
+              <p className="text-gray-600">Download het PDF-document</p>
+            </a>
+            <a
+              href="/assets/brevet-7.pdf"
+              download
+              className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center flex flex-col items-center"
+              aria-label="Download Brevet 7 PDF"
+            >
+              <svg
+                className="w-8 h-8 text-blue-900 mb-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+              <h3 className="text-xl font-bold text-blue-900 mb-2">Brevet 7</h3>
+              <p className="text-gray-600">Download het PDF-document</p>
+            </a>
+            <a
+              href="/assets/brevet-7plus.pdf"
+              download
+              className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center flex flex-col items-center"
+              aria-label="Download Brevet 7 Plus PDF"
+            >
+              <svg
+                className="w-8 h-8 text-blue-900 mb-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+              <h3 className="text-xl font-bold text-blue-900 mb-2">Brevet 7 Plus</h3>
+              <p className="text-gray-600">Download het PDF-document</p>
+            </a>
+            <a
+              href="/assets/brevet-8.pdf"
+              download
+              className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center flex flex-col items-center"
+              aria-label="Download Brevet 8 PDF"
+            >
+              <svg
+                className="w-8 h-8 text-blue-900 mb-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+              <h3 className="text-xl font-bold text-blue-900 mb-2">Brevet 8</h3>
+              <p className="text-gray-600">Download het PDF-document</p>
+            </a>
+            <a
+              href="/assets/brevet-8plus.pdf"
+              download
+              className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center flex flex-col items-center"
+              aria-label="Download Brevet 8 Plus PDF"
+            >
+              <svg
+                className="w-8 h-8 text-blue-900 mb-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+              <h3 className="text-xl font-bold text-blue-900 mb-2">Brevet 8 Plus</h3>
+              <p className="text-gray-600">Download het PDF-document</p>
+            </a>
+            <a
+              href="/assets/brevet-9.pdf"
+              download
+              className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center flex flex-col items-center"
+              aria-label="Download Brevet 9 PDF"
+            >
+              <svg
+                className="w-8 h-8 text-blue-900 mb-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+              <h3 className="text-xl font-bold text-blue-900 mb-2">Brevet 9</h3>
+              <p className="text-gray-600">Download het PDF-document</p>
+            </a>
+            <a
+              href="/assets/brevet-9plus.pdf"
+              download
+              className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center flex flex-col items-center"
+              aria-label="Download Brevet 9 Plus PDF"
+            >
+              <svg
+                className="w-8 h-8 text-blue-900 mb-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+              <h3 className="text-xl font-bold text-blue-900 mb-2">Brevet 9 Plus</h3>
+              <p className="text-gray-600">Download het PDF-document</p>
+            </a>
+            <a
+              href="/assets/brevet-10.pdf"
+              download
+              className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center flex flex-col items-center"
+              aria-label="Download Brevet 10 PDF"
+            >
+              <svg
+                className="w-8 h-8 text-blue-900 mb-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+              <h3 className="text-xl font-bold text-blue-900 mb-2">Brevet 10</h3>
+              <p className="text-gray-600">Download het PDF-document</p>
+            </a>
+            <a
+              href="/assets/brevet-10plus.pdf"
+              download
+              className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center flex flex-col items-center"
+              aria-label="Download Brevet 10 Plus PDF"
+            >
+              <svg
+                className="w-8 h-8 text-blue-900 mb-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+              <h3 className="text-xl font-bold text-blue-900 mb-2">Brevet 10 Plus</h3>
+              <p className="text-gray-600">Download het PDF-document</p>
+            </a>
           </div>
         </div>
       </div>
