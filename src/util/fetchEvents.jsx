@@ -27,8 +27,9 @@ export const fetchBelgianEvents = async () => {
 const parseBelgianEvents = (html, year) => {
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, 'text/html');
-  const rows = doc.querySelectorAll('table tr'); // Adjust selector if needed
+  const rows = doc.querySelectorAll('table tr');
   const events = [];
+  const processedEvents = new Set(); // Track unique events
 
   if (rows.length <= 1) {
     console.warn('No table rows found for Belgian events. Check selector or HTML.');
@@ -47,21 +48,30 @@ const parseBelgianEvents = (html, year) => {
     const location = cells[2].textContent.trim();
     const details = cells[3].textContent.trim();
 
-    // Skip rows with empty name or date
-    if (!name || !dateStr) {
-      console.warn(`Skipping row ${index + 1} due to empty name or date:`, { name, dateStr });
+    // Skip rows with empty or invalid name/date
+    if (!name || !dateStr || name.toLowerCase().includes('competition') || name.toLowerCase().includes('event')) {
+      console.warn(`Skipping row ${index + 1} due to empty or invalid name/date:`, { name, dateStr });
       return;
     }
 
-    // Normalize month names to title case (e.g., "february" → "February")
+    // Normalize date string: handle "And" and month case
     const cleanDateStr = dateStr
       .replace(/\s+/g, ' ')
+      .replace(/And/gi, 'and')
       .trim()
-      .replace(/\b([a-z]+)\b/g, (match) => match.charAt(0).toUpperCase() + match.slice(1).toLowerCase());
+      .replace(/\b([a-z]+)\b/gi, (match) => match.charAt(0).toUpperCase() + match.slice(1).toLowerCase());
+
+    // Create unique key for deduplication
+    const eventKey = `${name}|${cleanDateStr}`;
+    if (processedEvents.has(eventKey)) {
+      console.warn(`Skipping duplicate event: ${name} on ${cleanDateStr}`);
+      return;
+    }
+    processedEvents.add(eventKey);
 
     // Parse date (e.g., "21 and 22 November 2025", "7, 8 and 9 November 2025", "28 February, 1 March 2025")
     let startDate, endDate;
-    const dateMatch = cleanDateStr.match(/^(\d{1,2}(?:,\s*\d{1,2}|(?:\s*and\s*\d{1,2}))*)(?:\s*,\s*(\d{1,2}\s+[A-Za-z]+\s+\d{4}))?\s+([A-Za-z]+)\s+(\d{4})$/);
+    const dateMatch = cleanDateStr.match(/^(\d{1,2}(?:,\s*\d{1,2}|\s*and\s*\d{1,2})*)(?:\s*,\s*(\d{1,2}\s+[A-Za-z]+\s+\d{4}))?\s+([A-Za-z]+)\s+(\d{4})$/i);
     if (!dateMatch) {
       console.warn(`Invalid date format for event "${name}": ${cleanDateStr}`);
       return;
@@ -74,10 +84,10 @@ const parseBelgianEvents = (html, year) => {
 
     // Extract all days
     const days = daysStr
-      .replace(' and ', ',')
+      .replace(/\s*and\s*/gi, ',')
       .split(',')
       .map(day => day.trim())
-      .filter(day => day.match(/^\d{1,2}$/)); // Only valid day numbers
+      .filter(day => day.match(/^\d{1,2}$/));
 
     if (days.length === 0) {
       console.warn(`No valid days found for event "${name}": ${cleanDateStr}`);
@@ -85,13 +95,13 @@ const parseBelgianEvents = (html, year) => {
     }
 
     // Parse start date
-    startDate = DateTime.fromFormat(`${days[0]} ${month} ${eventYear}`, 'd MMMM yyyy').toJSDate();
+    startDate = DateTime.fromFormat(`${days[0]} ${month} ${eventYear}`, 'd MMMM yyyy', { zone: 'UTC' }).toJSDate();
 
     // Parse end date
     if (crossMonthEnd) {
-      endDate = DateTime.fromFormat(crossMonthEnd, 'd MMMM yyyy').toJSDate();
+      endDate = DateTime.fromFormat(crossMonthEnd, 'd MMMM yyyy', { zone: 'UTC' }).toJSDate();
     } else {
-      endDate = DateTime.fromFormat(`${days[days.length - 1]} ${month} ${eventYear}`, 'd MMMM yyyy').toJSDate();
+      endDate = DateTime.fromFormat(`${days[days.length - 1]} ${month} ${eventYear}`, 'd MMMM yyyy', { zone: 'UTC' }).toJSDate();
     }
 
     // Validate dates
@@ -136,6 +146,7 @@ const parseShortTrackEvents = (html) => {
   const doc = parser.parseFromString(html, 'text/html');
   const rows = doc.querySelectorAll('table tr');
   const events = [];
+  const processedEvents = new Set(); // Track unique events
 
   if (rows.length <= 1) {
     console.warn('No table rows found for Short Track events. Check selector or HTML.');
@@ -150,29 +161,38 @@ const parseShortTrackEvents = (html) => {
       const location = cells[2].textContent.trim();
       const details = cells[4].textContent.trim();
 
-      // Skip rows with empty name or date
-      if (!name || !dateStr) {
-        console.warn(`Skipping row ${index + 1} due to empty name or date:`, { name, dateStr });
+      // Skip rows with empty or invalid name/date
+      if (!name || !dateStr || name.toLowerCase().includes('competition') || name.toLowerCase().includes('event') || dateStr.toLowerCase().includes('date')) {
+        console.warn(`Skipping row ${index + 1} due to empty or invalid name/date:`, { name, dateStr });
         return;
       }
 
-      // Normalize month names to title case (e.g., "oct" → "Oct")
+      // Normalize month names
       const cleanDateStr = dateStr
         .replace(/\s+/g, ' ')
         .trim()
-        .replace(/\b([a-z]+)\b/g, (match) => match.charAt(0).toUpperCase() + match.slice(1).toLowerCase());
+        .replace(/\b([a-z]+)\b/gi, (match) => match.charAt(0).toUpperCase() + match.slice(1).toLowerCase());
 
-      // Parse date (e.g., "17-19 Oct 2025", "1 Nov 2025", "6-22 Feb 2026")
+      // Create unique key for deduplication
+      const eventKey = `${name}|${cleanDateStr}`;
+      if (processedEvents.has(eventKey)) {
+        console.warn(`Skipping duplicate event: ${name} on ${cleanDateStr}`);
+        return;
+      }
+      processedEvents.add(eventKey);
+
+      // Parse date (e.g., "17-19 Oct 2025", "31 Oct-1 Nov 2025")
       let startDate, endDate;
       if (cleanDateStr.includes('-')) {
-        // Range format (e.g., "17-19 Oct 2025")
+        // Range format (e.g., "31 Oct-1 Nov 2025")
         const [start, end] = cleanDateStr.split('-').map(d => d.trim());
-        const startMatch = start.match(/^\d{1,2}$/) ? `${start} ${end.replace(/^\d{1,2}\s+/, '')}` : start;
-        startDate = DateTime.fromFormat(startMatch, 'd MMM yyyy').toJSDate();
-        endDate = DateTime.fromFormat(end, 'd MMM yyyy').toJSDate();
+        const endParts = end.split(' ');
+        const startMonthYear = endParts.length > 1 ? `${endParts[1]} ${endParts[2] || endParts[1]}` : end;
+        startDate = DateTime.fromFormat(start.match(/^\d{1,2}$/) ? `${start} ${startMonthYear}` : start, 'd MMM yyyy', { zone: 'UTC' }).toJSDate();
+        endDate = DateTime.fromFormat(end, 'd MMM yyyy', { zone: 'UTC' }).toJSDate();
       } else {
         // Single date (e.g., "1 Nov 2025")
-        startDate = DateTime.fromFormat(cleanDateStr, 'd MMM yyyy').toJSDate();
+        startDate = DateTime.fromFormat(cleanDateStr, 'd MMM yyyy', { zone: 'UTC' }).toJSDate();
         endDate = startDate;
       }
 
