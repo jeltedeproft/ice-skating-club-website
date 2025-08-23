@@ -14,26 +14,37 @@ function ClubCalendar() {
   useEffect(() => {
     const AIRTABLE_PERSONAL_ACCESS_TOKEN = import.meta.env.VITE_AIRTABLE_PAT;
     const AIRTABLE_BASE = import.meta.env.VITE_AIRTABLE_BASE;
-    const AIRTABLE_TABLE_ID = import.meta.env.VITE_AIRTABLE_TABLE;
-    const AIRTABLE_TABLE_NAME = "Events"; // the table name, not ID
+    const AIRTABLE_TABLE = import.meta.env.VITE_AIRTABLE_TABLE;
 
-    axios
-      .get(`https://api.airtable.com/v0/${AIRTABLE_BASE}/${AIRTABLE_TABLE_NAME}`, {
-        headers: {
-          Authorization: `Bearer ${AIRTABLE_PERSONAL_ACCESS_TOKEN}`,
-          "Content-Type": "application/json",
-        },
-      })
-      .then((res) => {
-        const evs = res.data.records.map((r) => ({
+    if (!AIRTABLE_PERSONAL_ACCESS_TOKEN || !AIRTABLE_BASE || !AIRTABLE_TABLE) {
+      console.error("Error: Missing Airtable environment variables!");
+      return;
+    }
+
+    const url = `https://api.airtable.com/v0/${AIRTABLE_BASE}/${AIRTABLE_TABLE}`;
+    console.log("Debug: Axios URL:", url);
+
+    axios.get(url, {
+      headers: {
+        Authorization: `Bearer ${AIRTABLE_PERSONAL_ACCESS_TOKEN}`,
+        "Content-Type": "application/json",
+      },
+    })
+      .then(res => {
+        console.log("Debug: Airtable raw response:", res.data);
+        const evs = res.data.records.map(r => ({
           title: r.fields.Title,
           start: new Date(r.fields.Start),
           end: new Date(r.fields.End),
         }));
+        console.log("Debug: Parsed events:", evs);
         setEvents(evs);
       })
-      .catch((err) => console.error("Error fetching Airtable events:", err));
-  }, []); // empty dependency array ensures it runs once
+      .catch(err => {
+        console.error("Error fetching Airtable events:", err);
+      });
+  }, []);
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 via-cyan-50 to-white animate-gradient">
