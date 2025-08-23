@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from "framer-motion";
+import LanguageSwitcher from './LanguageSwitcher';
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -123,6 +124,7 @@ function Navbar() {
                     <li><Link to="/policies" className="block text-white hover:text-blue-200 transition duration-200 py-2 md:py-0">Beleid</Link></li>
                     <li><Link to="/info" className="block text-white hover:text-blue-200 transition duration-200 py-2 md:py-0">Info</Link></li>
                 </ul>
+                <LanguageSwitcher />
             </div>
             {submenu}
         </nav>

@@ -12,9 +12,12 @@ import Contact from './pages/Contact';
 import Policies from './pages/Policies';
 import Info from './pages/Info';
 import Sportsmedical from './pages/SportsMedical';
+import Footer from "./components/Footer";
+import { LanguageProvider } from "./context/LanguageContext";
 
 function App() {
   return (
+    <LanguageProvider>
     <div className="min-h-screen bg-gradient-to-br from-blue-100 via-cyan-50 to-white animate-gradient text-gray-800">
       <Navbar />
       <Routes>
@@ -31,7 +34,9 @@ function App() {
         <Route path="/info" element={<Info />} />
         <Route path="/info/sportsmedical" element={<Sportsmedical />} />
       </Routes>
+      <Footer />
     </div>
+    </LanguageProvider>
   );
 }
 
