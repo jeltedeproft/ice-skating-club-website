@@ -1,15 +1,19 @@
-import React from 'react';
+import React from "react";
+import { useTranslation } from "../hooks/useTranslation";
 
 function Footer() {
+  const t = useTranslation();
   return (
     <footer className="bg-blue-700 text-white p-4 text-center">
-      <p>&copy; 2025 Ice Diamonds Antwerp. Alle rechten voorbehouden.</p>
+      <p>
+        &copy; 2025 Ice Diamonds Antwerp. {t("copyright")}
+      </p>
       <div className="flex justify-center gap-4 mt-4">
         <a
           href="https://www.facebook.com/IceDiamondsAntwerp"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Volg ons op Facebook"
+          aria-label={t("followFacebook")}
         >
           <svg
             className="w-6 h-6 text-white hover:text-blue-200 transition duration-200"
@@ -23,7 +27,7 @@ function Footer() {
           href="https://www.instagram.com/icediamondsantwerp/"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Volg ons op Instagram"
+          aria-label={t("followInstagram")}
         >
           <svg
             className="w-6 h-6 text-white hover:text-blue-200 transition duration-200"
