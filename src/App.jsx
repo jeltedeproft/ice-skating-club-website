@@ -8,6 +8,7 @@ import Schedule from './pages/Schedule';
 import Calendar from './pages/Calendar';
 import News from './pages/News';
 import Initiations from './pages/Initiations';
+import Team from "./pages/Team";
 import Contact from './pages/Contact';
 import Policies from './pages/Policies';
 import Info from './pages/Info';
@@ -28,6 +29,7 @@ function App() {
         <Route path="/schedule" element={<Schedule />} />
         <Route path="/calendar" element={<Calendar />} />
         <Route path="/news" element={<News />} />
+        <Route path="/team" element={<Team />} />
         <Route path="/initiations" element={<Initiations />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/policies" element={<Policies />} />

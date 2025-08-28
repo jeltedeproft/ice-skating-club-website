@@ -86,6 +86,7 @@ function Navbar() {
                         <li><Link to="/calendar" className="hover:text-blue-200 transition">Kalender</Link></li>
                         <li><Link to="/news" className="hover:text-blue-200 transition">Clubnieuws</Link></li>
                         <li><Link to="/initiations" className="hover:text-blue-200 transition">Initiaties</Link></li>
+                        <li><Link to="/team" className="hover:text-blue-200 transition">Team</Link></li>
                         <li><Link to="/contact" className="hover:text-blue-200 transition">Contact</Link></li>
                         <li><Link to="/policies" className="hover:text-blue-200 transition">Beleid</Link></li>
                         <li><Link to="/info" className="hover:text-blue-200 transition">Info</Link></li>
