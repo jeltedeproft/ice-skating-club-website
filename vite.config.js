@@ -3,9 +3,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    react({
-      jsxRuntime: 'automatic', // Use modern JSX transform
-    }),
-  ],
+  plugins: [react({jsxRuntime: 'automatic'}),],
+  base: "/ice-skating-club-website/",
 });
