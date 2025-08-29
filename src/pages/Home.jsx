@@ -38,16 +38,16 @@ function Home() {
                             <img src={`${import.meta.env.BASE_URL}stad_antwerpen.jpg`} alt="Stad Antwerpen Logo" className="h-16 object-contain hover:scale-105 transition duration-200" />
                         </a>
                         <a href="https://www.skatebelgium.be" target="_blank" rel="noopener noreferrer">
-                            <img src={`${import.meta.env.BASE_URL}"kbkf.jpeg`} alt="K.B.K.F. Logo" className="h-16 object-contain hover:scale-105 transition duration-200" />
+                            <img src={`${import.meta.env.BASE_URL}kbkf.jpeg`} alt="K.B.K.F. Logo" className="h-16 object-contain hover:scale-105 transition duration-200" />
                         </a>
                         <a href="https://www.kbsf.be" target="_blank" rel="noopener noreferrer">
-                            <img src={`${import.meta.env.BASE_URL}"kbsf.png`} alt="K.B.S.F. Logo" className="h-16 object-contain hover:scale-105 transition duration-200" />
+                            <img src={`${import.meta.env.BASE_URL}kbsf.png`} alt="K.B.S.F. Logo" className="h-16 object-contain hover:scale-105 transition duration-200" />
                         </a>
                         <a href="https://www.vlsu.be" target="_blank" rel="noopener noreferrer">
-                            <img src={`${import.meta.env.BASE_URL}"vlsu.png`} alt="VLSU Logo" className="h-16 object-contain hover:scale-105 transition duration-200" />
+                            <img src={`${import.meta.env.BASE_URL}vlsu.png`} alt="VLSU Logo" className="h-16 object-contain hover:scale-105 transition duration-200" />
                         </a>
                         <a href="https://www.thefoodmaker.com" target="_blank" rel="noopener noreferrer">
-                            <img src={`${import.meta.env.BASE_URL}"foodmaker.png`} alt="Foodmaker Logo" className="h-16 object-contain hover:scale-105 transition duration-200" />
+                            <img src={`${import.meta.env.BASE_URL}foodmaker.png`} alt="Foodmaker Logo" className="h-16 object-contain hover:scale-105 transition duration-200" />
                         </a>
                     </div>
                 </div>
