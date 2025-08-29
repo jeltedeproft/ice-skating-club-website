@@ -69,7 +69,7 @@ function Navbar() {
             <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
                 {/* Logo + Title */}
                 <Link to="/" className="flex items-center space-x-3">
-                    <img src="/IDALogo.jpg" alt="Ice Diamonds Logo" className="h-10 w-auto rounded-md shadow-md" />
+                    <img src={`${import.meta.env.BASE_URL}IDALogo.jpg`} alt="Ice Diamonds Logo" className="h-10 w-auto rounded-md shadow-md" />
                     <span className="text-xl md:text-2xl font-bold text-white drop-shadow-md">Ice Diamonds Antwerp</span>
                 </Link>
 
