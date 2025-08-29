@@ -35,19 +35,19 @@ function Home() {
                     <h2 className="text-2xl font-bold text-blue-900 mb-4">{t("partners")}</h2>
                     <div className="grid grid-cols-1 md:grid-cols-5 gap-6 justify-items-center">
                         <a href="https://www.antwerpen.be" target="_blank" rel="noopener noreferrer">
-                            <img src="stad_antwerpen.jpg" alt="Stad Antwerpen Logo" className="h-16 object-contain hover:scale-105 transition duration-200" />
+                            <img src={`${import.meta.env.BASE_URL}stad_antwerpen.jpg`} alt="Stad Antwerpen Logo" className="h-16 object-contain hover:scale-105 transition duration-200" />
                         </a>
                         <a href="https://www.skatebelgium.be" target="_blank" rel="noopener noreferrer">
-                            <img src="kbkf.jpeg" alt="K.B.K.F. Logo" className="h-16 object-contain hover:scale-105 transition duration-200" />
+                            <img src={`${import.meta.env.BASE_URL}"kbkf.jpeg`} alt="K.B.K.F. Logo" className="h-16 object-contain hover:scale-105 transition duration-200" />
                         </a>
                         <a href="https://www.kbsf.be" target="_blank" rel="noopener noreferrer">
-                            <img src="kbsf.png" alt="K.B.S.F. Logo" className="h-16 object-contain hover:scale-105 transition duration-200" />
+                            <img src={`${import.meta.env.BASE_URL}"kbsf.png`} alt="K.B.S.F. Logo" className="h-16 object-contain hover:scale-105 transition duration-200" />
                         </a>
                         <a href="https://www.vlsu.be" target="_blank" rel="noopener noreferrer">
-                            <img src="vlsu.png" alt="VLSU Logo" className="h-16 object-contain hover:scale-105 transition duration-200" />
+                            <img src={`${import.meta.env.BASE_URL}"vlsu.png`} alt="VLSU Logo" className="h-16 object-contain hover:scale-105 transition duration-200" />
                         </a>
                         <a href="https://www.thefoodmaker.com" target="_blank" rel="noopener noreferrer">
-                            <img src="foodmaker.png" alt="Foodmaker Logo" className="h-16 object-contain hover:scale-105 transition duration-200" />
+                            <img src={`${import.meta.env.BASE_URL}"foodmaker.png`} alt="Foodmaker Logo" className="h-16 object-contain hover:scale-105 transition duration-200" />
                         </a>
                     </div>
                 </div>

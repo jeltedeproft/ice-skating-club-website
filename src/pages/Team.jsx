@@ -5,19 +5,19 @@ const teamMembers = [
   {
     name: "Peter Vermeeren",
     role: "Trainer Shorttrack",
-    image: "coaches/peterVermeeren.jpg",
+    image: `${import.meta.env.BASE_URL}coaches/peterVermeeren.jpg`,
     objectPosition: "object-top", // align higher so his face is visible
   },
   {
     name: "Lieselot Norion",
     role: "Trainer Shorttrack",
-    image: "coaches/lieselotNoiron.jpg",
+    image: `${import.meta.env.BASE_URL}coaches/lieselotNoiron.jpg`,
     objectPosition: "object-center", // default center
   },
   {
     name: "Koen Turcksin",
     role: "Trainer Shorttrack",
-    image: "coaches/koenTurcksin.jpg",
+    image: `${import.meta.env.BASE_URL}coaches/koenTurcksin.jpg`,
     objectPosition: "object-center", // default center
   },
 ];
