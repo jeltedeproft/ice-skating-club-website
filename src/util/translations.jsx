@@ -11,6 +11,7 @@ const translations = {
     copyright: "Alle rechten voorbehouden.",
     followFacebook: "Volg ons op Facebook",
     followInstagram: "Volg ons op Instagram",
+    footerTagline: "Schaatsplezier voor iedereen – van initiatie tot competitie",
   },
   en: {
     welcome: "Welcome to Ice Diamonds Antwerp",
@@ -24,6 +25,7 @@ const translations = {
     copyright: "All rights reserved.",
     followFacebook: "Follow us on Facebook",
     followInstagram: "Follow us on Instagram",
+    footerTagline: "ice skating fun for everyone – from initiation to competition",
   },
   fr: {
     welcome: "Bienvenue chez Ice Diamonds Antwerp",
@@ -37,6 +39,7 @@ const translations = {
     copyright: "Tous droits réservés.",
     followFacebook: "Suivez-nous sur Facebook",
     followInstagram: "Suivez-nous sur Instagram",
+    footerTagline: "Le plaisir du patinage sur glace pour tous – de l'initiation à la compétition",
   },
 };
 

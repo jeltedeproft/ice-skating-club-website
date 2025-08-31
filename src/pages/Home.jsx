@@ -1,14 +1,27 @@
 import React from 'react';
 import { useTranslation } from "../hooks/useTranslation";
+import { Link } from "react-router-dom";
 
 function Home() {
     const t = useTranslation();
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-100 via-cyan-50 to-white animate-gradient">
-            <div className="relative w-full h-64 overflow-hidden">
-                <div className="absolute inset-0 bg-cover bg-center opacity-50" style={{ backgroundImage: 'url("https://images.pexels.com/photos/866351/pexels-photo-866351.jpeg")', filter: 'blur(1px)' }} />
-                <div className="relative z-10 flex items-center justify-center h-full">
-                    <h1 className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg bg-blue-900/50 p-4 rounded-lg">{t("welcome")}</h1>
+            {/* Hero Section */}
+            <div className="relative w-full h-[70vh] bg-cover bg-center flex items-center justify-center text-center"
+                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}hero_banner.jpg)` }}>
+                <div className="bg-blue-900/60 p-8 rounded-2xl max-w-2xl">
+                    <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
+                        Ontdek het plezier van schaatsen!
+                    </h1>
+                    <p className="text-lg text-white mb-6">
+                        Doe mee met een initiatie en ervaar zelf de magie op het ijs. Geen ervaring nodig!
+                    </p>
+                    <Link
+                        to="/initiations"
+                        className="inline-block bg-yellow-400 text-blue-900 font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-yellow-500 transition"
+                    >
+                        Schrijf je in voor een initiatie
+                    </Link>
                 </div>
             </div>
             <div className="max-w-6xl mx-auto px-4 py-12">
@@ -17,16 +30,65 @@ function Home() {
                         {t("intro")}
                     </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                        <h2 className="text-xl font-bold text-blue-900 mb-2">{t("figureSkating")}</h2>
-                        <p className="text-gray-600">{t("figureSkatingDesc")}</p>
+                {/* Categories */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                    {/* Figure Skating */}
+                    <div className="bg-white/90 backdrop-blur-md rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <img src={`${import.meta.env.BASE_URL}figure_skating.jpg`} alt="Figure Skating"
+                            className="h-48 w-full object-cover" />
+                        <div className="p-6">
+                            <h2 className="text-xl font-bold text-blue-900 mb-2">Kunstschaatsen</h2>
+                            <p className="text-gray-600 mb-4">Gratie, techniek en kunstzinnige expressie op het ijs.</p>
+                            <a href="/figure-skating" className="text-blue-700 font-semibold hover:underline">Lees meer →</a>
+                        </div>
                     </div>
-                    <div className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                        <h2 className="text-xl font-bold text-blue-900 mb-2">{t("shorttrack")}</h2>
-                        <p className="text-gray-600">{t("shorttrackDesc")}</p>
+
+                    {/* Shorttrack */}
+                    <div className="bg-white/90 backdrop-blur-md rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <img src={`${import.meta.env.BASE_URL}shorttrack.png`} alt="Shorttrack"
+                            className="h-48 w-full object-cover" />
+                        <div className="p-6">
+                            <h2 className="text-xl font-bold text-blue-900 mb-2">Shorttrack</h2>
+                            <p className="text-gray-600 mb-4">Snelheid, strategie en adrenaline op het ijs.</p>
+                            <a href="/shorttrack" className="text-blue-700 font-semibold hover:underline">Lees meer →</a>
+                        </div>
                     </div>
                 </div>
+                {/* Initiations */}
+                <div className="mt-16 text-center">
+                    <h2 className="text-3xl font-bold text-blue-900 mb-6">Begin met een initiatie</h2>
+                    <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+                        Iedereen kan leren schaatsen! Onze initiaties zijn dé perfecte manier om kennis te maken
+                        met het ijs in een veilige en leuke omgeving. Materiaal kan je lenen bij ons.
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                        <img src={`${import.meta.env.BASE_URL}initiations/init1.jpg`} alt="Initiatie 1"
+                            className="rounded-xl shadow-md object-cover h-56 w-full" />
+                        <img src={`${import.meta.env.BASE_URL}initiations/init2.jpg`} alt="Initiatie 2"
+                            className="rounded-xl shadow-md object-cover h-56 w-full" />
+                        <img src={`${import.meta.env.BASE_URL}initiations/init3.jpg`} alt="Initiatie 3"
+                            className="rounded-xl shadow-md object-cover h-56 w-full" />
+                    </div>
+                    <a href="/initiations"
+                        className="inline-block bg-blue-900 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-blue-800 transition">
+                        Ontdek onze initiaties
+                    </a>
+                </div>
+                {/* Testimonials */}
+                <div className="mt-20 max-w-4xl mx-auto text-center">
+                    <h2 className="text-3xl font-bold text-blue-900 mb-8">Wat onze leden zeggen</h2>
+                    <div className="grid md:grid-cols-2 gap-8">
+                        <div className="bg-white/90 p-6 rounded-xl shadow-md">
+                            <p className="italic text-gray-700">"Ik probeerde een initiatie en was meteen verkocht!"</p>
+                            <p className="mt-4 font-semibold text-blue-900">– Sarah, 14 jaar</p>
+                        </div>
+                        <div className="bg-white/90 p-6 rounded-xl shadow-md">
+                            <p className="italic text-gray-700">"De club voelde meteen als familie, iedereen is welkom."</p>
+                            <p className="mt-4 font-semibold text-blue-900">– Tom, ouder van lid</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div className="mt-12 text-center">
                     <h2 className="text-2xl font-bold text-blue-900 mb-4">{t("partners")}</h2>
                     <div className="grid grid-cols-1 md:grid-cols-5 gap-6 justify-items-center">
