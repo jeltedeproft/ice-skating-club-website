@@ -17,14 +17,10 @@ function Home() {
                         {t("intro")}
                     </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
                         <h2 className="text-xl font-bold text-blue-900 mb-2">{t("figureSkating")}</h2>
                         <p className="text-gray-600">{t("figureSkatingDesc")}</p>
-                    </div>
-                    <div className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                        <h2 className="text-xl font-bold text-blue-900 mb-2">{t("synchro")}</h2>
-                        <p className="text-gray-600">{t("synchroDesc")}</p>
                     </div>
                     <div className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
                         <h2 className="text-xl font-bold text-blue-900 mb-2">{t("shorttrack")}</h2>

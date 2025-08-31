@@ -2,7 +2,6 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import FigureSkating from './pages/FigureSkating';
-import SynchronizedSkating from './pages/SynchronizedSkating';
 import ShortTrack from './pages/ShortTrack';
 import Schedule from './pages/Schedule';
 import Calendar from './pages/Calendar';
@@ -24,7 +23,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/figure-skating" element={<FigureSkating />} />
-        <Route path="/synchronized-skating" element={<SynchronizedSkating />} />
         <Route path="/short-track" element={<ShortTrack />} />
         <Route path="/schedule" element={<Schedule />} />
         <Route path="/calendar" element={<Calendar />} />

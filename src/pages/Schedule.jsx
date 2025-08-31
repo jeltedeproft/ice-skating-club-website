@@ -31,7 +31,7 @@ function Schedule() {
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-2xl">
           <p className="text-lg text-gray-700 mb-6">
-            Ons wekelijkse rooster voor kunstschaatsen, synchroonschaatsen en shorttrack.
+            Ons wekelijkse rooster voor kunstschaatsen en shorttrack.
           </p>
           <div className="overflow-x-auto">
             <table className="w-full bg-white/95 rounded-lg shadow-inner">

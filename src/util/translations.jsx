@@ -2,11 +2,9 @@ const translations = {
   nl: {
     welcome: "Welkom bij Ice Diamonds Antwerp",
     intro:
-      "Wij zijn een kunstschaatsclub in Antwerpen met focus op kunstschaatsen, synchroonschaatsen en shorttrack. Word lid van onze community!",
+      "Wij zijn een kunstschaatsclub in Antwerpen met focus op kunstschaatsen en shorttrack. Word lid van onze community!",
     figureSkating: "Kunstschaatsen",
     figureSkatingDesc: "Elegante figuren en sprongen.",
-    synchro: "Synchroonschaatsen",
-    synchroDesc: "Perfecte teamharmonie.",
     shorttrack: "Shorttrack",
     shorttrackDesc: "Snelle races en strategie.",
     partners: "Onze Partners",
@@ -17,11 +15,9 @@ const translations = {
   en: {
     welcome: "Welcome to Ice Diamonds Antwerp",
     intro:
-      "We are a figure skating club in Antwerp focusing on figure skating, synchronized skating and shorttrack. Join our community!",
+      "We are a figure skating club in Antwerp focusing on figure skating and shorttrack. Join our community!",
     figureSkating: "Figure Skating",
     figureSkatingDesc: "Elegant figures and jumps.",
-    synchro: "Synchronized Skating",
-    synchroDesc: "Perfect team harmony.",
     shorttrack: "Shorttrack",
     shorttrackDesc: "Fast races and strategy.",
     partners: "Our Partners",
@@ -32,11 +28,9 @@ const translations = {
   fr: {
     welcome: "Bienvenue chez Ice Diamonds Antwerp",
     intro:
-      "Notre club de patinage artistique situé à Anvers, est axé sur le patinage artistique, le patinage synchronisé et le shorttrack. Rejoignez notre communauté !",
+      "Notre club de patinage artistique situé à Anvers, est axé sur le patinage artistique et le shorttrack. Rejoignez notre communauté !",
     figureSkating: "Patinage Artistique",
     figureSkatingDesc: "Figures et sauts élégants.",
-    synchro: "Patinage Synchronisé",
-    synchroDesc: "Harmonie parfaite en équipe.",
     shorttrack: "Shorttrack",
     shorttrackDesc: "Courses rapides et stratégie.",
     partners: "Nos Partenaires",

@@ -53,9 +53,6 @@ function Navbar() {
                         <Link to="/figure-skating" className="block px-4 py-2 text-blue-900 hover:bg-blue-100 transition rounded-md">Kunstschaatsen</Link>
                     </li>
                     <li>
-                        <Link to="/synchronized-skating" className="block px-4 py-2 text-blue-900 hover:bg-blue-100 transition rounded-md">Synchroonschaatsen</Link>
-                    </li>
-                    <li>
                         <Link to="/short-track" className="block px-4 py-2 text-blue-900 hover:bg-blue-100 transition rounded-md">Shorttrack</Link>
                     </li>
                 </motion.ul>
@@ -110,7 +107,6 @@ function Navbar() {
                     {isDisciplinesOpen && (
                         <div className="pl-4 space-y-1">
                             <Link to="/figure-skating" className="block text-white py-1 hover:bg-blue-700/50 rounded-md transition">Kunstschaatsen</Link>
-                            <Link to="/synchronized-skating" className="block text-white py-1 hover:bg-blue-700/50 rounded-md transition">Synchroonschaatsen</Link>
                             <Link to="/short-track" className="block text-white py-1 hover:bg-blue-700/50 rounded-md transition">Shorttrack</Link>
                         </div>
                     )}
