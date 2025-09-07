@@ -20,20 +20,46 @@ const teamMembers = [
     image: `${import.meta.env.BASE_URL}coaches/koenTurcksin.jpg`,
     objectPosition: "object-center", // default center
   },
+  {
+    name: "Wolter Hartog",
+    role: "Monitor",
+    image: `${import.meta.env.BASE_URL}coaches/wolterHartog.jpg`,
+    objectPosition: "object-center", // default center
+  },
+  {
+    name: "Anke Declerck",
+    role: "Monitor",
+    image: `${import.meta.env.BASE_URL}coaches/ankeDeclerck.jpg`,
+    objectPosition: "object-center", // default center
+  },
 ];
 
 function Team() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50 py-16 px-6">
-      <div className="max-w-6xl mx-auto text-center">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-blue-900 mb-10">
-          Ons Team
-        </h1>
-        <p className="text-lg text-gray-700 mb-12">
-          Maak kennis met onze coaches en staff die elke dag het beste uit onze
-          schaatsers halen.
-        </p>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50">
+      {/* Full-width Banner */}
+      <div className="relative w-full h-64 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-50"
+          style={{
+            backgroundImage:
+              'url("https://images.pexels.com/photos/866351/pexels-photo-866351.jpeg")',
+            filter: "blur(1px)",
+          }}
+        />
+        <div className="relative z-10 flex flex-col items-center justify-center h-full space-y-4 text-center">
+          <h1 className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg bg-blue-900/50 px-6 py-3 rounded-lg">
+            Ons Team
+          </h1>
+          <p className="text-lg text-white drop-shadow-md max-w-2xl">
+            Maak kennis met onze coaches en staff die elke dag het beste uit onze
+            schaatsers halen.
+          </p>
+        </div>
+      </div>
 
+      {/* Page Content */}
+      <div className="max-w-6xl mx-auto text-center py-16 px-6">
         {/* Team Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
           {teamMembers.map((member) => (
@@ -57,5 +83,6 @@ function Team() {
     </div>
   );
 }
+
 
 export default Team;

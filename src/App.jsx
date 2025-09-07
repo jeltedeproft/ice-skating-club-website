@@ -18,26 +18,31 @@ import { LanguageProvider } from "./context/LanguageContext";
 function App() {
   return (
     <LanguageProvider>
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-cyan-50 to-white animate-gradient text-gray-800">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/figure-skating" element={<FigureSkating />} />
-        <Route path="/short-track" element={<ShortTrack />} />
-        <Route path="/schedule" element={<Schedule />} />
-        <Route path="/calendar" element={<Calendar />} />
-        <Route path="/news" element={<News />} />
-        <Route path="/team" element={<Team />} />
-        <Route path="/initiations" element={<Initiations />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/policies" element={<Policies />} />
-        <Route path="/info" element={<Info />} />
-        <Route path="/info/sportsmedical" element={<Sportsmedical />} />
-      </Routes>
-      <Footer />
-    </div>
+      <div className="min-h-screen bg-gradient-to-br from-blue-100 via-cyan-50 to-white animate-gradient text-gray-800">
+        <Navbar />
+
+        {/* Apply top padding only to the content below navbar */}
+        <main className="pt-24">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/figure-skating" element={<FigureSkating />} />
+            <Route path="/short-track" element={<ShortTrack />} />
+            <Route path="/schedule" element={<Schedule />} />
+            <Route path="/calendar" element={<Calendar />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/initiations" element={<Initiations />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/policies" element={<Policies />} />
+            <Route path="/info" element={<Info />} />
+            <Route path="/info/sportsmedical" element={<Sportsmedical />} />
+          </Routes>
+          <Footer />
+        </main>
+      </div>
     </LanguageProvider>
   );
 }
+
 
 export default App;
