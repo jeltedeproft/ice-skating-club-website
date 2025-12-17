@@ -11,16 +11,16 @@ function Home() {
                 style={{ backgroundImage: `url(${import.meta.env.BASE_URL}hero_banner.jpg)` }}>
                 <div className="bg-blue-900/60 p-8 rounded-2xl max-w-2xl">
                     <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
-                        Ontdek het plezier van schaatsen!
+                        {t("home_hero_title")}
                     </h1>
                     <p className="text-lg text-white mb-6">
-                        Doe mee met een initiatie en ervaar zelf de magie op het ijs. Geen ervaring nodig!
+                        {t("home_hero_subtitle")}
                     </p>
                     <Link
                         to="/initiations"
                         className="inline-block bg-yellow-400 text-blue-900 font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-yellow-500 transition"
                     >
-                        Schrijf je in voor een initiatie
+                        {t("home_cta_initiation")}
                     </Link>
                 </div>
             </div>
@@ -37,9 +37,9 @@ function Home() {
                         <img src={`${import.meta.env.BASE_URL}Kunstschaatsen Loena Hendrickx Foto.jpg`} alt="Figure Skating"
                             className="h-72 w-full object-cover" />
                         <div className="p-6">
-                            <h2 className="text-xl font-bold text-blue-900 mb-2">Kunstschaatsen</h2>
-                            <p className="text-gray-600 mb-4">Gratie, techniek en kunstzinnige expressie op het ijs.</p>
-                            <a href="/figure-skating" className="text-blue-700 font-semibold hover:underline">Lees meer →</a>
+                            <h2 className="text-xl font-bold text-blue-900 mb-2">{t("figureSkating")}</h2>
+                            <p className="text-gray-600 mb-4">{t("home_fs_desc")}</p>
+                            <a href="/figure-skating" className="text-blue-700 font-semibold hover:underline">{t("readMore")} →</a>
                         </div>
                     </div>
 
@@ -48,30 +48,22 @@ function Home() {
                         <img src={`${import.meta.env.BASE_URL}Shorttrack Hanne Desmet Foto.png`} alt="Shorttrack"
                             className="h-72 w-full object-cover" />
                         <div className="p-6">
-                            <h2 className="text-xl font-bold text-blue-900 mb-2">Shorttrack</h2>
-                            <p className="text-gray-600 mb-4">Snelheid, strategie en adrenaline op het ijs.</p>
-                            <a href="/shorttrack" className="text-blue-700 font-semibold hover:underline">Lees meer →</a>
+                            <h2 className="text-xl font-bold text-blue-900 mb-2">{t("shorttrack")}</h2>
+                            <p className="text-gray-600 mb-4">{t("home_st_desc")}</p>
+                            <a href="/shorttrack" className="text-blue-700 font-semibold hover:underline">{t("readMore")} →</a>
                         </div>
                     </div>
                 </div>
                 {/* Initiations */}
                 <div className="mt-16 text-center">
-                    <h2 className="text-3xl font-bold text-blue-900 mb-6">Begin met een initiatie</h2>
+                    <h2 className="text-3xl font-bold text-blue-900 mb-6">{t("home_initiation_section_title")}</h2>
                     <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-                        Iedereen kan leren schaatsen! Onze initiaties zijn dé perfecte manier om kennis te maken
-                        met het ijs in een veilige en leuke omgeving. €70 voor een 10 beurtenkaart, huurschaatsen zijn inbegrepen.
+                        {t("home_initiation_section_text")}
                     </p>
-                    {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                        <img src={`${import.meta.env.BASE_URL}initiations/init1.jpg`} alt="Initiatie 1"
-                            className="rounded-xl shadow-md object-cover h-56 w-full" />
-                        <img src={`${import.meta.env.BASE_URL}initiations/init2.jpg`} alt="Initiatie 2"
-                            className="rounded-xl shadow-md object-cover h-56 w-full" />
-                        <img src={`${import.meta.env.BASE_URL}initiations/init3.jpg`} alt="Initiatie 3"
-                            className="rounded-xl shadow-md object-cover h-56 w-full" />
-                    </div> */}
+                    
                     <a href="/initiations"
                         className="inline-block bg-blue-900 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-blue-800 transition">
-                        Ontdek onze initiaties
+                        {t("home_initiation_section_btn")}
                     </a>
                 </div>
 

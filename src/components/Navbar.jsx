@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from "framer-motion";
 import LanguageSwitcher from './LanguageSwitcher';
+import { useTranslation } from "../hooks/useTranslation"; // Import hook
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -10,6 +11,7 @@ function Navbar() {
     const location = useLocation();
     const disciplinesButtonRef = useRef(null);
     const submenuRef = useRef(null);
+    const t = useTranslation(); // Initialize hook
 
     useEffect(() => {
         const handleDocumentClick = (e) => {
@@ -50,10 +52,10 @@ function Navbar() {
                     transition={{ duration: 0.2 }}
                 >
                     <li>
-                        <Link to="/figure-skating" className="block px-4 py-2 text-blue-900 hover:bg-blue-100 transition rounded-md">Kunstschaatsen</Link>
+                        <Link to="/figure-skating" className="block px-4 py-2 text-blue-900 hover:bg-blue-100 transition rounded-md">{t("nav_fs")}</Link>
                     </li>
                     <li>
-                        <Link to="/short-track" className="block px-4 py-2 text-blue-900 hover:bg-blue-100 transition rounded-md">Shorttrack</Link>
+                        <Link to="/short-track" className="block px-4 py-2 text-blue-900 hover:bg-blue-100 transition rounded-md">{t("nav_st")}</Link>
                     </li>
                 </motion.ul>
             )}
@@ -65,30 +67,66 @@ function Navbar() {
         <nav className="bg-blue-800/90 backdrop-blur-md shadow-lg fixed w-full z-50">
             <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
                 {/* Logo + Title */}
-                <Link to="/" className="flex items-center space-x-3">
-                    <img src={`${import.meta.env.BASE_URL}IDALogo.jpg`} alt="Ice Diamonds Logo" className="h-10 w-auto rounded-md shadow-md" />
-                    <span className="text-xl md:text-2xl font-bold text-white drop-shadow-md">Ice Diamonds Antwerp</span>
+                <Link
+                    to="/"
+                    className="flex items-center space-x-3 flex-shrink-0"
+                >
+                    <img
+                        src={`${import.meta.env.BASE_URL}IDALogo.jpg`}
+                        alt="Ice Diamonds Logo"
+                        className="h-10 w-auto rounded-md shadow-md"
+                    />
+                    <span className="text-xl md:text-2xl font-bold text-white drop-shadow-md whitespace-nowrap">
+                        Ice Diamonds Antwerp
+                    </span>
                 </Link>
 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex items-center space-x-6">
-                    <ul className="flex space-x-4 items-center text-white">
-                        <li><Link to="/" className="hover:text-blue-200 transition">Home</Link></li>
+                <div className="hidden md:flex items-center gap-6 w-full max-w-[1300px] justify-end">
+
+                    {/* MENU */}
+                    <ul className="flex items-center text-white min-w-0 justify-end
+
+    whitespace-nowrap
+    flex-nowrap
+
+    gap-3
+    xl:gap-4
+">
+                        <li><Link to="/" className="hover:text-blue-200 transition">{t("nav_home")}</Link></li>
+
                         <li className="relative">
-                            <button ref={disciplinesButtonRef} onClick={handleDisciplinesToggle} className="hover:text-blue-200 transition flex items-center gap-1">
-                                Disciplines <svg className={`w-4 h-4 transform ${isDisciplinesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
+                            <button
+                                ref={disciplinesButtonRef}
+                                onClick={handleDisciplinesToggle}
+                                className="hover:text-blue-200 transition flex items-center gap-1 whitespace-nowrap"
+                            >
+                                {t("nav_disciplines")}
+                                <svg
+                                    className={`w-4 h-4 transform ${isDisciplinesOpen ? 'rotate-180' : ''}`}
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                                </svg>
                             </button>
                         </li>
-                        <li><Link to="/schedule" className="hover:text-blue-200 transition">Weekrooster</Link></li>
-                        <li><Link to="/calendar" className="hover:text-blue-200 transition">Kalender</Link></li>
-                        <li><Link to="/news" className="hover:text-blue-200 transition">Clubnieuws</Link></li>
-                        <li><Link to="/initiations" className="hover:text-blue-200 transition">Initiaties</Link></li>
-                        <li><Link to="/team" className="hover:text-blue-200 transition">Team</Link></li>
-                        <li><Link to="/contact" className="hover:text-blue-200 transition">Contact</Link></li>
-                        <li><Link to="/policies" className="hover:text-blue-200 transition">Beleid</Link></li>
-                        <li><Link to="/info" className="hover:text-blue-200 transition">Info</Link></li>
+
+                        <li><Link to="/schedule" className="hover:text-blue-200 transition whitespace-nowrap">{t("nav_schedule")}</Link></li>
+                        <li><Link to="/calendar" className="hover:text-blue-200 transition whitespace-nowrap">{t("nav_calendar")}</Link></li>
+                        <li><Link to="/news" className="hover:text-blue-200 transition whitespace-nowrap">{t("nav_news")}</Link></li>
+                        <li><Link to="/initiations" className="hover:text-blue-200 transition whitespace-nowrap">{t("nav_initiations")}</Link></li>
+                        <li><Link to="/team" className="hover:text-blue-200 transition whitespace-nowrap">{t("nav_team")}</Link></li>
+                        <li><Link to="/contact" className="hover:text-blue-200 transition whitespace-nowrap">{t("nav_contact")}</Link></li>
+                        <li><Link to="/policies" className="hover:text-blue-200 transition whitespace-nowrap">{t("nav_policies")}</Link></li>
+                        <li><Link to="/info" className="hover:text-blue-200 transition whitespace-nowrap">{t("nav_info")}</Link></li>
                     </ul>
-                    <LanguageSwitcher />
+
+                    {/* LANGUAGES */}
+                    <div className="flex-shrink-0 ml-4">
+                        <LanguageSwitcher />
+                    </div>
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -110,13 +148,14 @@ function Navbar() {
                             <Link to="/short-track" className="block text-white py-1 hover:bg-blue-700/50 rounded-md transition">Shorttrack</Link>
                         </div>
                     )}
-                    <Link to="/schedule" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">Weekrooster</Link>
-                    <Link to="/calendar" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">Kalender</Link>
-                    <Link to="/news" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">Clubnieuws</Link>
-                    <Link to="/initiations" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">Initiaties</Link>
-                    <Link to="/contact" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">Contact</Link>
-                    <Link to="/policies" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">Beleid</Link>
-                    <Link to="/info" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">Info</Link>
+                    <Link to="/schedule" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">{t("nav_schedule")}</Link>
+                    <Link to="/calendar" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">{t("nav_calendar")}</Link>
+                    <Link to="/news" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">{t("nav_news")}</Link>
+                    <Link to="/initiations" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">{t("nav_initiations")}</Link>
+                    <Link to="/team" className="hover:text-blue-200 transition">{t("nav_team")}</Link>
+                    <Link to="/contact" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">{t("nav_contact")}</Link>
+                    <Link to="/policies" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">{t("nav_policies")}</Link>
+                    <Link to="/info" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">{t("nav_info")}</Link>
                     <LanguageSwitcher />
                 </div>
             )}
