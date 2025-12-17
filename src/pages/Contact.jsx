@@ -35,7 +35,7 @@ function Contact() {
               <li><strong>Ondernemingsnummer:</strong> 0452 302 387</li>
               <li><strong>Club telefoon:</strong> +32 (0) 497 17 52 64</li>
               <li><strong>Officieel adres:</strong> Gebr. Van Raemdonckstraat 28, 2170 Merksem</li>
-              <li><strong>Trainingsadres:</strong> Ruggeveldlaan 488, 2100 Deurne</li>
+              <li><strong>Trainingsadres:</strong> Sportoase Groot Schijn, Ruggeveldlaan 488, 2100 Deurne</li>
               <li><strong>Rekeningnummer:</strong> BE35 1430 9092 1437</li>
               <li><strong>BIC:</strong> GEBABEBB</li>
             </ul>

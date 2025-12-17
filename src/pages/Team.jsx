@@ -9,7 +9,7 @@ const teamMembers = [
     objectPosition: "object-top", // align higher so his face is visible
   },
   {
-    name: "Lieselot Norion",
+    name: "Lieselot Noiron",
     role: "Trainer Shorttrack",
     image: `${import.meta.env.BASE_URL}coaches/lieselotNoiron.jpg`,
     objectPosition: "object-center", // default center

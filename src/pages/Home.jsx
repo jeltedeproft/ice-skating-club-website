@@ -34,8 +34,8 @@ function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
                     {/* Figure Skating */}
                     <div className="bg-white/90 backdrop-blur-md rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
-                        <img src={`${import.meta.env.BASE_URL}figure_skating.jpg`} alt="Figure Skating"
-                            className="h-48 w-full object-cover" />
+                        <img src={`${import.meta.env.BASE_URL}Kunstschaatsen Loena Hendrickx Foto.jpg`} alt="Figure Skating"
+                            className="h-72 w-full object-cover" />
                         <div className="p-6">
                             <h2 className="text-xl font-bold text-blue-900 mb-2">Kunstschaatsen</h2>
                             <p className="text-gray-600 mb-4">Gratie, techniek en kunstzinnige expressie op het ijs.</p>
@@ -45,8 +45,8 @@ function Home() {
 
                     {/* Shorttrack */}
                     <div className="bg-white/90 backdrop-blur-md rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
-                        <img src={`${import.meta.env.BASE_URL}shorttrack.png`} alt="Shorttrack"
-                            className="h-48 w-full object-cover" />
+                        <img src={`${import.meta.env.BASE_URL}Shorttrack Hanne Desmet Foto.png`} alt="Shorttrack"
+                            className="h-72 w-full object-cover" />
                         <div className="p-6">
                             <h2 className="text-xl font-bold text-blue-900 mb-2">Shorttrack</h2>
                             <p className="text-gray-600 mb-4">Snelheid, strategie en adrenaline op het ijs.</p>
@@ -59,34 +59,20 @@ function Home() {
                     <h2 className="text-3xl font-bold text-blue-900 mb-6">Begin met een initiatie</h2>
                     <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
                         Iedereen kan leren schaatsen! Onze initiaties zijn dé perfecte manier om kennis te maken
-                        met het ijs in een veilige en leuke omgeving. Materiaal kan je lenen bij ons.
+                        met het ijs in een veilige en leuke omgeving. €70 voor een 10 beurtenkaart, huurschaatsen zijn inbegrepen.
                     </p>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                         <img src={`${import.meta.env.BASE_URL}initiations/init1.jpg`} alt="Initiatie 1"
                             className="rounded-xl shadow-md object-cover h-56 w-full" />
                         <img src={`${import.meta.env.BASE_URL}initiations/init2.jpg`} alt="Initiatie 2"
                             className="rounded-xl shadow-md object-cover h-56 w-full" />
                         <img src={`${import.meta.env.BASE_URL}initiations/init3.jpg`} alt="Initiatie 3"
                             className="rounded-xl shadow-md object-cover h-56 w-full" />
-                    </div>
+                    </div> */}
                     <a href="/initiations"
                         className="inline-block bg-blue-900 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-blue-800 transition">
                         Ontdek onze initiaties
                     </a>
-                </div>
-                {/* Testimonials */}
-                <div className="mt-20 max-w-4xl mx-auto text-center">
-                    <h2 className="text-3xl font-bold text-blue-900 mb-8">Wat onze leden zeggen</h2>
-                    <div className="grid md:grid-cols-2 gap-8">
-                        <div className="bg-white/90 p-6 rounded-xl shadow-md">
-                            <p className="italic text-gray-700">"Ik probeerde een initiatie en was meteen verkocht!"</p>
-                            <p className="mt-4 font-semibold text-blue-900">– Sarah, 14 jaar</p>
-                        </div>
-                        <div className="bg-white/90 p-6 rounded-xl shadow-md">
-                            <p className="italic text-gray-700">"De club voelde meteen als familie, iedereen is welkom."</p>
-                            <p className="mt-4 font-semibold text-blue-900">– Tom, ouder van lid</p>
-                        </div>
-                    </div>
                 </div>
 
                 <div className="mt-12 text-center">

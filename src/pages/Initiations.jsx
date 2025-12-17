@@ -17,10 +17,11 @@ function Initiations() {
           <div className="mt-4">
             <h2 className="text-xl font-bold text-blue-900 mb-2">Details</h2>
             <ul className="list-disc pl-6 text-gray-600 mb-4">
-              <li>Datum: 10 november 2025, 10:00 - 12:00</li>
               <li>Locatie: Sportoase Antwerpen</li>
               <li>Kosten: Gratis voor nieuwe leden</li>
               <li>Inschrijven: Via ons <a href="/contact" className="text-blue-600 hover:text-blue-800 transition duration-200">contactformulier</a></li>
+              <li>Bij een initiatie krijg je 10-lessenkaart waarin de huur van de schaatsen en de les inbegrepen zijn. Na deze 10 lessen om te leren schaatsen kan men dan kiezen of men verder gaat naar snelschaatsen of kunstschaatsen</li>
+              <li>Er is de keuze om op zaterdag op de Sportsbaan te schaatsen (start om 13:30u) of zondag op de Funbaan (start om 10:45u). Je kan best een kwartier op voorhand aanwezig zijn.</li>
             </ul>
           </div>
         </div>
