@@ -126,7 +126,7 @@ const translations = {
     initiation_intro_text: "Ontdek de magie van schaatsen met onze initiatielessen voor beginners!",
     initiation_details_title: "Details",
     initiation_detail_location: "Locatie: Sportoase Antwerpen",
-    initiation_detail_cost: "Kosten: Gratis voor nieuwe leden",
+    initiation_detail_cost: "Kosten: 70€",
     initiation_detail_info_1: "Bij een initiatie krijg je een 10-lessenkaart (huur schaatsen + les inbegrepen).",
     initiation_detail_info_2: "Na deze 10 lessen kan men kiezen voor snelschaatsen of kunstschaatsen.",
     
