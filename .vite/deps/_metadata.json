@@ -1,0 +1,79 @@
+{
+  "hash": "1d606c4b",
+  "configHash": "bcdf82bf",
+  "lockfileHash": "c6497bb5",
+  "browserHash": "ef622d57",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "cae033ae",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "4fa1c155",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.mjs",
+      "file": "react-router-dom.js",
+      "fileHash": "6efd2f0c",
+      "needsInterop": false
+    },
+    "react-dom": {
+      "src": "../../node_modules/react-dom/index.js",
+      "file": "react-dom.js",
+      "fileHash": "31a654c4",
+      "needsInterop": true
+    },
+    "framer-motion": {
+      "src": "../../node_modules/framer-motion/dist/es/index.mjs",
+      "file": "framer-motion.js",
+      "fileHash": "656d5d6d",
+      "needsInterop": false
+    },
+    "@emailjs/browser": {
+      "src": "../../node_modules/@emailjs/browser/es/index.js",
+      "file": "@emailjs_browser.js",
+      "fileHash": "e1da827e",
+      "needsInterop": false
+    },
+    "react-big-calendar": {
+      "src": "../../node_modules/react-big-calendar/dist/react-big-calendar.esm.js",
+      "file": "react-big-calendar.js",
+      "fileHash": "2fbeccbb",
+      "needsInterop": false
+    },
+    "moment": {
+      "src": "../../node_modules/moment/dist/moment.js",
+      "file": "moment.js",
+      "fileHash": "6b1dfa0b",
+      "needsInterop": false
+    },
+    "axios": {
+      "src": "../../node_modules/axios/index.js",
+      "file": "axios.js",
+      "fileHash": "82317a99",
+      "needsInterop": false
+    },
+    "luxon": {
+      "src": "../../node_modules/luxon/src/luxon.js",
+      "file": "luxon.js",
+      "fileHash": "b0b48b5e",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-2YVMFDJ2": {
+      "file": "chunk-2YVMFDJ2.js"
+    },
+    "chunk-QLJLW6ED": {
+      "file": "chunk-QLJLW6ED.js"
+    },
+    "chunk-PR4QN5HX": {
+      "file": "chunk-PR4QN5HX.js"
+    }
+  }
+}
