@@ -86,6 +86,60 @@ const translations = {
     // Sports Medical
     medical_title: "Sportongevallen",
 
+    contact_accessibility_title: "Bereikbaarheid",
+    contact_transport_tram: "Tram 5, 10",
+    contact_transport_bus: "Bus 19, 410",
+    contact_transport_velo: "Velostation Station 240 – Park Groot Schijn",
+    contact_form_intro: "Stuur ons een bericht voor meer informatie over lessen of lidmaatschap.",
+    contact_label_email: "Email",
+    contact_label_message: "Bericht",
+    contact_placeholder_name: "Je Naam",
+    contact_placeholder_email: "Je Email",
+    contact_placeholder_message: "Je Bericht",
+    contact_send_btn: "Verzenden",
+    contact_or_mail: "Of mail naar: ",
+
+    // About Page Values
+    about_value_community_title: "Gemeenschap",
+    about_value_community_text: "Word lid van een hechte groep schaatsers die jouw passie en enthousiasme delen.",
+    about_value_excellence_title: "Uitmuntendheid",
+    about_value_excellence_text: "Train met ervaren coaches om je volledige potentieel op het ijs te bereiken.",
+    about_value_fun_title: "Plezier",
+    about_value_fun_text: "Geniet van schaatssessies, evenementen en wedstrijden die vreugde brengen!",
+    
+    // About Page Team Placeholders
+    about_team_title: "Ontmoet Ons Team",
+    about_role_head_coach: "Hoofdcoach",
+    about_desc_head_coach: "Voormalig competitief schaatser met 15 jaar coachingservaring.",
+    about_role_program_dir: "Programmadirecteur",
+    about_desc_program_dir: "Organiseert evenementen en zorgt ervoor dat elke schaatser zich thuis voelt.",
+    about_role_youth_coord: "Jeugdcoördinator",
+    about_desc_youth_coord: "Leidt onze jeugdprogramma's met enthousiasme.",
+
+    // About Page CTA
+    about_cta_title: "Doe Vandaag Nog Mee!",
+    about_cta_text: "Klaar om met ons mee te glijden? Bekijk ons schema of neem contact op voor meer informatie.",
+    about_cta_schedule_btn: "Bekijk Uurrooster",
+    about_cta_contact_btn: "Contacteer Ons",
+
+    // Initiations Page
+    initiation_intro_text: "Ontdek de magie van schaatsen met onze initiatielessen voor beginners!",
+    initiation_details_title: "Details",
+    initiation_detail_location: "Locatie: Sportoase Antwerpen",
+    initiation_detail_cost: "Kosten: Gratis voor nieuwe leden",
+    initiation_detail_info_1: "Bij een initiatie krijg je een 10-lessenkaart (huur schaatsen + les inbegrepen).",
+    initiation_detail_info_2: "Na deze 10 lessen kan men kiezen voor snelschaatsen of kunstschaatsen.",
+    
+    // Initiation Form
+    initiation_form_title: "Vraag een initiatie aan",
+    initiation_label_phone: "Telefoonnummer",
+    initiation_label_day: "Voorkeursdag",
+    initiation_option_saturday: "Zaterdag (Sportsbaan - 13:30)",
+    initiation_option_sunday: "Zondag (Funbaan - 10:45)",
+    initiation_label_message: "Extra opmerkingen (optioneel)",
+    initiation_placeholder_message: "Bv. leeftijd van de schaatser...",
+    initiation_btn_submit: "Schrijf je in",
+
   },
   en: {
     //general
@@ -174,6 +228,60 @@ const translations = {
     // Sports Medical
     medical_title: "Sports Accidents",
 
+    contact_accessibility_title: "Accessibility",
+    contact_transport_tram: "Tram 5, 10",
+    contact_transport_bus: "Bus 19, 410",
+    contact_transport_velo: "Velo Station 240 – Park Groot Schijn",
+    contact_form_intro: "Send us a message for more information about lessons or membership.",
+    contact_label_email: "Email",
+    contact_label_message: "Message",
+    contact_placeholder_name: "Your Name",
+    contact_placeholder_email: "Your Email",
+    contact_placeholder_message: "Your Message",
+    contact_send_btn: "Send",
+    contact_or_mail: "Or mail to: ",
+
+    // About Page Values
+    about_value_community_title: "Community",
+    about_value_community_text: "Join a tight-knit group of skaters who share your passion and enthusiasm.",
+    about_value_excellence_title: "Excellence",
+    about_value_excellence_text: "Train with experienced coaches to reach your full potential on the ice.",
+    about_value_fun_title: "Fun",
+    about_value_fun_text: "Enjoy skating sessions, events, and competitions that spark joy!",
+
+    // About Page Team Placeholders
+    about_team_title: "Meet Our Team",
+    about_role_head_coach: "Head Coach",
+    about_desc_head_coach: "Former competitive skater with 15 years of coaching experience.",
+    about_role_program_dir: "Program Director",
+    about_desc_program_dir: "Organizes events and ensures every skater feels at home.",
+    about_role_youth_coord: "Youth Coordinator",
+    about_desc_youth_coord: "Leads our junior skating programs with enthusiasm.",
+
+    // About Page CTA
+    about_cta_title: "Join Us Today!",
+    about_cta_text: "Ready to glide with us? Check out our schedule or contact us to learn more.",
+    about_cta_schedule_btn: "View Schedule",
+    about_cta_contact_btn: "Contact Us",
+
+    // Initiations Page
+    initiation_intro_text: "Discover the magic of skating with our initiation lessons for beginners!",
+    initiation_details_title: "Details",
+    initiation_detail_location: "Location: Sportoase Antwerp",
+    initiation_detail_cost: "Cost: Free for new members",
+    initiation_detail_info_1: "An initiation includes a 10-lesson card (skate rental + lesson included).",
+    initiation_detail_info_2: "After these 10 lessons, you can choose between speed skating or figure skating.",
+
+    // Initiation Form
+    initiation_form_title: "Request an initiation",
+    initiation_label_phone: "Phone Number",
+    initiation_label_day: "Preferred Day",
+    initiation_option_saturday: "Saturday (Sports track - 13:30)",
+    initiation_option_sunday: "Sunday (Fun track - 10:45)",
+    initiation_label_message: "Extra comments (optional)",
+    initiation_placeholder_message: "E.g. age of the skater...",
+    initiation_btn_submit: "Sign Up",
+
   },
   fr: {
     //general
@@ -261,6 +369,60 @@ const translations = {
 
     // Sports Medical
     medical_title: "Accidents Sportifs",
+
+    contact_accessibility_title: "Accès",
+    contact_transport_tram: "Tram 5, 10",
+    contact_transport_bus: "Bus 19, 410",
+    contact_transport_velo: "Station Velo 240 – Park Groot Schijn",
+    contact_form_intro: "Envoyez-nous un message pour plus d'informations sur les cours ou l'adhésion.",
+    contact_label_email: "E-mail",
+    contact_label_message: "Message",
+    contact_placeholder_name: "Votre Nom",
+    contact_placeholder_email: "Votre E-mail",
+    contact_placeholder_message: "Votre Message",
+    contact_send_btn: "Envoyer",
+    contact_or_mail: "Ou écrivez à : ",
+
+    // About Page Values
+    about_value_community_title: "Communauté",
+    about_value_community_text: "Rejoignez un groupe soudé de patineurs qui partagent votre passion et votre enthousiasme.",
+    about_value_excellence_title: "Excellence",
+    about_value_excellence_text: "Entraînez-vous avec des coachs expérimentés pour atteindre votre plein potentiel sur la glace.",
+    about_value_fun_title: "Plaisir",
+    about_value_fun_text: "Profitez de séances de patinage, d'événements et de compétitions qui procurent de la joie !",
+
+    // About Page Team Placeholders
+    about_team_title: "Rencontrez Notre Équipe",
+    about_role_head_coach: "Entraîneur Principal",
+    about_desc_head_coach: "Ancien patineur de compétition avec 15 ans d'expérience en coaching.",
+    about_role_program_dir: "Directeur de Programme",
+    about_desc_program_dir: "Organise des événements et veille à ce que chaque patineur se sente chez lui.",
+    about_role_youth_coord: "Coordinateur Jeunesse",
+    about_desc_youth_coord: "Dirige nos programmes de patinage junior avec enthousiasme.",
+
+    // About Page CTA
+    about_cta_title: "Rejoignez-nous Aujourd'hui !",
+    about_cta_text: "Prêt à glisser avec nous ? Consultez notre horaire ou contactez-nous pour en savoir plus.",
+    about_cta_schedule_btn: "Voir l'Horaire",
+    about_cta_contact_btn: "Contactez-nous",
+
+    // Initiations Page
+    initiation_intro_text: "Découvrez la magie du patinage avec nos cours d'initiation pour débutants !",
+    initiation_details_title: "Détails",
+    initiation_detail_location: "Lieu : Sportoase Anvers",
+    initiation_detail_cost: "Coût : Gratuit pour les nouveaux membres",
+    initiation_detail_info_1: "Une initiation comprend une carte de 10 leçons (location de patins + leçon incluse).",
+    initiation_detail_info_2: "Après ces 10 leçons, vous pouvez choisir entre le patinage de vitesse ou artistique.",
+
+    // Initiation Form
+    initiation_form_title: "Demander une initiation",
+    initiation_label_phone: "Numéro de téléphone",
+    initiation_label_day: "Jour préféré",
+    initiation_option_saturday: "Samedi (Piste sportive - 13:30)",
+    initiation_option_sunday: "Dimanche (Piste ludique - 10:45)",
+    initiation_label_message: "Commentaires supplémentaires (facultatif)",
+    initiation_placeholder_message: "Par ex. âge du patineur...",
+    initiation_btn_submit: "S'inscrire",
 
   },
 };

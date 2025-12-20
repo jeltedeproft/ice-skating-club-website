@@ -1,7 +1,41 @@
-import React from "react";
-import { MapPin, Phone, Mail, Home } from "lucide-react";
+import React, { useRef, useState } from "react";
+import emailjs from '@emailjs/browser';
+import { useTranslation } from "../hooks/useTranslation";
 
 function Contact() {
+  const t = useTranslation();
+  const form = useRef();
+  const [isSending, setIsSending] = useState(false);
+  const [status, setStatus] = useState(null); // null, 'success', or 'error'
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setIsSending(true);
+    setStatus(null);
+
+    // ⚠️ REPLACE THESE VALUES WITH YOUR ACTUAL EMAILJS KEYS ⚠️
+    const SERVICE_ID = "service_npn3yrb";
+    const TEMPLATE_ID = "template_dyea27u";
+    const PUBLIC_KEY = "esM-SwYjzCyP-GhLD";
+
+    emailjs
+      .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
+        publicKey: PUBLIC_KEY,
+      })
+      .then(
+        () => {
+          setIsSending(false);
+          setStatus('success');
+          form.current.reset(); // Clear the form
+        },
+        (error) => {
+          setIsSending(false);
+          setStatus('error');
+          console.error('FAILED...', error.text);
+        },
+      );
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 via-cyan-50 to-white animate-gradient">
       {/* Hero */}
@@ -16,7 +50,7 @@ function Contact() {
         />
         <div className="relative z-10 flex items-center justify-center h-full">
           <h1 className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg bg-blue-900/50 p-4 rounded-lg">
-            Contacteer Ons
+            {t("contact_title")}
           </h1>
         </div>
       </div>
@@ -24,29 +58,29 @@ function Contact() {
       {/* Club Info */}
       <div className="max-w-4xl mx-auto px-6 pb-16">
         <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">
-          Clubinfo & Bereikbaarheid
+          {t("contact_info_title")}
         </h2>
 
         <div className="grid md:grid-cols-2 gap-8 bg-white/80 backdrop-blur-md p-8 rounded-xl shadow-lg">
           <div>
-            <h3 className="text-xl font-semibold text-blue-800 mb-4">Algemene info</h3>
+            <h3 className="text-xl font-semibold text-blue-800 mb-4">{t("contact_general_info")}</h3>
             <ul className="space-y-2 text-gray-700">
-              <li><strong>Naam:</strong> Ice Diamonds Antwerp VZW</li>
-              <li><strong>Ondernemingsnummer:</strong> 0452 302 387</li>
-              <li><strong>Club telefoon:</strong> +32 (0) 497 17 52 64</li>
-              <li><strong>Officieel adres:</strong> Gebr. Van Raemdonckstraat 28, 2170 Merksem</li>
-              <li><strong>Trainingsadres:</strong> Sportoase Groot Schijn, Ruggeveldlaan 488, 2100 Deurne</li>
-              <li><strong>Rekeningnummer:</strong> BE35 1430 9092 1437</li>
+              <li><strong>{t("contact_label_name")}:</strong> Ice Diamonds Antwerp VZW</li>
+              <li><strong>{t("contact_label_enterprise")}:</strong> 0452 302 387</li>
+              <li><strong>{t("contact_label_phone")}:</strong> +32 (0) 497 17 52 64</li>
+              <li><strong>{t("contact_label_address_official")}:</strong> Gebr. Van Raemdonckstraat 28, 2170 Merksem</li>
+              <li><strong>{t("contact_label_address_training")}:</strong> Sportoase Groot Schijn, Ruggeveldlaan 488, 2100 Deurne</li>
+              <li><strong>{t("contact_label_account")}:</strong> BE35 1430 9092 1437</li>
               <li><strong>BIC:</strong> GEBABEBB</li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold text-blue-800 mb-4">Bereikbaarheid</h3>
+            <h3 className="text-xl font-semibold text-blue-800 mb-4">{t("contact_accessibility_title")}</h3>
             <ul className="space-y-2 text-gray-700">
-              <li>Tram 5, 10</li>
-              <li>Bus 19, 410</li>
-              <li>Velostation Station 240 – Park Groot Schijn</li>
+              <li>{t("contact_transport_tram")}</li>
+              <li>{t("contact_transport_bus")}</li>
+              <li>{t("contact_transport_velo")}</li>
             </ul>
             <div className="mt-4 flex gap-4">
               <a
@@ -87,55 +121,77 @@ function Contact() {
       <div className="max-w-lg mx-auto px-4 py-12">
         <div className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-2xl">
           <p className="text-lg text-gray-700 mb-6">
-            Stuur ons een bericht voor meer informatie over lessen of lidmaatschap.
+            {t("contact_form_intro")}
           </p>
-          <form className="space-y-4">
+          
+          <form className="space-y-4" ref={form} onSubmit={sendEmail}>
             <div>
               <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">
-                Naam
+                {t("contact_label_name")}
               </label>
               <input
                 type="text"
                 id="name"
+                name="user_name" // Required for EmailJS
+                required
                 className="w-full p-3 bg-white/50 rounded-lg border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
-                placeholder="Je Naam"
+                placeholder={t("contact_placeholder_name")}
               />
             </div>
             <div>
               <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">
-                Email
+                {t("contact_label_email")}
               </label>
               <input
                 type="email"
                 id="email"
+                name="user_email" // Required for EmailJS
+                required
                 className="w-full p-3 bg-white/50 rounded-lg border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
-                placeholder="Je Email"
+                placeholder={t("contact_placeholder_email")}
               />
             </div>
             <div>
               <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">
-                Bericht
+                {t("contact_label_message")}
               </label>
               <textarea
                 id="message"
+                name="message" // Required for EmailJS
+                required
                 className="w-full p-3 bg-white/50 rounded-lg border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
                 rows="5"
-                placeholder="Je Bericht"
+                placeholder={t("contact_placeholder_message")}
               ></textarea>
             </div>
+            
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition duration-200"
+              disabled={isSending}
+              className={`w-full text-white p-3 rounded-lg transition duration-200 ${
+                isSending ? "bg-gray-400 cursor-not-allowed" : "bg-blue-600 hover:bg-blue-700"
+              }`}
             >
-              Verzenden
+              {isSending ? "Sending..." : t("contact_send_btn")}
             </button>
+
+            {status === 'success' && (
+              <p className="text-green-600 text-center font-semibold mt-2">
+                ✅ Bericht succesvol verzonden! / Message sent successfully!
+              </p>
+            )}
+            {status === 'error' && (
+              <p className="text-red-600 text-center font-semibold mt-2">
+                ❌ Er ging iets mis. Probeer het later opnieuw. / Something went wrong.
+              </p>
+            )}
           </form>
 
           <p className="text-center mt-4 text-gray-600">
-            Of mail naar:{" "}
+            {t("contact_or_mail")}
             <a
               href="mailto:secretariaat@icediamonds.be"
-              className="text-blue-600 hover:text-blue-800 transition duration-200"
+              className="text-blue-600 hover:text-blue-800 transition duration-200 ml-1"
             >
               secretariaat@icediamonds.be
             </a>
