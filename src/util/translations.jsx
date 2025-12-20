@@ -30,7 +30,7 @@ const translations = {
     home_initiation_section_title: "Begin met een initiatie",
     home_initiation_section_text: "Iedereen kan leren schaatsen! Onze initiaties zijn dé perfecte manier om kennis te maken met het ijs in een veilige en leuke omgeving. €70 voor een 10 beurtenkaart, huurschaatsen zijn inbegrepen.",
     home_initiation_section_btn: "Ontdek onze initiaties",
-    intro: "Wij zijn een kunstschaatsclub in Antwerpen met focus op kunstschaatsen en shorttrack. Word lid van onze community!",
+    intro: "Wij zijn een schaatsclub in Antwerpen met focus op kunstschaatsen en shorttrack. Word lid van onze community!",
     
     // About
     about_title: "Over Onze Schaatsclub",
