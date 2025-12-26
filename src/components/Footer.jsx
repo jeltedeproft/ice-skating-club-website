@@ -18,7 +18,7 @@ function Footer() {
           <Link to="/" className="hover:underline">{t("home") || "Home"}</Link>
           <Link to="/initiations" className="hover:underline">{t("initiations") || "Initiaties"}</Link>
           <Link to="/figure-skating" className="hover:underline">{t("figureSkating") || "Kunstrijden"}</Link>
-          <Link to="/shorttrack" className="hover:underline">{t("shorttrack") || "Shorttrack"}</Link>
+          <Link to="/short-track" className="hover:underline">{t("shorttrack") || "Shorttrack"}</Link>
           <Link to="/contact" className="hover:underline">{t("contact") || "Contact"}</Link>
         </div>
 
