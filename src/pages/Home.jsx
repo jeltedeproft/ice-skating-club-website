@@ -25,9 +25,13 @@ function Home() {
                 </div>
             </div>
             <div className="max-w-6xl mx-auto px-4 py-12">
-                <div className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-2xl mb-8">
-                    <p className="text-lg text-gray-700 mb-6">
+                <div className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-2xl mb-8 text-center">
+                    <p className="text-lg text-gray-700 mb-4">
                         {t("intro")}
+                    </p>
+                    {/* Explicit Affiliation Link */}
+                    <p className="text-sm text-gray-500">
+                        {t("member_vlsu")} <a href="https://www.vlsu.be" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">{t("vlsu")}</a>.
                     </p>
                 </div>
                 {/* Categories */}
@@ -60,7 +64,7 @@ function Home() {
                     <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
                         {t("home_initiation_section_text")}
                     </p>
-                    
+
                     <a href="/initiations"
                         className="inline-block bg-blue-900 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-blue-800 transition">
                         {t("home_initiation_section_btn")}
@@ -79,9 +83,11 @@ function Home() {
                         <a href="https://www.kbsf.be" target="_blank" rel="noopener noreferrer">
                             <img src={`${import.meta.env.BASE_URL}kbsf.png`} alt="K.B.S.F. Logo" className="h-16 object-contain hover:scale-105 transition duration-200" />
                         </a>
+                        <div className="flex flex-col items-center gap-2">
                         <a href="https://www.vlsu.be" target="_blank" rel="noopener noreferrer">
                             <img src={`${import.meta.env.BASE_URL}vlsu.png`} alt="VLSU Logo" className="h-16 object-contain hover:scale-105 transition duration-200" />
                         </a>
+                        </div>
                         <a href="https://www.thefoodmaker.com" target="_blank" rel="noopener noreferrer">
                             <img src={`${import.meta.env.BASE_URL}foodmaker.png`} alt="Foodmaker Logo" className="h-16 object-contain hover:scale-105 transition duration-200" />
                         </a>

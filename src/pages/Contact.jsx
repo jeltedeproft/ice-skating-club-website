@@ -67,8 +67,7 @@ function Contact() {
             <ul className="space-y-2 text-gray-700">
               <li><strong>{t("contact_label_name")}:</strong> Ice Diamonds Antwerp VZW</li>
               <li><strong>{t("contact_label_enterprise")}:</strong> 0452 302 387</li>
-              <li><strong>{t("contact_label_phone")}:</strong> +32 (0) 497 17 52 64</li>
-              <li><strong>{t("contact_label_address_official")}:</strong> Gebr. Van Raemdonckstraat 28, 2170 Merksem</li>
+              <li><strong>{t("contact_label_address_official")}:</strong> Diepestraat 22, 2850 Boom</li>
               <li><strong>{t("contact_label_address_training")}:</strong> Sportoase Groot Schijn, Ruggeveldlaan 488, 2100 Deurne</li>
               <li><strong>{t("contact_label_account")}:</strong> BE35 1430 9092 1437</li>
               <li><strong>BIC:</strong> GEBABEBB</li>
@@ -190,10 +189,10 @@ function Contact() {
           <p className="text-center mt-4 text-gray-600">
             {t("contact_or_mail")}
             <a
-              href="mailto:secretariaat@icediamonds.be"
+              href="mailto:secretariaatida@outlook.com"
               className="text-blue-600 hover:text-blue-800 transition duration-200 ml-1"
             >
-              secretariaat@icediamonds.be
+              secretariaatida@outlook.com
             </a>
           </p>
         </div>

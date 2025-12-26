@@ -140,6 +140,9 @@ const translations = {
     initiation_placeholder_message: "Bv. leeftijd van de schaatser...",
     initiation_btn_submit: "Schrijf je in",
 
+    vlsu: "Vlaamse Schaatsunie (VLSU)",
+    member_vlsu: "Trots lid van de ",
+
   },
   en: {
     //general
@@ -282,6 +285,9 @@ const translations = {
     initiation_placeholder_message: "E.g. age of the skater...",
     initiation_btn_submit: "Sign Up",
 
+    vlsu: "Flemish IceSkating Union (VLSU)",
+    member_vlsu: "Proud member of the ",
+
   },
   fr: {
     //general
@@ -423,6 +429,9 @@ const translations = {
     initiation_label_message: "Commentaires supplémentaires (facultatif)",
     initiation_placeholder_message: "Par ex. âge du patineur...",
     initiation_btn_submit: "S'inscrire",
+
+    vlsu: "Union Flamande de Patinage (VLSU)",
+    member_vlsu: "Fier membre de l'",
 
   },
 };
