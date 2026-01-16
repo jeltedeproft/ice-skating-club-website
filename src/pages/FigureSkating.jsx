@@ -1,19 +1,20 @@
 import React from 'react';
-import { useTranslation } from "../hooks/useTranslation";
+import { useTranslation } from "../hooks/useTranslation"; // Make sure path is correct
 
 function FigureSkating() {
   const t = useTranslation();
 
   // List of brevet IDs to map through
   const brevets = [
-    "1", "2", "3", "4", 
-    "5", "5plus", "6", "6plus", 
-    "7", "7plus", "8", "8plus", 
+    "1", "2", "3", "4",
+    "5", "5plus", "6", "6plus",
+    "7", "7plus", "8", "8plus",
     "9", "9plus", "10", "10plus"
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 via-cyan-50 to-white animate-gradient">
+      {/* Hero Section */}
       <div className="relative w-full h-64 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-50"
@@ -28,53 +29,78 @@ function FigureSkating() {
           </h1>
         </div>
       </div>
+
+      {/* Main Content Section */}
       <div className="max-w-6xl mx-auto px-4 py-12">
-        <div className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-2xl">
-          <p className="text-lg text-gray-700 mb-6">
-            {t("fs_intro")}
-          </p>
-          <div className="mt-4">
-            <h2 className="text-xl font-bold text-blue-900 mb-2">{t("fs_lesson_info_title")}</h2>
-            <ul className="list-disc pl-6 text-gray-600">
-              <li>{t("fs_lesson_beginners")}</li>
-              <li>{t("fs_lesson_advanced")}</li>
-              <li>{t("fs_cost")}</li>
-            </ul>
-          </div>
+        <div className="bg-white/90 backdrop-blur-md p-8 rounded-xl shadow-2xl space-y-6">
+
+          <section>
+            <h2 className="text-3xl font-bold text-blue-900 mb-4">{t("fs_title")}</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              {t("fs_desc_main")}
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              {t("fs_desc_sub")}
+            </p>
+          </section>
+
+          {/* Callout Box for Motivation */}
+          <section className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
+            <h3 className="text-xl font-bold text-blue-900 mb-2">{t("fs_motto_title")}</h3>
+            <p className="text-gray-800 italic text-lg">
+              "{t("fs_motto_quote")}"
+            </p>
+          </section>
+
+          {/* CTA / Contact Section */}
+          <section>
+            <p className="text-lg text-gray-700">
+              {t("fs_cta_text")}
+              <a
+                href="mailto:secretariaat@icediamonds.be"
+                className="font-bold text-blue-600 hover:text-blue-800 hover:underline"
+              >
+                secretariaat@icediamonds.be
+              </a>
+            </p>
+          </section>
+
         </div>
       </div>
-      <div className="max-w-6xl mx-auto px-4 py-12">
-        <div className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-2xl">
-          <h2 className="text-2xl font-bold text-blue-900 mb-4">{t("fs_brevets_title")}</h2>
-          <p className="text-lg text-gray-700 mb-6">
-            {t("fs_brevets_intro")}
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+      {/* Compact Brevets Section */}
+      <div className="max-w-6xl mx-auto px-4 pb-12">
+        <div className="bg-white/90 backdrop-blur-md p-8 rounded-xl shadow-2xl">
+          <div className="mb-6">
+             <h2 className="text-2xl font-bold text-blue-900">{t("fs_brevets_title")}</h2>
+             <p className="text-gray-700 mt-2">
+               {t("fs_brevets_intro")}
+             </p>
+          </div>
+
+          {/* Grid Layout */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {brevets.map((id) => (
               <a
                 key={id}
                 href={`/assets/brevet-${id}.pdf`}
                 download
-                className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center flex flex-col items-center"
                 aria-label={`Download Brevet ${id} PDF`}
+                className="group flex items-center justify-between p-3 bg-blue-50/50 border border-blue-100 rounded-lg hover:bg-blue-100 hover:border-blue-300 hover:shadow-md transition-all duration-200"
               >
+                <span className="font-semibold text-blue-900 text-sm truncate mr-2">
+                    {t(`fs_brevet_${id}`)}
+                </span>
+
                 <svg
-                  className="w-8 h-8 text-blue-900 mb-2"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                    className="w-5 h-5 text-blue-400 group-hover:text-blue-600 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                  />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
                 </svg>
-                {/* Dynamically select the translation key, e.g., fs_brevet_5plus */}
-                <h3 className="text-xl font-bold text-blue-900 mb-2">{t(`fs_brevet_${id}`)}</h3>
-                <p className="text-gray-600">{t("fs_brevet_download_text")}</p>
               </a>
             ))}
           </div>

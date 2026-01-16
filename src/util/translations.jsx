@@ -143,6 +143,31 @@ const translations = {
     vlsu: "Vlaamse Schaatsunie (VLSU)",
     member_vlsu: "Trots lid van de ",
 
+    // NEW SHORTTRACK TEXT
+    st_title_main: "Ontdek de snelheid bij Ice Diamonds Antwerp!",
+    st_intro_main: "Wij verwelkomen schaatsers van alle leeftijden en niveaus, van de eerste voorzichtige slagen tot de competitieve schaatser.",
+    st_beginner_title: "Beginners",
+    st_beginner_text: "Leer de basis van balans en techniek in een veilige omgeving.",
+    st_advanced_title: "Gevorderden",
+    st_advanced_text: "Verfijn je bochtenwerk en verhoog je snelheid op het ijs.",
+    st_comp_title: "Competitie",
+    st_comp_text: "Train mee met onze toppers en jaag op nationale en internationale titels.",
+    st_footer_intro: "Of je nu jong bent of oud, onze ervaren coaches begeleiden je bij elke stap. Sluit je aan bij de Ice Diamonds en ervaar de adrenaline van shorttrack.",
+    st_email_pre: "Stuur een mailtje naar ",
+    st_email_mid: " met ",
+    st_email_post: " in cc om je in te schrijven of een proefles aan te vragen.",
+    st_info_sessions: "Sessies: Vrijdag 18:00 - 20:00",
+    st_info_levels: "Niveaus: Alle leeftijden welkom",
+    st_info_gear: "Uitrusting: Beschikbaar ter plaatse",
+    st_training_title: "Traininginfo",
+
+    // NEW FIGURE SKATING TEXT
+    fs_desc_main: "Onder professionele begeleiding leer je bij ons de fijne kneepjes van het kunstschaatsen, van sierlijke basistechnieken tot krachtige sprongen en pirouettes. We combineren sportieve uitdagingen met een warm clubgevoel.",
+    fs_desc_sub: "Van beginnende recreanten tot gevorderde competitieve kan je bij ons terecht voor kunstschaatslessen.",
+    fs_motto_title: "Jong en oud kan terecht bij IDA",
+    fs_motto_quote: "Droom je om de absolute top te bereiken? Of zoek je liever een wekelijkse hobby?",
+    fs_cta_text: "Schrijf je in voor onze initiatie lessen om te leren schaatsen of contacteer ons secretariaat op "
+
   },
   en: {
     //general
@@ -288,6 +313,31 @@ const translations = {
     vlsu: "Flemish IceSkating Union (VLSU)",
     member_vlsu: "Proud member of the ",
 
+    // NEW SHORTTRACK TEXT
+    st_title_main: "Discover the speed at Ice Diamonds Antwerp!",
+    st_intro_main: "We welcome skaters of all ages and levels, from the first tentative strokes to the competitive skater.",
+    st_beginner_title: "Beginners",
+    st_beginner_text: "Learn the basics of balance and technique in a safe environment.",
+    st_advanced_title: "Advanced",
+    st_advanced_text: "Refine your cornering and increase your speed on the ice.",
+    st_comp_title: "Competition",
+    st_comp_text: "Train with our top athletes and chase national and international titles.",
+    st_footer_intro: "Whether you are young or old, our experienced coaches guide you every step of the way. Join the Ice Diamonds and experience the adrenaline of shorttrack.",
+    st_email_pre: "Send an email to ",
+    st_email_mid: " with ",
+    st_email_post: " in cc to register or request a trial lesson.",
+    st_info_sessions: "Sessions: Friday 18:00 - 20:00",
+    st_info_levels: "Levels: All ages welcome",
+    st_info_gear: "Equipment: Available on site",
+    st_training_title: "Training Info",
+
+    // NEW FIGURE SKATING TEXT
+    fs_desc_main: "Under professional guidance, you will learn the intricacies of figure skating, from graceful basic techniques to powerful jumps and spins. We combine sporting challenges with a warm club feeling.",
+    fs_desc_sub: "From beginner recreational to advanced competitive skaters, everyone is welcome for figure skating lessons.",
+    fs_motto_title: "Young and old are welcome at IDA",
+    fs_motto_quote: "Do you dream of reaching the absolute top? Or are you looking for a weekly hobby?",
+    fs_cta_text: "Sign up for our initiation lessons to learn to skate or contact our secretariat at "
+
   },
   fr: {
     //general
@@ -432,6 +482,31 @@ const translations = {
 
     vlsu: "Union Flamande de Patinage (VLSU)",
     member_vlsu: "Fier membre de l'",
+
+    // NEW SHORTTRACK TEXT
+    st_title_main: "Découvrez la vitesse chez Ice Diamonds Antwerp !",
+    st_intro_main: "Nous accueillons des patineurs de tous âges et de tous niveaux, des premiers pas hésitants aux patineurs de compétition.",
+    st_beginner_title: "Débutants",
+    st_beginner_text: "Apprenez les bases de l'équilibre et de la technique dans un environnement sûr.",
+    st_advanced_title: "Avancés",
+    st_advanced_text: "Perfectionnez vos virages et augmentez votre vitesse sur la glace.",
+    st_comp_title: "Compétition",
+    st_comp_text: "Entraînez-vous avec nos meilleurs athlètes et chassez les titres nationaux et internationaux.",
+    st_footer_intro: "Que vous soyez jeune ou moins jeune, nos entraîneurs expérimentés vous guident à chaque étape. Rejoignez les Ice Diamonds et vivez l'adrénaline du short-track.",
+    st_email_pre: "Envoyez un e-mail à ",
+    st_email_mid: " avec ",
+    st_email_post: " en cc pour vous inscrire ou demander un cours d'essai.",
+    st_info_sessions: "Séances : Vendredi 18:00 - 20:00",
+    st_info_levels: "Niveaux : Tous âges bienvenus",
+    st_info_gear: "Équipement : Disponible sur place",
+    st_training_title: "Infos Entraînement",
+
+    // NEW FIGURE SKATING TEXT
+    fs_desc_main: "Sous la direction de professionnels, vous apprendrez les subtilités du patinage artistique, des techniques de base gracieuses aux sauts et pirouettes puissants. Nous combinons défis sportifs et ambiance chaleureuse de club.",
+    fs_desc_sub: "Des débutants aux compétiteurs avancés, tout le monde est le bienvenu pour des cours de patinage artistique.",
+    fs_motto_title: "Jeunes et moins jeunes sont les bienvenus chez IDA",
+    fs_motto_quote: "Rêvez-vous d'atteindre le sommet absolu ? Ou cherchez-vous plutôt un passe-temps hebdomadaire ?",
+    fs_cta_text: "Inscrivez-vous à nos cours d'initiation pour apprendre à patiner ou contactez notre secrétariat à "
 
   },
 };
