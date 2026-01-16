@@ -3,15 +3,44 @@ import { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from "framer-motion";
 import LanguageSwitcher from './LanguageSwitcher';
-import { useTranslation } from "../hooks/useTranslation"; // Import hook
+import { useTranslation } from "../hooks/useTranslation";
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [isDisciplinesOpen, setIsDisciplinesOpen] = useState(false);
+    // We need state to store position so it updates if the window resizes
+    const [menuPosition, setMenuPosition] = useState({ top: 0, left: 0 });
+    
     const location = useLocation();
     const disciplinesButtonRef = useRef(null);
     const submenuRef = useRef(null);
-    const t = useTranslation(); // Initialize hook
+    const t = useTranslation();
+
+    // Helper to update position
+    const updatePosition = () => {
+        if (disciplinesButtonRef.current) {
+            const rect = disciplinesButtonRef.current.getBoundingClientRect();
+            setMenuPosition({
+                top: rect.bottom, // No scrollY needed for fixed elements
+                left: rect.left   // No scrollX needed for fixed elements
+            });
+        }
+    };
+
+    // Update position when opening
+    useEffect(() => {
+        if (isDisciplinesOpen) {
+            updatePosition();
+            // Optional: Close menu on scroll/resize to prevent misalignment
+            window.addEventListener('resize', updatePosition);
+            window.addEventListener('scroll', updatePosition); 
+        }
+        
+        return () => {
+            window.removeEventListener('resize', updatePosition);
+            window.removeEventListener('scroll', updatePosition);
+        };
+    }, [isDisciplinesOpen]);
 
     useEffect(() => {
         const handleDocumentClick = (e) => {
@@ -29,7 +58,11 @@ function Navbar() {
         setIsOpen(false);
     }, [location.pathname]);
 
-    const handleDisciplinesToggle = () => setIsDisciplinesOpen(!isDisciplinesOpen);
+    const handleDisciplinesToggle = () => {
+        // Calculate position *before* setting open state to avoid jump
+        updatePosition();
+        setIsDisciplinesOpen(!isDisciplinesOpen);
+    };
 
     const submenu = createPortal(
         <AnimatePresence>
@@ -38,12 +71,9 @@ function Navbar() {
                     ref={submenuRef}
                     className="fixed w-48 bg-white/90 backdrop-blur-md rounded-xl shadow-xl overflow-hidden border border-blue-200"
                     style={{
-                        top: disciplinesButtonRef.current
-                            ? disciplinesButtonRef.current.getBoundingClientRect().bottom + window.scrollY
-                            : 0,
-                        left: disciplinesButtonRef.current
-                            ? disciplinesButtonRef.current.getBoundingClientRect().left + window.scrollX
-                            : 0,
+                        // Use the state-based position
+                        top: menuPosition.top,
+                        left: menuPosition.left,
                         zIndex: 9999,
                     }}
                     initial={{ opacity: 0, y: -10 }}
@@ -85,14 +115,7 @@ function Navbar() {
                 <div className="hidden md:flex items-center gap-6 w-full max-w-[1300px] justify-end">
 
                     {/* MENU */}
-                    <ul className="flex items-center text-white min-w-0 justify-end
-
-    whitespace-nowrap
-    flex-nowrap
-
-    gap-3
-    xl:gap-4
-">
+                    <ul className="flex items-center text-white min-w-0 justify-end whitespace-nowrap flex-nowrap gap-3 xl:gap-4">
                         <li><Link to="/" className="hover:text-blue-200 transition">{t("nav_home")}</Link></li>
 
                         <li className="relative">
