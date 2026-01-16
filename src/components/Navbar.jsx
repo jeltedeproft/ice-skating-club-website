@@ -21,8 +21,8 @@ function Navbar() {
         if (disciplinesButtonRef.current) {
             const rect = disciplinesButtonRef.current.getBoundingClientRect();
             setMenuPosition({
-                top: rect.bottom, // No scrollY needed for fixed elements
-                left: rect.left   // No scrollX needed for fixed elements
+                top: rect.bottom, 
+                left: rect.left
             });
         }
     };
@@ -31,7 +31,6 @@ function Navbar() {
     useEffect(() => {
         if (isDisciplinesOpen) {
             updatePosition();
-            // Optional: Close menu on scroll/resize to prevent misalignment
             window.addEventListener('resize', updatePosition);
             window.addEventListener('scroll', updatePosition); 
         }
@@ -59,7 +58,6 @@ function Navbar() {
     }, [location.pathname]);
 
     const handleDisciplinesToggle = () => {
-        // Calculate position *before* setting open state to avoid jump
         updatePosition();
         setIsDisciplinesOpen(!isDisciplinesOpen);
     };
@@ -71,7 +69,6 @@ function Navbar() {
                     ref={submenuRef}
                     className="fixed w-48 bg-white/90 backdrop-blur-md rounded-xl shadow-xl overflow-hidden border border-blue-200"
                     style={{
-                        // Use the state-based position
                         top: menuPosition.top,
                         left: menuPosition.left,
                         zIndex: 9999,
@@ -104,7 +101,8 @@ function Navbar() {
                     <img
                         src={`${import.meta.env.BASE_URL}IDALogo.jpg`}
                         alt="Ice Diamonds Logo"
-                        className="h-10 w-auto rounded-md shadow-md"
+                        // UPDATED: Changed h-10 to h-16 for a bigger logo
+                        className="h-16 w-auto rounded-md shadow-md"
                     />
                     <span className="text-xl md:text-2xl font-bold text-white drop-shadow-md whitespace-nowrap">
                         Ice Diamonds Antwerp
