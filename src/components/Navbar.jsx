@@ -8,7 +8,6 @@ import { useTranslation } from "../hooks/useTranslation";
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [isDisciplinesOpen, setIsDisciplinesOpen] = useState(false);
-    // We need state to store position so it updates if the window resizes
     const [menuPosition, setMenuPosition] = useState({ top: 0, left: 0 });
     
     const location = useLocation();
@@ -16,7 +15,6 @@ function Navbar() {
     const submenuRef = useRef(null);
     const t = useTranslation();
 
-    // Helper to update position
     const updatePosition = () => {
         if (disciplinesButtonRef.current) {
             const rect = disciplinesButtonRef.current.getBoundingClientRect();
@@ -27,14 +25,12 @@ function Navbar() {
         }
     };
 
-    // Update position when opening
     useEffect(() => {
         if (isDisciplinesOpen) {
             updatePosition();
             window.addEventListener('resize', updatePosition);
             window.addEventListener('scroll', updatePosition); 
         }
-        
         return () => {
             window.removeEventListener('resize', updatePosition);
             window.removeEventListener('scroll', updatePosition);
@@ -93,15 +89,16 @@ function Navbar() {
     return (
         <nav className="bg-blue-800/90 backdrop-blur-md shadow-lg fixed w-full z-50">
             <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+                
                 {/* Logo + Title */}
                 <Link
                     to="/"
-                    className="flex items-center space-x-3 flex-shrink-0"
+                    // ADDED 'mr-6' HERE to force spacing
+                    className="flex items-center space-x-3 flex-shrink-0 mr-6"
                 >
                     <img
                         src={`${import.meta.env.BASE_URL}IDALogo.jpg`}
                         alt="Ice Diamonds Logo"
-                        // UPDATED: Changed h-10 to h-16 for a bigger logo
                         className="h-16 w-auto rounded-md shadow-md"
                     />
                     <span className="text-xl md:text-2xl font-bold text-white drop-shadow-md whitespace-nowrap">
@@ -111,11 +108,7 @@ function Navbar() {
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center gap-6 w-full max-w-[1300px] justify-end">
-
-                    {/* MENU */}
                     <ul className="flex items-center text-white min-w-0 justify-end whitespace-nowrap flex-nowrap gap-3 xl:gap-4">
-                        <li><Link to="/" className="hover:text-blue-200 transition">{t("nav_home")}</Link></li>
-
                         <li className="relative">
                             <button
                                 ref={disciplinesButtonRef}
@@ -161,7 +154,6 @@ function Navbar() {
             {/* Mobile Menu */}
             {isOpen && (
                 <div className="md:hidden bg-blue-800/95 backdrop-blur-md shadow-lg p-4 space-y-3">
-                    <Link to="/" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">Home</Link>
                     <button onClick={handleDisciplinesToggle} className="w-full text-left text-white py-2 rounded-md hover:bg-blue-700/50 transition flex justify-between items-center">Disciplines <svg className={`w-4 h-4 transform ${isDisciplinesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg></button>
                     {isDisciplinesOpen && (
                         <div className="pl-4 space-y-1">
