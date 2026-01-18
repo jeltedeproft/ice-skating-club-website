@@ -143,7 +143,7 @@ const translations = {
     vlsu: "Vlaamse Schaatsunie (VLSU)",
     member_vlsu: "Trots lid van de ",
 
-    // NEW SHORTTRACK TEXT
+    // Shorttrack
     st_title_main: "Ontdek de snelheid bij Ice Diamonds Antwerp!",
     st_intro_main: "Wij verwelkomen schaatsers van alle leeftijden en niveaus, van de eerste voorzichtige slagen tot de competitieve schaatser.",
     st_beginner_title: "Beginners",
@@ -161,14 +161,21 @@ const translations = {
     st_info_gear: "Uitrusting: Beschikbaar ter plaatse",
     st_training_title: "Traininginfo",
 
-    // NEW FIGURE SKATING TEXT
+    // Figure Skating
     fs_desc_main: "Onder professionele begeleiding leer je bij ons de fijne kneepjes van het kunstschaatsen, van sierlijke basistechnieken tot krachtige sprongen en pirouettes. We combineren sportieve uitdagingen met een warm clubgevoel.",
     fs_desc_sub: "Van beginnende recreanten tot gevorderde competitieve kan je bij ons terecht voor kunstschaatslessen.",
     fs_motto_title: "Jong en oud kan terecht bij IDA",
     fs_motto_quote: "Droom je om de absolute top te bereiken? Of zoek je liever een wekelijkse hobby?",
-    fs_cta_text: "Schrijf je in voor onze initiatie lessen om te leren schaatsen of contacteer ons secretariaat op "
+    fs_cta_text: "Schrijf je in voor onze initiatie lessen om te leren schaatsen of contacteer ons secretariaat op ",
 
+    // NEW: Schedule & Calendar Disclaimer
+    schedule_title: "Uurrooster",
+    schedule_intro_text: "Bekijk hieronder ons actuele rooster.",
+    schedule_disclaimer_title: "Let op:",
+    schedule_disclaimer_text: "Deze kalender synchroniseert automatisch met Twizzit, maar er kan een vertraging van 12 tot 24 uur zijn. Voor last-minute wijzigingen of annuleringen, controleer altijd je Twizzit-app of e-mail.",
+    schedule_open_full: "Open volledige kalender"
   },
+  
   en: {
     //general
     readMore: "Read More",
@@ -313,7 +320,7 @@ const translations = {
     vlsu: "Flemish IceSkating Union (VLSU)",
     member_vlsu: "Proud member of the ",
 
-    // NEW SHORTTRACK TEXT
+    // Shorttrack
     st_title_main: "Discover the speed at Ice Diamonds Antwerp!",
     st_intro_main: "We welcome skaters of all ages and levels, from the first tentative strokes to the competitive skater.",
     st_beginner_title: "Beginners",
@@ -331,14 +338,21 @@ const translations = {
     st_info_gear: "Equipment: Available on site",
     st_training_title: "Training Info",
 
-    // NEW FIGURE SKATING TEXT
+    // Figure Skating
     fs_desc_main: "Under professional guidance, you will learn the intricacies of figure skating, from graceful basic techniques to powerful jumps and spins. We combine sporting challenges with a warm club feeling.",
     fs_desc_sub: "From beginner recreational to advanced competitive skaters, everyone is welcome for figure skating lessons.",
     fs_motto_title: "Young and old are welcome at IDA",
     fs_motto_quote: "Do you dream of reaching the absolute top? Or are you looking for a weekly hobby?",
-    fs_cta_text: "Sign up for our initiation lessons to learn to skate or contact our secretariat at "
+    fs_cta_text: "Sign up for our initiation lessons to learn to skate or contact our secretariat at ",
 
+    // NEW: Schedule & Calendar Disclaimer
+    schedule_title: "Schedule",
+    schedule_intro_text: "View our current schedule below.",
+    schedule_disclaimer_title: "Note:",
+    schedule_disclaimer_text: "This calendar syncs automatically with Twizzit, but there may be a delay of 12 to 24 hours. For last-minute changes or cancellations, always check your Twizzit app or email.",
+    schedule_open_full: "Open full calendar"
   },
+  
   fr: {
     //general
     readMore: "Lire la suite",
@@ -483,7 +497,7 @@ const translations = {
     vlsu: "Union Flamande de Patinage (VLSU)",
     member_vlsu: "Fier membre de l'",
 
-    // NEW SHORTTRACK TEXT
+    // Shorttrack
     st_title_main: "Découvrez la vitesse chez Ice Diamonds Antwerp !",
     st_intro_main: "Nous accueillons des patineurs de tous âges et de tous niveaux, des premiers pas hésitants aux patineurs de compétition.",
     st_beginner_title: "Débutants",
@@ -501,13 +515,19 @@ const translations = {
     st_info_gear: "Équipement : Disponible sur place",
     st_training_title: "Infos Entraînement",
 
-    // NEW FIGURE SKATING TEXT
+    // Figure Skating
     fs_desc_main: "Sous la direction de professionnels, vous apprendrez les subtilités du patinage artistique, des techniques de base gracieuses aux sauts et pirouettes puissants. Nous combinons défis sportifs et ambiance chaleureuse de club.",
     fs_desc_sub: "Des débutants aux compétiteurs avancés, tout le monde est le bienvenu pour des cours de patinage artistique.",
     fs_motto_title: "Jeunes et moins jeunes sont les bienvenus chez IDA",
     fs_motto_quote: "Rêvez-vous d'atteindre le sommet absolu ? Ou cherchez-vous plutôt un passe-temps hebdomadaire ?",
-    fs_cta_text: "Inscrivez-vous à nos cours d'initiation pour apprendre à patiner ou contactez notre secrétariat à "
+    fs_cta_text: "Inscrivez-vous à nos cours d'initiation pour apprendre à patiner ou contactez notre secrétariat à ",
 
+    // NEW: Schedule & Calendar Disclaimer
+    schedule_title: "Horaire",
+    schedule_intro_text: "Consultez notre horaire actuel ci-dessous.",
+    schedule_disclaimer_title: "Attention :",
+    schedule_disclaimer_text: "Ce calendrier se synchronise automatiquement avec Twizzit, mais il peut y avoir un délai de 12 à 24 heures. Pour les changements de dernière minute ou les annulations, vérifiez toujours votre application Twizzit ou vos e-mails.",
+    schedule_open_full: "Ouvrir le calendrier complet"
   },
 };
 
