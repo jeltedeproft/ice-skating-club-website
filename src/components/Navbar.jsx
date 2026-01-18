@@ -6,18 +6,29 @@ import LanguageSwitcher from './LanguageSwitcher';
 import { useTranslation } from "../hooks/useTranslation";
 
 function Navbar() {
-    const [isOpen, setIsOpen] = useState(false);
-    const [isDisciplinesOpen, setIsDisciplinesOpen] = useState(false);
+    // STATE 1: Mobile Hamburger Menu
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    
+    // STATE 2: Desktop Popup Menu (Floating)
+    const [desktopDisciplinesOpen, setDesktopDisciplinesOpen] = useState(false);
+    
+    // STATE 3: Mobile Accordion Menu (Inline)
+    const [mobileDisciplinesOpen, setMobileDisciplinesOpen] = useState(false);
+
     const [menuPosition, setMenuPosition] = useState({ top: 0, left: 0 });
     
     const location = useLocation();
-    const disciplinesButtonRef = useRef(null);
+    
+    // Refs for Desktop interactions only
+    const desktopButtonRef = useRef(null);
     const submenuRef = useRef(null);
+    
     const t = useTranslation();
 
-    const updatePosition = () => {
-        if (disciplinesButtonRef.current) {
-            const rect = disciplinesButtonRef.current.getBoundingClientRect();
+    // Calculate position only for Desktop
+    const updateDesktopPosition = () => {
+        if (desktopButtonRef.current) {
+            const rect = desktopButtonRef.current.getBoundingClientRect();
             setMenuPosition({
                 top: rect.bottom, 
                 left: rect.left
@@ -25,42 +36,47 @@ function Navbar() {
         }
     };
 
+    // Desktop: Handle resize/scroll for the floating popup
     useEffect(() => {
-        if (isDisciplinesOpen) {
-            updatePosition();
-            window.addEventListener('resize', updatePosition);
-            window.addEventListener('scroll', updatePosition); 
+        if (desktopDisciplinesOpen) {
+            updateDesktopPosition();
+            window.addEventListener('resize', updateDesktopPosition);
+            window.addEventListener('scroll', updateDesktopPosition); 
         }
         return () => {
-            window.removeEventListener('resize', updatePosition);
-            window.removeEventListener('scroll', updatePosition);
+            window.removeEventListener('resize', updateDesktopPosition);
+            window.removeEventListener('scroll', updateDesktopPosition);
         };
-    }, [isDisciplinesOpen]);
+    }, [desktopDisciplinesOpen]);
 
+    // Desktop: Click outside to close
     useEffect(() => {
         const handleDocumentClick = (e) => {
-            if (disciplinesButtonRef.current && !disciplinesButtonRef.current.contains(e.target) &&
+            if (desktopButtonRef.current && !desktopButtonRef.current.contains(e.target) &&
                 submenuRef.current && !submenuRef.current.contains(e.target)) {
-                setIsDisciplinesOpen(false);
+                setDesktopDisciplinesOpen(false);
             }
         };
         document.addEventListener('mousedown', handleDocumentClick);
         return () => document.removeEventListener('mousedown', handleDocumentClick);
     }, []);
 
+    // Reset all menus on route change
     useEffect(() => {
-        setIsDisciplinesOpen(false);
-        setIsOpen(false);
+        setDesktopDisciplinesOpen(false);
+        setMobileDisciplinesOpen(false);
+        setIsMobileMenuOpen(false);
     }, [location.pathname]);
 
-    const handleDisciplinesToggle = () => {
-        updatePosition();
-        setIsDisciplinesOpen(!isDisciplinesOpen);
+    const handleDesktopToggle = () => {
+        updateDesktopPosition();
+        setDesktopDisciplinesOpen(!desktopDisciplinesOpen);
     };
 
-    const submenu = createPortal(
+    // This is the Desktop Popup Portal
+    const desktopSubmenu = createPortal(
         <AnimatePresence>
-            {isDisciplinesOpen && (
+            {desktopDisciplinesOpen && (
                 <motion.ul
                     ref={submenuRef}
                     className="fixed w-48 bg-white/90 backdrop-blur-md rounded-xl shadow-xl overflow-hidden border border-blue-200"
@@ -88,36 +104,42 @@ function Navbar() {
 
     return (
         <nav className="bg-blue-800/90 backdrop-blur-md shadow-lg fixed w-full z-50">
-            <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+            <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 flex justify-between items-center">
                 
                 {/* Logo + Title */}
                 <Link
                     to="/"
-                    // ADDED 'mr-6' HERE to force spacing
-                    className="flex items-center space-x-3 flex-shrink-0 mr-6"
+                    // CHANGED: Removed 'mr-6' to give more space on tiny screens
+                    // Added 'overflow-hidden' to prevent blowout
+                    className="flex items-center space-x-3 flex-1 md:flex-none min-w-0"
                 >
                     <img
                         src={`${import.meta.env.BASE_URL}IDALogo.jpg`}
                         alt="Ice Diamonds Logo"
-                        className="h-16 w-auto rounded-md shadow-md"
+                        className="h-12 md:h-16 w-auto rounded-md shadow-md flex-shrink-0"
                     />
-                    <span className="text-xl md:text-2xl font-bold text-white drop-shadow-md whitespace-nowrap">
+                    {/* CHANGED: 
+                        1. whitespace-normal (allows wrapping on tiny phones) 
+                        2. leading-tight (looks better if wrapped)
+                        3. text-lg on mobile (slightly smaller to fit)
+                    */}
+                    <span className="text-lg md:text-2xl font-bold text-white drop-shadow-md whitespace-normal md:whitespace-nowrap leading-tight">
                         Ice Diamonds Antwerp
                     </span>
                 </Link>
 
-                {/* Desktop Menu */}
+                {/* Desktop Menu (Hidden on Mobile) */}
                 <div className="hidden md:flex items-center gap-6 w-full max-w-[1300px] justify-end">
                     <ul className="flex items-center text-white min-w-0 justify-end whitespace-nowrap flex-nowrap gap-3 xl:gap-4">
                         <li className="relative">
                             <button
-                                ref={disciplinesButtonRef}
-                                onClick={handleDisciplinesToggle}
+                                ref={desktopButtonRef}
+                                onClick={handleDesktopToggle}
                                 className="hover:text-blue-200 transition flex items-center gap-1 whitespace-nowrap"
                             >
                                 {t("nav_disciplines")}
                                 <svg
-                                    className={`w-4 h-4 transform ${isDisciplinesOpen ? 'rotate-180' : ''}`}
+                                    className={`w-4 h-4 transform ${desktopDisciplinesOpen ? 'rotate-180' : ''}`}
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
@@ -137,43 +159,57 @@ function Navbar() {
                         <li><Link to="/info" className="hover:text-blue-200 transition whitespace-nowrap">{t("nav_info")}</Link></li>
                     </ul>
 
-                    {/* LANGUAGES */}
                     <div className="flex-shrink-0 ml-4">
                         <LanguageSwitcher />
                     </div>
                 </div>
 
-                {/* Mobile Menu Button */}
-                <div className="md:hidden">
-                    <button onClick={() => setIsOpen(!isOpen)} className="text-white p-2 rounded-md hover:bg-blue-700/40 transition">
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+                {/* Mobile Menu Button (Hamburger) */}
+                {/* CHANGED: Added flex-shrink-0 so it never gets squashed */}
+                <div className="md:hidden flex-shrink-0 ml-2">
+                    <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-white p-2 rounded-md hover:bg-blue-700/40 transition">
+                        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
                     </button>
                 </div>
             </div>
 
-            {/* Mobile Menu */}
-            {isOpen && (
-                <div className="md:hidden bg-blue-800/95 backdrop-blur-md shadow-lg p-4 space-y-3">
-                    <button onClick={handleDisciplinesToggle} className="w-full text-left text-white py-2 rounded-md hover:bg-blue-700/50 transition flex justify-between items-center">Disciplines <svg className={`w-4 h-4 transform ${isDisciplinesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg></button>
-                    {isDisciplinesOpen && (
-                        <div className="pl-4 space-y-1">
-                            <Link to="/figure-skating" className="block text-white py-1 hover:bg-blue-700/50 rounded-md transition">Kunstschaatsen</Link>
-                            <Link to="/short-track" className="block text-white py-1 hover:bg-blue-700/50 rounded-md transition">Shorttrack</Link>
+            {/* Mobile Menu Dropdown */}
+            {isMobileMenuOpen && (
+                <div className="md:hidden bg-blue-800/95 backdrop-blur-md shadow-lg p-4 space-y-3 max-h-[80vh] overflow-y-auto">
+                    {/* Mobile Disciplines Toggle (Inline Accordion) */}
+                    <button 
+                        onClick={() => setMobileDisciplinesOpen(!mobileDisciplinesOpen)} 
+                        className="w-full text-left text-white py-2 rounded-md hover:bg-blue-700/50 transition flex justify-between items-center"
+                    >
+                        {t("nav_disciplines")} 
+                        <svg className={`w-4 h-4 transform ${mobileDisciplinesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
+                    </button>
+                    
+                    {/* Inline Submenu */}
+                    {mobileDisciplinesOpen && (
+                        <div className="pl-4 space-y-1 border-l-2 border-blue-400/30 ml-2">
+                            <Link to="/figure-skating" className="block text-white py-2 px-2 hover:bg-blue-700/50 rounded-md transition">{t("nav_fs")}</Link>
+                            <Link to="/short-track" className="block text-white py-2 px-2 hover:bg-blue-700/50 rounded-md transition">{t("nav_st")}</Link>
                         </div>
                     )}
+
                     <Link to="/schedule" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">{t("nav_schedule")}</Link>
                     <Link to="/calendar" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">{t("nav_calendar")}</Link>
                     <Link to="/news" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">{t("nav_news")}</Link>
                     <Link to="/initiations" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">{t("nav_initiations")}</Link>
-                    <Link to="/team" className="hover:text-blue-200 transition">{t("nav_team")}</Link>
+                    <Link to="/team" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">{t("nav_team")}</Link>
                     <Link to="/contact" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">{t("nav_contact")}</Link>
                     <Link to="/policies" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">{t("nav_policies")}</Link>
                     <Link to="/info" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">{t("nav_info")}</Link>
-                    <LanguageSwitcher />
+                    
+                    <div className="pt-2 border-t border-blue-700">
+                        <LanguageSwitcher />
+                    </div>
                 </div>
             )}
 
-            {submenu}
+            {/* Render the Desktop Portal only */}
+            {desktopSubmenu}
         </nav>
     );
 }

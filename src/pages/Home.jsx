@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from "../hooks/useTranslation";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; 
 
 function Home() {
     const t = useTranslation();
@@ -29,35 +29,46 @@ function Home() {
                     <p className="text-lg text-gray-700 mb-4">
                         {t("intro")}
                     </p>
-                    {/* Explicit Affiliation Link */}
                     <p className="text-sm text-gray-500">
                         {t("member_vlsu")} <a href="https://www.vlsu.be" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">{t("vlsu")}</a>.
                     </p>
                 </div>
+                
                 {/* Categories */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
                     {/* Figure Skating */}
-                    <div className="bg-white/90 backdrop-blur-md rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div className="bg-white/90 backdrop-blur-md rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col h-full">
                         <img src={`${import.meta.env.BASE_URL}Kunstschaatsen Loena Hendrickx Foto.jpg`} alt="Figure Skating"
                             className="h-72 w-full object-cover" />
-                        <div className="p-6">
+                        <div className="p-6 flex flex-col flex-grow">
                             <h2 className="text-xl font-bold text-blue-900 mb-2">{t("figureSkating")}</h2>
-                            <p className="text-gray-600 mb-4">{t("home_fs_desc")}</p>
-                            <a href="/figure-skating" className="text-blue-700 font-semibold hover:underline">{t("readMore")} →</a>
+                            
+                            {/* USE TRANSLATION KEY HERE */}
+                            <p className="text-gray-600 mb-4 flex-grow">
+                                {t("home_fs_desc")}
+                            </p>
+                            
+                            <Link to="/figure-skating" className="text-blue-700 font-semibold hover:underline mt-auto">{t("readMore")} →</Link>
                         </div>
                     </div>
 
                     {/* Shorttrack */}
-                    <div className="bg-white/90 backdrop-blur-md rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div className="bg-white/90 backdrop-blur-md rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col h-full">
                         <img src={`${import.meta.env.BASE_URL}Shorttrack Hanne Desmet Foto.png`} alt="Shorttrack"
                             className="h-72 w-full object-cover" />
-                        <div className="p-6">
+                        <div className="p-6 flex flex-col flex-grow">
                             <h2 className="text-xl font-bold text-blue-900 mb-2">{t("shorttrack")}</h2>
-                            <p className="text-gray-600 mb-4">{t("home_st_desc")}</p>
-                            <a href="/shorttrack" className="text-blue-700 font-semibold hover:underline">{t("readMore")} →</a>
+                            
+                            {/* USE TRANSLATION KEY HERE */}
+                            <p className="text-gray-600 mb-4 flex-grow">
+                                {t("home_st_desc")}
+                            </p>
+                            
+                            <Link to="/short-track" className="text-blue-700 font-semibold hover:underline mt-auto">{t("readMore")} →</Link>
                         </div>
                     </div>
                 </div>
+
                 {/* Initiations */}
                 <div className="mt-16 text-center">
                     <h2 className="text-3xl font-bold text-blue-900 mb-6">{t("home_initiation_section_title")}</h2>
@@ -65,10 +76,10 @@ function Home() {
                         {t("home_initiation_section_text")}
                     </p>
 
-                    <a href="/initiations"
+                    <Link to="/initiations"
                         className="inline-block bg-blue-900 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-blue-800 transition">
                         {t("home_initiation_section_btn")}
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="mt-12 text-center">
