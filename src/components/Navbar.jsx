@@ -104,13 +104,12 @@ function Navbar() {
 
     return (
         <nav className="bg-blue-800/90 backdrop-blur-md shadow-lg fixed w-full z-50">
-            <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 flex justify-between items-center">
+            {/* CHANGED: Added 'gap-4' here. This forces space between Logo and Menu Button */}
+            <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 flex justify-between items-center gap-4">
                 
                 {/* Logo + Title */}
                 <Link
                     to="/"
-                    // CHANGED: Removed 'mr-6' to give more space on tiny screens
-                    // Added 'overflow-hidden' to prevent blowout
                     className="flex items-center space-x-3 flex-1 md:flex-none min-w-0"
                 >
                     <img
@@ -118,11 +117,6 @@ function Navbar() {
                         alt="Ice Diamonds Logo"
                         className="h-12 md:h-16 w-auto rounded-md shadow-md flex-shrink-0"
                     />
-                    {/* CHANGED: 
-                        1. whitespace-normal (allows wrapping on tiny phones) 
-                        2. leading-tight (looks better if wrapped)
-                        3. text-lg on mobile (slightly smaller to fit)
-                    */}
                     <span className="text-lg md:text-2xl font-bold text-white drop-shadow-md whitespace-normal md:whitespace-nowrap leading-tight">
                         Ice Diamonds Antwerp
                     </span>
@@ -165,8 +159,8 @@ function Navbar() {
                 </div>
 
                 {/* Mobile Menu Button (Hamburger) */}
-                {/* CHANGED: Added flex-shrink-0 so it never gets squashed */}
-                <div className="md:hidden flex-shrink-0 ml-2">
+                {/* CHANGED: Removed 'ml-2' because 'gap-4' on the parent handles the spacing now */}
+                <div className="md:hidden flex-shrink-0">
                     <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-white p-2 rounded-md hover:bg-blue-700/40 transition">
                         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
                     </button>
