@@ -178,7 +178,15 @@ const translations = {
     news_title: "Clubnieuws",
     news_intro: "Blijf op de hoogte van het laatste nieuws, evenementen en aankondigingen via ons Twizzit-portaal.",
     news_open_twizzit: "Lees artikel op Twizzit",
-    news_disclaimer: "Zie je een inlogscherm? Klik dan op de knop hieronder om het nieuws direct in de Twizzit-app te openen."
+    news_disclaimer: "Zie je een inlogscherm? Klik dan op de knop hieronder om het nieuws direct in de Twizzit-app te openen.",
+
+    // TEAM TABS
+    team_title: "Ons Team",
+    team_intro: "Maak kennis met onze coaches en staff die elke dag het beste uit onze schaatsers halen.",
+    team_tab_st: "Shorttrack",
+    team_tab_fs: "Kunstschaatsen",
+    team_tab_staff: "Bestuur & Staff",
+    team_coming_soon: "Foto's en info volgen binnenkort."
   },
   
   en: {
@@ -360,7 +368,15 @@ const translations = {
     news_title: "Club News",
     news_intro: "Stay up to date with the latest news, events, and announcements via our Twizzit portal.",
     news_open_twizzit: "Read article on Twizzit",
-    news_disclaimer: "Do you see a login screen? Click the button below to open the news directly in the Twizzit app."
+    news_disclaimer: "Do you see a login screen? Click the button below to open the news directly in the Twizzit app.",
+
+    // TEAM TABS
+    team_title: "Our Team",
+    team_intro: "Meet our coaches and staff who get the best out of our skaters every day.",
+    team_tab_st: "Shorttrack",
+    team_tab_fs: "Figure Skating",
+    team_tab_staff: "Board & Staff",
+    team_coming_soon: "Photos and info coming soon."
   },
   
   fr: {
@@ -542,7 +558,15 @@ const translations = {
     news_title: "Actualités du Club",
     news_intro: "Restez au courant des dernières nouvelles, événements et annonces via notre portail Twizzit.",
     news_open_twizzit: "Lire l'article sur Twizzit",
-    news_disclaimer: "Vous voyez un écran de connexion ? Cliquez sur le bouton ci-dessous pour ouvrir les nouvelles directement dans l'application Twizzit."
+    news_disclaimer: "Vous voyez un écran de connexion ? Cliquez sur le bouton ci-dessous pour ouvrir les nouvelles directement dans l'application Twizzit.",
+
+    // TEAM TABS
+    team_title: "Notre Équipe",
+    team_intro: "Rencontrez nos entraîneurs et notre personnel qui tirent le meilleur parti de nos patineurs chaque jour.",
+    team_tab_st: "Short-track",
+    team_tab_fs: "Patinage Artistique",
+    team_tab_staff: "Conseil & Staff",
+    team_coming_soon: "Photos et infos à venir."
   },
 };
 
