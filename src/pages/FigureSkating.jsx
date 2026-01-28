@@ -1,8 +1,13 @@
-import React from 'react';
-import { useTranslation } from "../hooks/useTranslation"; // Make sure path is correct
+import React, { useEffect } from 'react'; // Added useEffect import
+import { useTranslation } from "../hooks/useTranslation"; 
 
 function FigureSkating() {
   const t = useTranslation();
+
+  // NEW: Scroll to top when this component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // List of brevet IDs to map through
   const brevets = [

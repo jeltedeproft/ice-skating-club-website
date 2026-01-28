@@ -1,8 +1,13 @@
-import React from 'react';
-import { useTranslation } from "../hooks/useTranslation"; // Make sure path is correct
+import React, { useEffect } from 'react'; // Added useEffect import
+import { useTranslation } from "../hooks/useTranslation"; 
 
 function ShortTrack() {
   const t = useTranslation();
+
+  // NEW: Scroll to top when this component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 via-cyan-50 to-white animate-gradient">
