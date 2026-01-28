@@ -7,15 +7,13 @@ function Home() {
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-100 via-cyan-50 to-white animate-gradient">
             {/* Hero Section */}
-            {/* UPDATED: Reduced height to h-[60vh] */}
             <div className="relative w-full h-[60vh] min-h-[450px] bg-cover bg-center flex flex-col items-center justify-center text-center pt-16"
                 style={{ backgroundImage: `url(${import.meta.env.BASE_URL}hero_banner.jpg)` }}>
                 
-                {/* UPDATED: Made logo wider (w-64 to w-80) and auto height */}
                 <img 
                     src={`${import.meta.env.BASE_URL}IDA logo Zwart 3.png`} 
                     alt="Ice Diamonds Antwerp Logo" 
-                    className="w-128 md:w-80 h-auto mx-auto mb-6 drop-shadow-2xl"
+                    className="w-80 md:w-96 h-auto mx-auto mb-6 drop-shadow-2xl"
                 />
 
                 <div className="bg-blue-900/60 p-8 rounded-2xl max-w-2xl mx-4 backdrop-blur-sm">
@@ -115,19 +113,20 @@ function Home() {
                     <h2 className="text-2xl font-bold text-gray-400 mb-8 uppercase tracking-widest">{t("partners")}</h2>
                     <div className="grid grid-cols-2 md:grid-cols-5 gap-8 justify-items-center items-center opacity-80 hover:opacity-100 transition-opacity">
                         <a href="https://www.antwerpen.be" target="_blank" rel="noopener noreferrer">
-                            <img src={`${import.meta.env.BASE_URL}stad_antwerpen.jpg`} alt="Stad Antwerpen Logo" className="h-16 object-contain grayscale hover:grayscale-0 transition duration-300" />
+                            {/* UPDATED: Changed h-16 to h-24 md:h-32 */}
+                            <img src={`${import.meta.env.BASE_URL}stad_antwerpen.jpg`} alt="Stad Antwerpen Logo" className="h-24 md:h-32 object-contain grayscale hover:grayscale-0 transition duration-300" />
                         </a>
                         <a href="https://www.skatebelgium.be" target="_blank" rel="noopener noreferrer">
-                            <img src={`${import.meta.env.BASE_URL}kbkf.jpeg`} alt="K.B.K.F. Logo" className="h-16 object-contain grayscale hover:grayscale-0 transition duration-300" />
+                            <img src={`${import.meta.env.BASE_URL}kbkf.jpeg`} alt="K.B.K.F. Logo" className="h-24 md:h-32 object-contain grayscale hover:grayscale-0 transition duration-300" />
                         </a>
                         <a href="https://www.kbsf.be" target="_blank" rel="noopener noreferrer">
-                            <img src={`${import.meta.env.BASE_URL}kbsf.png`} alt="K.B.S.F. Logo" className="h-16 object-contain grayscale hover:grayscale-0 transition duration-300" />
+                            <img src={`${import.meta.env.BASE_URL}kbsf.png`} alt="K.B.S.F. Logo" className="h-24 md:h-32 object-contain grayscale hover:grayscale-0 transition duration-300" />
                         </a>
                         <a href="https://www.vlsu.be" target="_blank" rel="noopener noreferrer">
-                            <img src={`${import.meta.env.BASE_URL}vlsu.png`} alt="VLSU Logo" className="h-16 object-contain grayscale hover:grayscale-0 transition duration-300" />
+                            <img src={`${import.meta.env.BASE_URL}vlsu.png`} alt="VLSU Logo" className="h-24 md:h-32 object-contain grayscale hover:grayscale-0 transition duration-300" />
                         </a>
                         <a href="https://www.thefoodmaker.com" target="_blank" rel="noopener noreferrer">
-                            <img src={`${import.meta.env.BASE_URL}foodmaker.png`} alt="Foodmaker Logo" className="h-16 object-contain grayscale hover:grayscale-0 transition duration-300" />
+                            <img src={`${import.meta.env.BASE_URL}foodmaker.png`} alt="Foodmaker Logo" className="h-24 md:h-32 object-contain grayscale hover:grayscale-0 transition duration-300" />
                         </a>
                     </div>
                 </div>
