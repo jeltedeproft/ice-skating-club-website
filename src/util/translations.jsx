@@ -173,7 +173,12 @@ const translations = {
     schedule_intro_text: "Bekijk hieronder ons actuele rooster.",
     schedule_disclaimer_title: "Let op:",
     schedule_disclaimer_text: "Deze kalender synchroniseert automatisch met Twizzit, maar er kan een vertraging van 12 tot 24 uur zijn. Voor last-minute wijzigingen of annuleringen, controleer altijd je Twizzit-app of e-mail.",
-    schedule_open_full: "Open volledige kalender"
+    schedule_open_full: "Open volledige kalender",
+
+    news_title: "Clubnieuws",
+    news_intro: "Blijf op de hoogte van het laatste nieuws, evenementen en aankondigingen via ons Twizzit-portaal.",
+    news_open_twizzit: "Lees artikel op Twizzit",
+    news_disclaimer: "Zie je een inlogscherm? Klik dan op de knop hieronder om het nieuws direct in de Twizzit-app te openen."
   },
   
   en: {
@@ -350,7 +355,12 @@ const translations = {
     schedule_intro_text: "View our current schedule below.",
     schedule_disclaimer_title: "Note:",
     schedule_disclaimer_text: "This calendar syncs automatically with Twizzit, but there may be a delay of 12 to 24 hours. For last-minute changes or cancellations, always check your Twizzit app or email.",
-    schedule_open_full: "Open full calendar"
+    schedule_open_full: "Open full calendar",
+
+    news_title: "Club News",
+    news_intro: "Stay up to date with the latest news, events, and announcements via our Twizzit portal.",
+    news_open_twizzit: "Read article on Twizzit",
+    news_disclaimer: "Do you see a login screen? Click the button below to open the news directly in the Twizzit app."
   },
   
   fr: {
@@ -527,7 +537,12 @@ const translations = {
     schedule_intro_text: "Consultez notre horaire actuel ci-dessous.",
     schedule_disclaimer_title: "Attention :",
     schedule_disclaimer_text: "Ce calendrier se synchronise automatiquement avec Twizzit, mais il peut y avoir un délai de 12 à 24 heures. Pour les changements de dernière minute ou les annulations, vérifiez toujours votre application Twizzit ou vos e-mails.",
-    schedule_open_full: "Ouvrir le calendrier complet"
+    schedule_open_full: "Ouvrir le calendrier complet",
+
+    news_title: "Actualités du Club",
+    news_intro: "Restez au courant des dernières nouvelles, événements et annonces via notre portail Twizzit.",
+    news_open_twizzit: "Lire l'article sur Twizzit",
+    news_disclaimer: "Vous voyez un écran de connexion ? Cliquez sur le bouton ci-dessous pour ouvrir les nouvelles directement dans l'application Twizzit."
   },
 };
 
