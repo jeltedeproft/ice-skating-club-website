@@ -1,108 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { Calendar, momentLocalizer, Views } from 'react-big-calendar';
-import moment from 'moment';
-import 'react-big-calendar/lib/css/react-big-calendar.css';
-import axios from 'axios';
-import { fetchBelgianEvents, fetchShortTrackEvents } from '../util/fetchEvents';
-
-const localizer = momentLocalizer(moment);
+import React from 'react';
 
 function ClubCalendar() {
-  const [events, setEvents] = useState([]);
-  const [view, setView] = useState(Views.MONTH);
-  const [date, setDate] = useState(new Date());
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  const AIRTABLE_PERSONAL_ACCESS_TOKEN = import.meta.env.VITE_AIRTABLE_PAT;
-  const AIRTABLE_BASE = import.meta.env.VITE_AIRTABLE_BASE;
-  const AIRTABLE_TABLE = import.meta.env.VITE_AIRTABLE_TABLE;
-
-  const fetchAllEvents = async () => {
-    setLoading(true);
-    setError(null);
-
-    try {
-      // Fetch Airtable events
-      let airtableEvents = [];
-      if (AIRTABLE_PERSONAL_ACCESS_TOKEN && AIRTABLE_BASE && AIRTABLE_TABLE) {
-        const res = await axios.get(`https://api.airtable.com/v0/${AIRTABLE_BASE}/${AIRTABLE_TABLE}`, {
-          headers: {
-            Authorization: `Bearer ${AIRTABLE_PERSONAL_ACCESS_TOKEN}`,
-            'Content-Type': 'application/json',
-          },
-        });
-
-        airtableEvents = res.data.records.map(r => ({
-          title: r.fields.Title,
-          start: new Date(r.fields.Start),
-          end: new Date(r.fields.End),
-          resource: { source: 'Airtable' },
-        }));
-      } else {
-        console.error('Missing Airtable environment variables!');
-      }
-
-      // Fetch external events
-      const belgianEvents = await fetchBelgianEvents();
-      const shortTrackEvents = await fetchShortTrackEvents();
-
-      // Merge all events
-      setEvents([...airtableEvents, ...belgianEvents, ...shortTrackEvents]);
-      if (belgianEvents.length === 0 && shortTrackEvents.length === 0) {
-        setError('Geen externe evenementen geladen. Probeer opnieuw of neem contact op met de ondersteuning.');
-      }
-    } catch (err) {
-      console.error('Error fetching events:', err);
-      setError('Kon evenementen niet laden. Probeer opnieuw of neem contact op met de ondersteuning.');
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchAllEvents();
-  }, [AIRTABLE_PERSONAL_ACCESS_TOKEN, AIRTABLE_BASE, AIRTABLE_TABLE]);
-
-  const onViewChange = newView => setView(newView);
-
-  const onNavigate = action => {
-    let newDate = moment(date);
-    switch (view) {
-      case Views.DAY:
-        newDate.add(action === 'NEXT' ? 1 : -1, 'day');
-        break;
-      case Views.WEEK:
-        newDate.add(action === 'NEXT' ? 1 : -1, 'week');
-        break;
-      case Views.MONTH:
-      case Views.AGENDA:
-      default:
-        newDate.add(action === 'NEXT' ? 1 : -1, 'month');
-        break;
-    }
-    setDate(newDate.toDate());
-  };
-
-  const getToolbarTitle = () => {
-    switch (view) {
-      case Views.DAY:
-        return moment(date).format('dddd, D MMMM YYYY');
-      case Views.WEEK: {
-        const startOfWeek = moment(date).startOf('week').format('D MMM');
-        const endOfWeek = moment(date).endOf('week').format('D MMM YYYY');
-        return `${startOfWeek} - ${endOfWeek}`;
-      }
-      case Views.MONTH:
-        return moment(date).format('MMMM YYYY');
-      case Views.AGENDA:
-      default:
-        return 'Agenda';
-    }
-  };
+  // Path to your PDF in the public folder
+  const pdfUrl = "Uurrooster seizoen 2025_2026_1.pdf";
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 via-cyan-50 to-white animate-gradient">
+      
+      {/* Hero Section - Kept consistent with your other pages */}
       <div className="relative w-full h-64 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-50"
@@ -114,64 +19,59 @@ function ClubCalendar() {
           </h1>
         </div>
       </div>
+
+      {/* Main Content */}
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-2xl">
-          {loading && (
-            <p className="text-center text-gray-600 mb-4">Evenementen worden geladen...</p>
-          )}
-          {error && (
-            <div className="text-center mb-4">
-              <p className="text-red-600">{error}</p>
-              <button
-                onClick={fetchAllEvents}
-                className="mt-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition duration-200"
-              >
-                Opnieuw proberen
-              </button>
+          
+          <div className="flex flex-col items-center space-y-6">
+            
+            {/* Header / Intro */}
+            <div className="text-center">
+              <h2 className="text-2xl font-bold text-blue-900 mb-2">Uurrooster Seizoen 2025-2026</h2>
+              <p className="text-gray-600 mb-4">
+                Hieronder vindt u het volledige schema. Kunt u het bestand niet zien? 
+                <a href={pdfUrl} target="_blank" rel="noreferrer" className="text-blue-600 font-bold hover:underline ml-1">
+                  Klik hier om het te downloaden.
+                </a>
+              </p>
             </div>
-          )}
-          <Calendar
-            localizer={localizer}
-            events={events}
-            startAccessor="start"
-            endAccessor="end"
-            view={view}
-            onView={onViewChange}
-            date={date}
-            onNavigate={onNavigate}
-            style={{ height: 600 }}
-            className="text-gray-800 rounded-xl"
-            eventPropGetter={event => ({
-              style: {
-                background:
-                  event.resource.source === 'Airtable'
-                    ? 'linear-gradient(45deg, #3B82F6, #60A5FA)'
-                    : event.resource.source === 'Belgian Figure Skating'
-                    ? 'linear-gradient(45deg, #1E3A8A, #3B82F6)'
-                    : 'linear-gradient(45deg, #047857, #34D399)',
-                color: 'white',
-                borderRadius: '8px',
-                border: 'none',
-                boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-              },
-            })}
-            components={{
-              toolbar: props => (
-                <div className="rbc-toolbar bg-white/80 backdrop-blur-md p-4 rounded-t-xl flex flex-col items-center mb-4 border-b border-blue-200/50">
-                  <h2 className="text-2xl font-bold text-blue-900 mb-3">{getToolbarTitle()}</h2>
-                  <div className="flex space-x-3 flex-wrap justify-center">
-                    <button onClick={() => onNavigate('PREV')} className="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition duration-200">Vorige</button>
-                    <button onClick={() => onNavigate('NEXT')} className="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition duration-200">Volgende</button>
-                    <button onClick={() => onViewChange(Views.DAY)} className="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition duration-200">Dag</button>
-                    <button onClick={() => onViewChange(Views.WEEK)} className="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition duration-200">Week</button>
-                    <button onClick={() => onViewChange(Views.MONTH)} className="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition duration-200">Maand</button>
-                    <button onClick={() => onViewChange(Views.AGENDA)} className="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition duration-200">Agenda</button>
-                  </div>
-                </div>
-              ),
-            }}
-          />
+
+            {/* PDF Viewer */}
+            <div className="w-full h-[800px] border-2 border-blue-100 rounded-lg overflow-hidden shadow-inner bg-gray-100">
+              <iframe
+                src={`${pdfUrl}#view=FitH`}
+                title="Schaats Kalender"
+                width="100%"
+                height="100%"
+                className="w-full h-full"
+              >
+                <p className="p-4 text-center">
+                  Uw browser ondersteunt geen PDF-weergave. 
+                  <a href={pdfUrl} className="text-blue-600 underline">Download het bestand hier.</a>
+                </p>
+              </iframe>
+            </div>
+
+            {/* Mobile Fallback Button (PDFs are hard to read in iframes on mobile) */}
+            <div className="block md:hidden w-full">
+               <a 
+                 href={pdfUrl} 
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="flex items-center justify-center w-full py-4 bg-blue-600 text-white rounded-lg font-bold shadow-lg hover:bg-blue-700 transition"
+               >
+                 <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                 </svg>
+                 Open PDF
+               </a>
+            </div>
+
+          </div>
+
         </div>
+
         <p className="text-center mt-6 text-gray-600">
           <a href="/contact" className="text-blue-600 hover:text-blue-800 hover:underline transition duration-200">Contacteer ons</a> voor meer info.
         </p>
