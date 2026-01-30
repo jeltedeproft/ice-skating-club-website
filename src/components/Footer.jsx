@@ -17,8 +17,8 @@ function Footer() {
         <div className="flex justify-center gap-6 text-sm">
           <Link to="/" className="hover:underline">{t("home") || "Home"}</Link>
           <Link to="/initiations" className="hover:underline">{t("initiations") || "Initiaties"}</Link>
-          <Link to="/figure-skating" className="hover:underline">{t("figureSkating") || "Kunstrijden"}</Link>
-          <Link to="/short-track" className="hover:underline">{t("shorttrack") || "Shorttrack"}</Link>
+          <Link to="/figure-skating" className="hover:underline">{t("nav_fs") || "Figure Skating"}</Link>
+          <Link to="/short-track" className="hover:underline">{t("nav_st") || "Shorttrack"}</Link>
           <Link to="/contact" className="hover:underline">{t("contact") || "Contact"}</Link>
         </div>
 

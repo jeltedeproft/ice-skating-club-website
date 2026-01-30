@@ -62,7 +62,7 @@ function Home() {
                                 className="h-full w-full object-cover group-hover:scale-110 transition duration-500" />
                         </div>
                         <div className="p-6 flex flex-col flex-grow">
-                            <h2 className="text-xl font-bold text-blue-900 mb-2">{t("figureSkating")}</h2>
+                            <h2 className="text-xl font-bold text-blue-900 mb-2">{t("nav_fs")}</h2>
                             
                             <p className="text-gray-600 mb-4 flex-grow">
                                 {t("home_fs_desc")}
@@ -82,7 +82,7 @@ function Home() {
                                 className="h-full w-full object-cover group-hover:scale-110 transition duration-500" />
                         </div>
                         <div className="p-6 flex flex-col flex-grow">
-                            <h2 className="text-xl font-bold text-blue-900 mb-2">{t("shorttrack")}</h2>
+                            <h2 className="text-xl font-bold text-blue-900 mb-2">{t("nav_st")}</h2>
                             
                             <p className="text-gray-600 mb-4 flex-grow">
                                 {t("home_st_desc")}

@@ -6,7 +6,7 @@ const translations = {
     // Navigation
     nav_home: "Home",
     nav_initiations: "Initiaties",
-    nav_fs: "Kunstschaatsen",
+    nav_fs: "Figure Skating",
     nav_st: "Shorttrack",
     nav_contact: "Contact",
     nav_team: "Team",
@@ -25,12 +25,12 @@ const translations = {
     home_hero_title: "Ontdek het plezier van schaatsen!",
     home_hero_subtitle: "Doe mee met een initiatie en ervaar zelf de magie op het ijs. Geen ervaring nodig!",
     home_cta_initiation: "Schrijf je in voor een initiatie",
-    home_fs_desc: "Onder professionele begeleiding leer je bij ons de fijne kneepjes van het kunstschaatsen, van sierlijke basistechnieken tot krachtige sprongen en pirouettes. We combineren sportieve uitdagingen met een warm clubgevoel.",
+    home_fs_desc: "Onder professionele begeleiding leer je bij ons de fijne kneepjes van het Figure Skating, van sierlijke basistechnieken tot krachtige sprongen en pirouettes. We combineren sportieve uitdagingen met een warm clubgevoel.",
     home_st_desc: "Ontdek de snelheid bij Ice Diamonds Antwerp! Wij verwelkomen schaatsers van alle leeftijden en niveaus, van de eerste voorzichtige slagen tot de competitieve schaatser. Sluit je aan bij de Ice Diamonds en ervaar de adrenaline.",
     home_initiation_section_title: "Begin met een initiatie",
     home_initiation_section_text: "Iedereen kan leren schaatsen! Onze initiaties zijn dé perfecte manier om kennis te maken met het ijs in een veilige en leuke omgeving. €70 voor een 10 beurtenkaart, huurschaatsen zijn inbegrepen.",
     home_initiation_section_btn: "Ontdek onze initiaties",
-    intro: "Wij zijn een schaatsclub in Antwerpen met focus op kunstschaatsen en shorttrack. Word lid van onze community!",
+    intro: "Wij zijn een schaatsclub in Antwerpen met focus op Figure Skating en Shorttrack.",
     
     // About
     about_title: "Over Onze Schaatsclub",
@@ -50,7 +50,7 @@ const translations = {
     contact_label_account: "Rekeningnummer",
     
     // Figure Skating
-    fs_title: "Kunstschaatsen",
+    fs_title: "Figure Skating",
     fs_intro: "Leer basisbewegingen, sprongen en spins onder begeleiding van ervaren coaches.",
     fs_lesson_info_title: "Lesinformatie",
     fs_lesson_beginners: "Beginners: Dinsdag 18:00 - 19:00",
@@ -128,7 +128,7 @@ const translations = {
     initiation_detail_location: "Locatie: Sportoase Antwerpen",
     initiation_detail_cost: "Kosten: 70€",
     initiation_detail_info_1: "Bij een initiatie krijg je een 10-lessenkaart (huur schaatsen + les inbegrepen).",
-    initiation_detail_info_2: "Na deze 10 lessen kan men kiezen voor snelschaatsen of kunstschaatsen.",
+    initiation_detail_info_2: "Na deze 10 lessen kan men kiezen voor Shorttrack of Figure Skating.",
     
     // Initiation Form
     initiation_form_title: "Vraag een initiatie aan",
@@ -162,7 +162,7 @@ const translations = {
     st_training_title: "Traininginfo",
 
     // Figure Skating
-    fs_desc_main: "Onder professionele begeleiding leer je bij ons de fijne kneepjes van het kunstschaatsen, van sierlijke basistechnieken tot krachtige sprongen en pirouettes. We combineren sportieve uitdagingen met een warm clubgevoel.",
+    fs_desc_main: "Onder professionele begeleiding leer je bij ons de fijne kneepjes van het Figure Skating, van sierlijke basistechnieken tot krachtige sprongen en pirouettes. We combineren sportieve uitdagingen met een warm clubgevoel.",
     fs_desc_sub: "Van beginnende recreanten tot gevorderde competitieve kan je bij ons terecht voor kunstschaatslessen.",
     fs_motto_title: "Jong en oud kan terecht bij IDA",
     fs_motto_quote: "Droom je om de absolute top te bereiken? Of zoek je liever een wekelijkse hobby?",
@@ -184,7 +184,7 @@ const translations = {
     team_title: "Ons Team",
     team_intro: "Maak kennis met onze coaches en staff die elke dag het beste uit onze schaatsers halen.",
     team_tab_st: "Shorttrack",
-    team_tab_fs: "Kunstschaatsen",
+    team_tab_fs: "Figure Skating",
     team_tab_staff: "Bestuur & Staff",
     team_coming_soon: "Foto's en info volgen binnenkort."
   },
@@ -387,7 +387,7 @@ const translations = {
     nav_home: "Accueil",
     nav_initiations: "Initiations",
     nav_fs: "Patinage Artistique",
-    nav_st: "Short-track",
+    nav_st: "Shorttrack",
     nav_contact: "Contact",
     nav_team: "L'Équipe",
     nav_schedule: "Horaire",

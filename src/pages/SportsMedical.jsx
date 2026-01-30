@@ -13,7 +13,7 @@ function Sportsmedical() {
         <div className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-2xl">
           <h2 className="text-2xl font-bold text-blue-900 mb-4">Voor Nieuwe IJssporters</h2>
           <p className="text-lg text-gray-700 mb-6">
-            Het sportmedisch onderzoek is verplicht voor alle nieuwe leden die willen starten met kunstschaatsen of shorttrack bij Ice Diamonds Antwerp. Dit onderzoek zorgt ervoor dat je in een goede gezondheidstoestand bent om te sporten en helpt blessures te voorkomen.
+            Het sportmedisch onderzoek is verplicht voor alle nieuwe leden die willen starten met Figure Skating of Shorttrack bij Ice Diamonds Antwerp. Dit onderzoek zorgt ervoor dat je in een goede gezondheidstoestand bent om te sporten en helpt blessures te voorkomen.
           </p>
           <h3 className="text-xl font-semibold text-blue-900 mb-2">Wat houdt het in?</h3>
           <ul className="list-disc pl-6 text-gray-600 mb-6">

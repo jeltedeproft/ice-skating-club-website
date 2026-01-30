@@ -25,7 +25,7 @@ function Info() {
               De club streeft naar het aantrekken van passende expertise, waarbij iedere rol vervuld wordt door personen met overeenkomstige visie en kwalificaties. Er wordt gewerkt aan een stabiele omgeving voor diverse sporters. Trainers beschikken over de vereiste diploma's en competenties voor begeleiding van ontwikkelings- en prestatieprogramma’s. Experts worden geselecteerd op basis van kennis en ervaring.
             </p>
             <p className="text-gray-700 mb-4">
-              Binnen de sporttak kunstschaatsen richt men zich op jeugdleden vanaf 4 jaar en young adults vanaf 14 jaar. Na initiatielessen worden leden ingedeeld in groepen. Twee keer per jaar leggen zij clubbrevetten af en vindt een evaluatie van hun kennis plaats. Ook recreatieve leden krijgen educatie en ervaring, terwijl talentherkenning mogelijk wordt gemaakt.
+              Binnen de sporttak Figure Skating richt men zich op jeugdleden vanaf 4 jaar en young adults vanaf 14 jaar. Na initiatielessen worden leden ingedeeld in groepen. Twee keer per jaar leggen zij clubbrevetten af en vindt een evaluatie van hun kennis plaats. Ook recreatieve leden krijgen educatie en ervaring, terwijl talentherkenning mogelijk wordt gemaakt.
             </p>
             <p className="text-gray-700 mb-4">
               Recreanten met potentieel voor deelname aan wedstrijden worden persoonlijk benaderd en geïnformeerd over de mogelijkheden tot doorgroei naar het competitieve circuit. Hiervoor wordt een individueel trainingsschema opgesteld, aangepast aan het niveau van de schaatser. Daarnaast worden specifieke trainingen aangeboden ter voorbereiding op de CLT-tests (Competition Level Test).
@@ -40,7 +40,7 @@ function Info() {
               In de sporttak shorttrack (snelschaatsen) zijn deelnemers van alle leeftijden welkom. Zij starten met proeflessen en initiatietrainingen, waarna ze ingedeeld worden bij startersgroepen. Ongeveer 85% stroomt vervolgens door naar competitief schaatsen. De leeftijd binnen shorttrack begint rond 8 jaar en hoger.
             </p>
             <p className="text-gray-700 mb-4">
-              Shorttrack en solo kunstschaatsen nemen momenteel deel aan nationale en internationale wedstrijden, waaronder Belgische en Vlaamse kampioenschappen, Grand Prix Junior en Senior, Olympische-, Europese- en wereldkampioenschappen.
+              Shorttrack en solo Figure Skating nemen momenteel deel aan nationale en internationale wedstrijden, waaronder Belgische en Vlaamse kampioenschappen, Grand Prix Junior en Senior, Olympische-, Europese- en wereldkampioenschappen.
             </p>
           </section>
           <p className="text-lg text-gray-700 mb-6">
