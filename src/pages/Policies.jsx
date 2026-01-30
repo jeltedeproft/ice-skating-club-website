@@ -11,28 +11,28 @@ function Policies() {
       </div>
       <div className="max-w-4xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <a href="/assets/Gedragscode_Sporters.pdf" download className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center">
-            <h2 className="text-xl font-bold text-blue-900 mb-2">Gedragscode voor Sporters</h2>
+          <a href="Gedragscode_Sporters.pdf" download className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center">
+            <h2 className="text-xl font-bold text-blue-900 mb-2">IDA Gedragscode voor Sporters</h2>
             <p className="text-gray-600">Download het PDF-document</p>
           </a>
-          <a href="/assets/IDA  Privacyverklaring.docx" download className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center">
-            <h2 className="text-xl font-bold text-blue-900 mb-2">IDA Privacy Statement</h2>
+          <a href="IDA  Privacyverklaring.docx" download className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center">
+            <h2 className="text-xl font-bold text-blue-900 mb-2">IDA Privacy Verklaring</h2>
             <p className="text-gray-600">Download het PDF-document</p>
           </a>
-          <a href="/assets/IDA Charter 010923.docx" download className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center">
+          <a href="IDA Charter 010923.docx" download className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center">
             <h2 className="text-xl font-bold text-blue-900 mb-2">IDA Charter</h2>
             <p className="text-gray-600">Download het PDF-document</p>
           </a>
-          <a href="/assets/IDA Gedragscode_Trainers 24092021.docx" download className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center">
-            <h2 className="text-xl font-bold text-blue-900 mb-2">Gedragscode voor Trainers</h2>
+          <a href="IDA Gedragscode_Trainers 24092021.docx" download className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center">
+            <h2 className="text-xl font-bold text-blue-900 mb-2">IDA Gedragscode voor Trainers</h2>
             <p className="text-gray-600">Download het PDF-document</p>
           </a>
-          <a href="/assets/IDA Interne richtlijnen 202023-2024" download className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center">
+          <a href="IDA Interne richtlijnen 202023-2024" download className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center">
             <h2 className="text-xl font-bold text-blue-900 mb-2">IDA Interne Richtlijnen</h2>
             <p className="text-gray-600">Download het PDF-document</p>
           </a>
-          <a href="/assets/Statuten Ice Diamonds Antwerp vzw 18082021.docx" download className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center">
-            <h2 className="text-xl font-bold text-blue-900 mb-2">Juridische Statuten</h2>
+          <a href="Statuten Ice Diamonds Antwerp vzw 18082021.docx" download className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center">
+            <h2 className="text-xl font-bold text-blue-900 mb-2">IDA Clubstatuten</h2>
             <p className="text-gray-600">Download het PDF-document</p>
           </a>
           <a

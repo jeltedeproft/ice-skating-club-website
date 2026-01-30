@@ -88,7 +88,7 @@ function FigureSkating() {
             {brevets.map((id) => (
               <a
                 key={id}
-                href={`/assets/brevet-${id}.pdf`}
+                href={`brevet-${id}.pdf`}
                 download
                 aria-label={`Download Brevet ${id} PDF`}
                 className="group flex items-center justify-between p-3 bg-blue-50/50 border border-blue-100 rounded-lg hover:bg-blue-100 hover:border-blue-300 hover:shadow-md transition-all duration-200"
