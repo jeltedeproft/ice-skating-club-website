@@ -109,11 +109,14 @@ function Home() {
                     </Link>
                 </div>
 
+                {/* Partners Section */}
                 <div className="mt-12 text-center border-t border-gray-200 pt-12">
                     <h2 className="text-2xl font-bold text-gray-400 mb-8 uppercase tracking-widest">{t("partners")}</h2>
-                    <div className="grid grid-cols-2 md:grid-cols-5 gap-8 justify-items-center items-center opacity-80 hover:opacity-100 transition-opacity">
+                    {/* Changed grid from md:grid-cols-5 to md:grid-cols-4 to better fit 8 items */}
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-items-center items-center opacity-80 hover:opacity-100 transition-opacity">
+                        
+                        {/* Original 5 Partners */}
                         <a href="https://www.antwerpen.be" target="_blank" rel="noopener noreferrer">
-                            {/* UPDATED: Changed h-16 to h-24 md:h-32 */}
                             <img src={`${import.meta.env.BASE_URL}stad_antwerpen.jpg`} alt="Stad Antwerpen Logo" className="h-24 md:h-32 object-contain grayscale hover:grayscale-0 transition duration-300" />
                         </a>
                         <a href="https://www.skatebelgium.be" target="_blank" rel="noopener noreferrer">
@@ -128,6 +131,18 @@ function Home() {
                         <a href="https://foodmaker.be/schijnbardeurne/" target="_blank" rel="noopener noreferrer">
                             <img src={`${import.meta.env.BASE_URL}foodmaker.png`} alt="Foodmaker Logo" className="h-24 md:h-32 object-contain grayscale hover:grayscale-0 transition duration-300" />
                         </a>
+
+                        {/* New Partners Added Here */}
+                        <a href="https://www.trooper.be/nl/" target="_blank" rel="noopener noreferrer">
+                            <img src={`${import.meta.env.BASE_URL}trooper.png`} alt="Trooper Logo" className="h-24 md:h-32 object-contain grayscale hover:grayscale-0 transition duration-300" />
+                        </a>
+                        <a href="https://sportoase.be/nl/" target="_blank" rel="noopener noreferrer">
+                            <img src={`${import.meta.env.BASE_URL}sportoase.png`} alt="Sportoase Logo" className="h-24 md:h-32 object-contain grayscale hover:grayscale-0 transition duration-300" />
+                        </a>
+                        <a href="https://www.antwerpen.be/nl/overzicht/district-deurne-1/nieuws" target="_blank" rel="noopener noreferrer">
+                            <img src={`${import.meta.env.BASE_URL}deurne.jpg`} alt="District Deurne Logo" className="h-24 md:h-32 object-contain grayscale hover:grayscale-0 transition duration-300" />
+                        </a>
+
                     </div>
                 </div>
             </div>
