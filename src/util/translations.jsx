@@ -127,7 +127,7 @@ const translations = {
     initiation_details_title: "Details",
     initiation_detail_location: "Locatie: Sportoase Antwerpen",
     initiation_detail_cost: "Kosten: 70€",
-    initiation_detail_info_1: "Bij een initiatie krijg je een 10-lessenkaart (huur schaatsen + les inbegrepen).",
+    initiation_detail_info_1: "Bij een initiatie krijg je een 10-beurtenkaart (huur schaatsen inbegrepen).",
     initiation_detail_info_2: "Na deze 10 lessen kan men kiezen voor Shorttrack of Figure Skating.",
     
     // Initiation Form

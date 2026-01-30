@@ -35,9 +35,14 @@ function Policies() {
             <h2 className="text-xl font-bold text-blue-900 mb-2">Juridische Statuten</h2>
             <p className="text-gray-600">Download het PDF-document</p>
           </a>
-          <a href="/assets/schade.pdf" download className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center">
-            <h2 className="text-xl font-bold text-blue-900 mb-2">Aangifte formulier in geval van schade</h2>
-            <p className="text-gray-600">Download het PDF-document</p>
+          <a
+            href="https://www.vlsu.be/assets/documents/VLSU_aangifteformulier.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center"
+          >
+            <h2 className="text-xl font-bold text-blue-900 mb-2">Ongevallenformulier</h2>
+            <p className="text-gray-600">Open het PDF-document</p>
           </a>
         </div>
       </div>

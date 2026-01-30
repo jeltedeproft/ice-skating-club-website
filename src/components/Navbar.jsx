@@ -145,7 +145,7 @@ function Navbar() {
 
                         <li><Link to="/schedule" className="hover:text-blue-200 transition whitespace-nowrap">{t("nav_schedule")}</Link></li>
                         <li><Link to="/calendar" className="hover:text-blue-200 transition whitespace-nowrap">{t("nav_calendar")}</Link></li>
-                        <li><Link to="/news" className="hover:text-blue-200 transition whitespace-nowrap">{t("nav_news")}</Link></li>
+                        {/* <li><Link to="/news" className="hover:text-blue-200 transition whitespace-nowrap">{t("nav_news")}</Link></li> */}
                         <li><Link to="/initiations" className="hover:text-blue-200 transition whitespace-nowrap">{t("nav_initiations")}</Link></li>
                         <li><Link to="/team" className="hover:text-blue-200 transition whitespace-nowrap">{t("nav_team")}</Link></li>
                         <li><Link to="/contact" className="hover:text-blue-200 transition whitespace-nowrap">{t("nav_contact")}</Link></li>
@@ -189,7 +189,7 @@ function Navbar() {
 
                     <Link to="/schedule" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">{t("nav_schedule")}</Link>
                     <Link to="/calendar" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">{t("nav_calendar")}</Link>
-                    <Link to="/news" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">{t("nav_news")}</Link>
+                    {/* <Link to="/news" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">{t("nav_news")}</Link> */}
                     <Link to="/initiations" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">{t("nav_initiations")}</Link>
                     <Link to="/team" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">{t("nav_team")}</Link>
                     <Link to="/contact" className="block text-white py-2 rounded-md hover:bg-blue-700/50 transition">{t("nav_contact")}</Link>
