@@ -74,19 +74,6 @@ function ShortTrack() {
               {t("st_email_post")}
             </p>
           </section>
-
-          <hr className="border-gray-200" />
-
-          {/* Practical Info */}
-          <div>
-            <h2 className="text-2xl font-bold text-blue-900 mb-4">{t("st_training_title")}</h2>
-            <ul className="list-disc pl-6 text-gray-700 space-y-2">
-              <li>{t("st_info_sessions")}</li>
-              <li>{t("st_info_levels")}</li>
-              <li>{t("st_info_gear")}</li>
-            </ul>
-          </div>
-
         </div>
       </div>
     </div>
