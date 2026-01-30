@@ -125,7 +125,7 @@ function Home() {
                         <a href="https://www.vlsu.be" target="_blank" rel="noopener noreferrer">
                             <img src={`${import.meta.env.BASE_URL}vlsu.png`} alt="VLSU Logo" className="h-24 md:h-32 object-contain grayscale hover:grayscale-0 transition duration-300" />
                         </a>
-                        <a href="https://www.thefoodmaker.com" target="_blank" rel="noopener noreferrer">
+                        <a href="https://foodmaker.be/schijnbardeurne/" target="_blank" rel="noopener noreferrer">
                             <img src={`${import.meta.env.BASE_URL}foodmaker.png`} alt="Foodmaker Logo" className="h-24 md:h-32 object-contain grayscale hover:grayscale-0 transition duration-300" />
                         </a>
                     </div>
