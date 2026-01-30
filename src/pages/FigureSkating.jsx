@@ -62,10 +62,10 @@ function FigureSkating() {
             <p className="text-lg text-gray-700">
               {t("fs_cta_text")}
               <a
-                href="mailto:secretariaat@icediamonds.be"
+                href="mailto:secretariaatida@outlook.com "
                 className="font-bold text-blue-600 hover:text-blue-800 hover:underline"
               >
-                secretariaat@icediamonds.be
+                secretariaatida@outlook.com 
               </a>
             </p>
           </section>
