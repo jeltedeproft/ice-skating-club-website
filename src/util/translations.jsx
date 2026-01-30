@@ -155,7 +155,7 @@ const translations = {
     st_footer_intro: "Of je nu jong bent of oud, onze ervaren coaches begeleiden je bij elke stap. Sluit je aan bij de Ice Diamonds en ervaar de adrenaline van shorttrack.",
     st_email_pre: "Stuur een mailtje naar ",
     st_email_mid: " met ",
-    st_email_post: " in cc om je in te schrijven of een proefles aan te vragen.",
+    st_email_post: " om je in te schrijven of een proefles aan te vragen.",
     st_info_sessions: "Sessies: Vrijdag 18:00 - 20:00",
     st_info_levels: "Niveaus: Alle leeftijden welkom",
     st_info_gear: "Uitrusting: Beschikbaar ter plaatse",

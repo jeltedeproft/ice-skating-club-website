@@ -71,10 +71,6 @@ function ShortTrack() {
               <a href="mailto:secretariaatida@outlook.com" className="text-cyan-300 hover:text-cyan-100 underline">
                 secretariaatida@outlook.com
               </a>{' '}
-              {t("st_email_mid")}
-              <a href="mailto:ida.shorttrack@gmail.com" className="text-cyan-300 hover:text-cyan-100 underline">
-                ida.shorttrack@gmail.com
-              </a>{' '}
               {t("st_email_post")}
             </p>
           </section>
