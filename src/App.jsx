@@ -1,4 +1,6 @@
+import { useState } from 'react'; //
 import { Routes, Route } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion'; // Added for exit animations
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import FigureSkating from './pages/FigureSkating';
@@ -14,11 +16,22 @@ import Info from './pages/Info';
 import Sportsmedical from './pages/SportsMedical';
 import Footer from "./components/Footer";
 import { LanguageProvider } from "./context/LanguageContext";
+import IntroAnimation from './components/IntroAnimation'; // Import the new component
 
 function App() {
+  const [showIntro, setShowIntro] = useState(true);
+
   return (
     <LanguageProvider>
       <div className="min-h-screen bg-gradient-to-br from-blue-100 via-cyan-50 to-white animate-gradient text-gray-800">
+        
+        {/* Intro Animation Overlay */}
+        <AnimatePresence>
+          {showIntro && (
+            <IntroAnimation onFinish={() => setShowIntro(false)} />
+          )}
+        </AnimatePresence>
+
         <Navbar />
 
         {/* Apply top padding only to the content below navbar */}
@@ -43,6 +56,5 @@ function App() {
     </LanguageProvider>
   );
 }
-
 
 export default App;
