@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import { useTranslation } from "../hooks/useTranslation";
 
@@ -14,16 +13,59 @@ function Initiations() {
     setIsSending(true);
     setStatus(null);
 
-    // ⚠️ VERVANG DEZE MET JE EMAILJS KEYS (Of gebruik dezelfde als Contact)
-    // Zorg dat je in je EmailJS template ook {{phone}} en {{day_preference}} toevoegt!
-    const SERVICE_ID = "service_npn3yrb";
-    const TEMPLATE_ID = "template_1wvvl81";
     const PUBLIC_KEY = "esM-SwYjzCyP-GhLD";
+    const SERVICE_ID = "service_npn3yrb";
+    const TEMPLATE_ID = "template_1wvvl81"; 
 
-    emailjs
-      .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
-        publicKey: PUBLIC_KEY,
-      })
+    // Haal de waarden uit het formulier
+    const values = {
+      user_name: form.current.user_name.value,
+      user_email: form.current.user_email.value,
+      phone: form.current.phone.value,
+      day_preference: form.current.day_preference.value,
+      message: form.current.message.value,
+    };
+
+    // We bouwen hier de volledige mail die zowel de klant als jij (in BCC) krijgt.
+    // Deel 1: De info voor de klant (Myriam's tekst)
+    // Deel 2: De gegevens van de klant (zodat jij weet wie het is)
+    const fullMessage = `Beste ${values.user_name},
+
+Dankjewel voor je vraag voor informatie aangaande onze club.
+
+De initiatielessen vinden plaats op zaterdag van 13:30 tot 14:15 uur en/of op zondag van 10:45 tot 11:45 uur. Voor deze lessen kun je een 10-beurtenkaart kopen voor €70. De lessen hoeven niet opeenvolgend te worden gevolgd. Als je eerder naar de club kan overstappen, worden de overgebleven beurten in mindering gebracht op het lidgeld.
+
+Plaats : Sportoase Groot Schijn, Ruggeveldlaan 488, 2100 Deurne
+
+Hierbij de link om in te schrijven:
+Initiatielessen kunstschaatsen: https://app.twizzit.com/v2/public/form/adc3de5ac437fb620d07c5c86756422b
+Vooraf inschrijven per persoon is verplicht!
+
+Ik hoop dat je hiermee verder kunt. Mocht je nog vragen hebben, aarzel dan niet om contact op te nemen.
+
+Vriendelijke groeten,
+
+Myriam
+mail : secretariaatida@outlook.com
+www.icediamonds.be
+
+--------------------------------------------------
+Overzicht van je aanvraag:
+Naam: ${values.user_name}
+Email: ${values.user_email}
+Telefoon: ${values.phone}
+Voorkeur dag: ${values.day_preference}
+Opmerking: ${values.message}
+`;
+
+    // Email params
+    const templateParams = {
+      target_email: values.user_email, // De mail gaat naar de klant
+      subject: `Informatie aanvraag Initiatielessen - ${values.user_name}`,
+      message: fullMessage, // Dit bevat de hele tekst hierboven
+    };
+
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
       .then(
         () => {
           setIsSending(false);
@@ -31,10 +73,10 @@ function Initiations() {
           form.current.reset();
         },
         (error) => {
+          console.error('FAILED...', error);
           setIsSending(false);
           setStatus('error');
-          console.error('FAILED...', error.text);
-        },
+        }
       );
   };
 
@@ -147,7 +189,7 @@ function Initiations() {
 
             {status === 'success' && (
               <p className="text-green-600 text-center font-semibold mt-4 bg-green-50 p-2 rounded">
-                ✅ Aanvraag verzonden! We nemen spoedig contact op.
+                ✅ Aanvraag verzonden! Controleer je mail voor de informatie.
               </p>
             )}
             {status === 'error' && (
