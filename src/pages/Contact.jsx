@@ -14,7 +14,7 @@ function Contact() {
     setStatus(null);
 
     // ⚠️ REPLACE THESE VALUES WITH YOUR ACTUAL EMAILJS KEYS ⚠️
-    const SERVICE_ID = "service_npn3yrb";
+    const SERVICE_ID = "service_7s9nvjl";
     const TEMPLATE_ID = "template_dyea27u";
     const PUBLIC_KEY = "esM-SwYjzCyP-GhLD";
 

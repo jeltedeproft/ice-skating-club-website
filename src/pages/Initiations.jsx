@@ -14,7 +14,7 @@ function Initiations() {
     setStatus(null);
 
     const PUBLIC_KEY = "esM-SwYjzCyP-GhLD";
-    const SERVICE_ID = "service_npn3yrb";
+    const SERVICE_ID = "service_7s9nvjl";
     const TEMPLATE_ID = "template_1wvvl81"; 
 
     // Haal de waarden uit het formulier
