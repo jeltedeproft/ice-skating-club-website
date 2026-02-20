@@ -104,7 +104,6 @@ Opmerking: ${values.message}
               <li>{t("initiation_detail_location")}</li>
               <li>{t("initiation_detail_cost")}</li>
               <li>{t("initiation_detail_info_1")}</li>
-              <li>{t("initiation_detail_info_2")}</li>
             </ul>
           </div>
         </div>

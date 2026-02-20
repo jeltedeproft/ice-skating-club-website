@@ -1,15 +1,42 @@
-import React from "react";
-import { useTranslation } from "../hooks/useTranslation";
+import React from 'react';
 
 function Schedule() {
-  const t = useTranslation();
+  const eventData = [
+    { event: "Kerststage", date: "22/12/2025 - 02/01/2026", time: "8:30 - 11:30" },
+    { event: "Kerstverlof club & patch", date: "22/12/2025 - 04/01/2026", time: "Zie aangepaste rooster" },
+    { event: "Oud/Nieuwjaar schaatsen (Silver/Goud)", date: "Zat 27/12/2025", time: "11:45 - 14:15" },
+    { event: "Krokusstage", date: "Ma 16/02 - Vr 20/02/2026", time: "8:30 - 11:30" },
+    { event: "Foodmaker Ice Skating Challenge", date: "Vr 27/02/2025", time: "8:00 - 20:00" },
+    { event: "Foodmaker Ice Skating Challenge", date: "Za 28/02/2025", time: "8:00 - 23:30" },
+    { event: "Foodmaker Shine on Ice", date: "Zo 01/03/2025", time: "8:00 - 17:30" },
+    { event: "Benelux Cup (Shorttrack)", date: "07/03/2025", time: "8:00 - 15:30" },
+    { event: "KBSF - Belgisch Kampioenschap 2026", date: "Zat 21/03 - Zon 22/03/2026", time: "9:00 - 17:00" },
+    { event: "Clubbrevetten", date: "Zo 12/04/2026", time: "9:00 - 11:30" },
+    { event: "Paasstage", date: "Ma 06/04 - Vrij 17/04/2026", time: "8:30 - 11:30" },
+    { event: "Indoor Pond Hockey Classic", date: "Zaterdag 25/04/2026", time: "9:00 - 23:00" },
+    { event: "Indoor Pond Hockey Classic", date: "Zondag 26/04/2026", time: "9:00 - 18:00" },
+    { event: "3x3 Toernooi Phantoms Jeugd", date: "Zaterdag 02/05/2026", time: "8:00 - 19:00" },
+    { event: "3x3 Toernooi Phantoms Jeugd", date: "Zondag 03/05/2026", time: "8:00 - 18:00" },
+    { event: "Gala: Festival", date: "Za 09/05/2026", time: "8:30 - 23:00" },
+    { event: "Indoor Pond Hockey Ladies Edition", date: "Zondag 10/05/2026", time: "9:00 - 18:00" },
+    { event: "Einde seizoen BBQ/Fuif", date: "30/05/2026", time: "TBD" },
+  ];
 
-  // Updated link: added &hl=nl to force Dutch UI (Host Language = NL)
-  const calendarSrc = "https://calendar.google.com/calendar/embed?src=iq79h306ihoo7anp1ema1gh3rq3jp4i4%40import.calendar.google.com&ctz=Europe%2FBrussels&hl=nl";
+  const closingData = [
+    { event: "Kerstavond", date: "24/12/2025", time: "08:00 - 12:00" },
+    { event: "Kerstmis", date: "25/12/2025", time: "Gesloten" },
+    { event: "Oudejaarsdag", date: "31/12/2025", time: "08:00 - 12:00" },
+    { event: "Nieuwjaar", date: "01/01/2026", time: "Gesloten" },
+    { event: "Pasen", date: "05/04/2026", time: "Gesloten" },
+    { event: "Paasmaandag", date: "06/04/2026", time: "08:00 - 18:00" },
+    { event: "Dag vd Arbeid", date: "01/05/2026", time: "08:00 - 18:00" },
+    { event: "OH Hemelvaart", date: "14/05/2026", time: "08:00 - 18:00" },
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 via-cyan-50 to-white animate-gradient">
-      {/* Hero Section */}
+      
+      {/* Hero Header - Matches Policies.jsx */}
       <div className="relative w-full h-64 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-50" 
@@ -17,58 +44,84 @@ function Schedule() {
         />
         <div className="relative z-10 flex items-center justify-center h-full">
           <h1 className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg bg-blue-900/50 p-4 rounded-lg">
-            {t("nav_schedule")}
+            Kalender & Planning
           </h1>
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 py-12">
-        <div className="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-2xl">
+      <div className="max-w-5xl mx-auto px-4 py-12">
+        
+        {/* IDA Events Section */}
+        <div className="mb-16">
+          <div className="flex items-center mb-8">
+            <div className="h-8 w-2 bg-blue-600 rounded-full mr-4"></div>
+            <h2 className="text-3xl font-bold text-blue-900 italic">IDA Club Events</h2>
+          </div>
           
-          <div className="mb-6">
-            <h2 className="text-2xl font-bold text-blue-900 mb-2">{t("schedule_title")}</h2>
-            <p className="text-lg text-gray-700">
-               {t("schedule_intro_text")}
-            </p>
-            
-            {/* Disclaimer Alert Box */}
-            <div className="mt-4 p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-r">
-              <div className="flex items-start">
-                <svg className="w-6 h-6 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-                </svg>
-                <p className="text-sm">
-                  <strong>{t("schedule_disclaimer_title")}</strong> {t("schedule_disclaimer_text")}
-                </p>
+          <div className="grid grid-cols-1 gap-4">
+            {eventData.map((item, idx) => (
+              <div key={idx} className="bg-white/90 backdrop-blur-md p-5 rounded-xl shadow-md border-l-4 border-blue-500 flex flex-col md:flex-row md:items-center justify-between hover:shadow-lg transition duration-200">
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold text-blue-900">{item.event}</h3>
+                  <p className="text-blue-600 font-medium">{item.date}</p>
+                </div>
+                <div className="mt-2 md:mt-0 md:text-right">
+                  <span className="bg-blue-50 text-blue-800 px-4 py-1 rounded-full text-sm font-bold border border-blue-100">
+                    {item.time}
+                  </span>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
-
-          {/* Responsive Iframe Container */}
-          <div className="relative w-full overflow-hidden rounded-lg shadow-inner border border-gray-200 bg-white" style={{ paddingTop: '75%' }}>
-            <iframe 
-              src={calendarSrc} 
-              style={{ border: 0 }} 
-              className="absolute top-0 left-0 w-full h-full"
-              frameBorder="0" 
-              scrolling="no"
-              title="Ice Diamonds Schedule"
-            ></iframe>
-          </div>
-
-          {/* Mobile Fallback Link */}
-          <div className="mt-6 text-center md:hidden">
-            <a 
-              href={calendarSrc} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold shadow hover:bg-blue-700 transition"
-            >
-              {t("schedule_open_full")}
-            </a>
-          </div>
-
         </div>
+
+        {/* Sportoase Closures Section */}
+        <div>
+          <div className="flex items-center mb-8">
+            <div className="h-8 w-2 bg-red-500 rounded-full mr-4"></div>
+            <h2 className="text-3xl font-bold text-blue-900 italic">Sportoase Sluitingsdagen</h2>
+          </div>
+
+          <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl overflow-hidden border border-red-100">
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="bg-red-500 text-white">
+                  <th className="p-4 font-bold">Gelegenheid</th>
+                  <th className="p-4 font-bold">Datum</th>
+                  <th className="p-4 font-bold text-right">Status / Uren</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                {closingData.map((item, idx) => (
+                  <tr key={idx} className="hover:bg-red-50/50 transition">
+                    <td className="p-4 font-bold text-gray-800">{item.event}</td>
+                    <td className="p-4 text-gray-600">{item.date}</td>
+                    <td className="p-4 text-right">
+                      <span className={`font-bold ${item.time.includes('Gesloten') ? 'text-red-600 uppercase' : 'text-gray-700'}`}>
+                        {item.time}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* Manual Download Link - Matches Policies Style */}
+        <div className="mt-16 text-center">
+          <a 
+            href="Kalender IDA seizoen 2026.xlsx" 
+            download 
+            className="inline-block bg-blue-900 text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:bg-blue-800 transition transform hover:-translate-y-1"
+          >
+            Download de volledige Excel kalender
+          </a>
+          <p className="mt-4 text-gray-500 text-sm italic">
+            * Wijzigingen onder voorbehoud.
+          </p>
+        </div>
+
       </div>
     </div>
   );

@@ -40,8 +40,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/figure-skating" element={<FigureSkating />} />
             <Route path="/short-track" element={<ShortTrack />} />
-            <Route path="/schedule" element={<Schedule />} />
-            <Route path="/calendar" element={<Calendar />} />
+            <Route path="/schedule" element={<Calendar />} />
+            <Route path="/calendar" element={<Schedule />} />
             <Route path="/news" element={<News />} />
             <Route path="/team" element={<Team />} />
             <Route path="/initiations" element={<Initiations />} />
