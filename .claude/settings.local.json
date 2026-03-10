@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"C:\\\\Users\\\\Admin\\\\Documents\\\\GitHub\\\\ice-skating-club-website\" && npm install --save-dev ftp-deploy)"
+    ]
+  }
+}
