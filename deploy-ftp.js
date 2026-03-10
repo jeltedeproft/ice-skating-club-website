@@ -19,7 +19,7 @@ const config = {
   localRoot: "./dist",
   remoteRoot: env.FTP_REMOTE_ROOT || "/",
   include: ["**/*"],
-  deleteRemote: false,
+  deleteRemote: true,
   forcePasv: true,
 };
 
