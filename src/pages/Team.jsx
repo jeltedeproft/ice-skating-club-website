@@ -37,7 +37,7 @@ function Team() {
         objectPosition: "object-center",
       },
       {
-        name: "Anke Declercq",
+        name: "Anke De clercq",
         role: "Monitor",
         image: `${import.meta.env.BASE_URL}coaches/ankeDeclerck.jpg`,
         objectPosition: "object-center",
