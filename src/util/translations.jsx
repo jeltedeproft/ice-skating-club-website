@@ -132,13 +132,6 @@ const translations = {
     
     // Initiation Form
     initiation_form_title: "Vraag een initiatie aan",
-    initiation_label_phone: "Telefoonnummer",
-    initiation_label_day: "Voorkeursdag",
-    initiation_option_saturday: "Zaterdag (Sportsbaan - 13:30)",
-    initiation_option_sunday: "Zondag (Funbaan - 10:45)",
-    initiation_label_message: "Extra opmerkingen (optioneel)",
-    initiation_placeholder_message: "Bv. leeftijd van de schaatser...",
-    initiation_btn_submit: "Schrijf je in",
 
     vlsu: "Vlaamse Schaatsunie (VLSU)",
     member_vlsu: "Trots lid van de ",
@@ -322,13 +315,6 @@ const translations = {
 
     // Initiation Form
     initiation_form_title: "Request an initiation",
-    initiation_label_phone: "Phone Number",
-    initiation_label_day: "Preferred Day",
-    initiation_option_saturday: "Saturday (Sports track - 13:30)",
-    initiation_option_sunday: "Sunday (Fun track - 10:45)",
-    initiation_label_message: "Extra comments (optional)",
-    initiation_placeholder_message: "E.g. age of the skater...",
-    initiation_btn_submit: "Sign Up",
 
     vlsu: "Flemish IceSkating Union (VLSU)",
     member_vlsu: "Proud member of the ",
@@ -512,13 +498,6 @@ const translations = {
 
     // Initiation Form
     initiation_form_title: "Demander une initiation",
-    initiation_label_phone: "Numéro de téléphone",
-    initiation_label_day: "Jour préféré",
-    initiation_option_saturday: "Samedi (Piste sportive - 13:30)",
-    initiation_option_sunday: "Dimanche (Piste ludique - 10:45)",
-    initiation_label_message: "Commentaires supplémentaires (facultatif)",
-    initiation_placeholder_message: "Par ex. âge du patineur...",
-    initiation_btn_submit: "S'inscrire",
 
     vlsu: "Union Flamande de Patinage (VLSU)",
     member_vlsu: "Fier membre de l'",
