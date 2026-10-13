@@ -23,12 +23,13 @@ const translations = {
     
     // Home
     home_hero_title: "Ontdek het plezier van schaatsen!",
-    home_hero_subtitle: "Doe mee met een initiatie en ervaar zelf de magie op het ijs. Geen ervaring nodig!",
-    home_cta_initiation: "Schrijf je in voor een initiatie",
+    home_hero_subtitle: "Start met initiatielessen kunstschaatsen of vraag 3 proeflessen shorttrack aan. Geen ervaring nodig!",
+    home_cta_initiation: "Initiatielessen kunstschaatsen",
+    home_cta_st_trial: "3 proeflessen shorttrack",
     home_fs_desc: "Onder professionele begeleiding leer je bij ons de fijne kneepjes van het Figure Skating, van sierlijke basistechnieken tot krachtige sprongen en pirouettes. We combineren sportieve uitdagingen met een warm clubgevoel.",
     home_st_desc: "Ontdek de snelheid bij Ice Diamonds Antwerp! Wij verwelkomen schaatsers van alle leeftijden en niveaus, van de eerste voorzichtige slagen tot de competitieve schaatser. Sluit je aan bij de Ice Diamonds en ervaar de adrenaline.",
-    home_initiation_section_title: "Begin met een initiatie",
-    home_initiation_section_text: "Iedereen kan leren schaatsen! Onze initiaties zijn dé perfecte manier om kennis te maken met het ijs in een veilige en leuke omgeving. €70 voor een 10 beurtenkaart, huurschaatsen zijn inbegrepen.",
+    home_initiation_section_title: "Begin met een initiatie kunstschaatsen",
+    home_initiation_section_text: "Iedereen kan leren kunstschaatsen! Onze initiaties zijn dé perfecte manier om kennis te maken met het ijs in een veilige en leuke omgeving. €95 voor een 10-beurtenkaart, huurschaatsen zijn inbegrepen.",
     home_initiation_section_btn: "Ontdek onze initiaties",
     intro: "Wij zijn een schaatsclub in Antwerpen met focus op Figure Skating en Shorttrack.",
     
@@ -98,6 +99,9 @@ const translations = {
     contact_placeholder_message: "Je Bericht",
     contact_send_btn: "Verzenden",
     contact_or_mail: "Of mail naar: ",
+    contact_mail_fs: "Kunstschaatsen",
+    contact_mail_st: "Shorttrack",
+    contact_mail_general: "Algemeen",
 
     // About Page Values
     about_value_community_title: "Gemeenschap",
@@ -123,12 +127,12 @@ const translations = {
     about_cta_contact_btn: "Contacteer Ons",
 
     // Initiations Page
-    initiation_intro_text: "Ontdek de magie van schaatsen met onze initiatielessen voor beginners!",
+    initiation_intro_text: "Ontdek de magie van het kunstschaatsen met onze initiatielessen voor beginners!",
     initiation_details_title: "Details",
     initiation_detail_location: "Locatie: Sportoase Antwerpen",
-    initiation_detail_cost: "Kosten: 70€",
+    initiation_detail_cost: "Kosten: €95",
     initiation_detail_info_1: "Bij een initiatie krijg je een 10-beurtenkaart (huur schaatsen inbegrepen).",
-    initiation_detail_info_2: "Na deze 10 lessen kan men kiezen voor Shorttrack of Figure Skating.",
+    initiation_detail_info_2: "Na deze 10 lessen kan men doorstromen naar een groep kunstschaatsen.",
     
     // Initiation Form
     initiation_form_title: "Vraag een initiatie aan",
@@ -148,7 +152,11 @@ const translations = {
     st_footer_intro: "Of je nu jong bent of oud, onze ervaren coaches begeleiden je bij elke stap. Sluit je aan bij de Ice Diamonds en ervaar de adrenaline van shorttrack.",
     st_email_pre: "Stuur een mailtje naar ",
     st_email_mid: " met ",
-    st_email_post: " om je in te schrijven of een proefles aan te vragen.",
+    st_email_post: " om je in te schrijven of 3 proeflessen aan te vragen.",
+    st_trial_title: "3 proeflessen shorttrack",
+    st_trial_text: "Wil je shorttrack eens uitproberen? Vraag 3 proeflessen aan en ervaar zelf de snelheid op het ijs. Geen ervaring nodig!",
+    st_trial_btn: "Vraag 3 proeflessen aan",
+    st_trial_mail_subject: "Aanvraag 3 proeflessen shorttrack",
     st_info_sessions: "Sessies: Vrijdag 18:00 - 20:00",
     st_info_levels: "Niveaus: Alle leeftijden welkom",
     st_info_gear: "Uitrusting: Beschikbaar ter plaatse",
@@ -159,7 +167,7 @@ const translations = {
     fs_desc_sub: "Van beginnende recreanten tot gevorderde competitieve kan je bij ons terecht voor kunstschaatslessen.",
     fs_motto_title: "Jong en oud kan terecht bij IDA",
     fs_motto_quote: "Droom je om de absolute top te bereiken? Of zoek je liever een wekelijkse hobby?",
-    fs_cta_text: "Schrijf je in voor onze initiatie lessen om te leren schaatsen of contacteer ons secretariaat op ",
+    fs_cta_text: "Schrijf je in voor onze initiatielessen om te leren schaatsen of contacteer het secretariaat kunstschaatsen op ",
 
     // NEW: Schedule & Calendar Disclaimer
     schedule_title: "Uurrooster",
@@ -206,12 +214,13 @@ const translations = {
 
     // Home
     home_hero_title: "Discover the joy of skating!",
-    home_hero_subtitle: "Join an initiation and experience the magic on the ice yourself. No experience needed!",
-    home_cta_initiation: "Sign up for an initiation",
+    home_hero_subtitle: "Start with figure skating initiation lessons or request 3 shorttrack trial lessons. No experience needed!",
+    home_cta_initiation: "Figure skating initiation lessons",
+    home_cta_st_trial: "3 shorttrack trial lessons",
     home_fs_desc: "Under professional guidance, learn the intricacies of figure skating, from graceful basic techniques to powerful jumps and spins. We combine sporting challenges with a warm club atmosphere.",
     home_st_desc: "Discover speed at Ice Diamonds Antwerp! We welcome skaters of all ages and levels, from the first tentative strides to competitive skaters. Join the Ice Diamonds and experience the adrenaline.",
-    home_initiation_section_title: "Start with an initiation",
-    home_initiation_section_text: "Anyone can learn to skate! Our initiation sessions are the perfect way to discover the ice in a safe and enjoyable environment. €70 for a 10-session pass, skate rental included.",
+    home_initiation_section_title: "Start with a figure skating initiation",
+    home_initiation_section_text: "Anyone can learn to figure skate! Our initiation sessions are the perfect way to discover the ice in a safe and enjoyable environment. €95 for a 10-session pass, skate rental included.",
     home_initiation_section_btn: "Discover our initiations",
     intro: "We are a figure skating club in Antwerp focusing on figure skating and shorttrack. Join our community!",
 
@@ -281,6 +290,9 @@ const translations = {
     contact_placeholder_message: "Your Message",
     contact_send_btn: "Send",
     contact_or_mail: "Or mail to: ",
+    contact_mail_fs: "Figure skating",
+    contact_mail_st: "Shorttrack",
+    contact_mail_general: "General",
 
     // About Page Values
     about_value_community_title: "Community",
@@ -306,12 +318,12 @@ const translations = {
     about_cta_contact_btn: "Contact Us",
 
     // Initiations Page
-    initiation_intro_text: "Discover the magic of skating with our initiation lessons for beginners!",
+    initiation_intro_text: "Discover the magic of figure skating with our initiation lessons for beginners!",
     initiation_details_title: "Details",
     initiation_detail_location: "Location: Sportoase Antwerp",
-    initiation_detail_cost: "Cost: Free for new members",
+    initiation_detail_cost: "Cost: €95",
     initiation_detail_info_1: "An initiation includes a 10-lesson card (skate rental + lesson included).",
-    initiation_detail_info_2: "After these 10 lessons, you can choose between speed skating or figure skating.",
+    initiation_detail_info_2: "After these 10 lessons, you can move on to a figure skating group.",
 
     // Initiation Form
     initiation_form_title: "Request an initiation",
@@ -331,7 +343,11 @@ const translations = {
     st_footer_intro: "Whether you are young or old, our experienced coaches guide you every step of the way. Join the Ice Diamonds and experience the adrenaline of shorttrack.",
     st_email_pre: "Send an email to ",
     st_email_mid: " with ",
-    st_email_post: " in cc to register or request a trial lesson.",
+    st_email_post: " to register or request 3 trial lessons.",
+    st_trial_title: "3 shorttrack trial lessons",
+    st_trial_text: "Want to give shorttrack a try? Request 3 trial lessons and experience the speed on the ice yourself. No experience needed!",
+    st_trial_btn: "Request 3 trial lessons",
+    st_trial_mail_subject: "Request 3 shorttrack trial lessons",
     st_info_sessions: "Sessions: Friday 18:00 - 20:00",
     st_info_levels: "Levels: All ages welcome",
     st_info_gear: "Equipment: Available on site",
@@ -342,7 +358,7 @@ const translations = {
     fs_desc_sub: "From beginner recreational to advanced competitive skaters, everyone is welcome for figure skating lessons.",
     fs_motto_title: "Young and old are welcome at IDA",
     fs_motto_quote: "Do you dream of reaching the absolute top? Or are you looking for a weekly hobby?",
-    fs_cta_text: "Sign up for our initiation lessons to learn to skate or contact our secretariat at ",
+    fs_cta_text: "Sign up for our initiation lessons to learn to skate or contact the figure skating secretariat at ",
 
     // NEW: Schedule & Calendar Disclaimer
     schedule_title: "Schedule",
@@ -389,12 +405,13 @@ const translations = {
 
     // Home
     home_hero_title: "Découvrez le plaisir du patinage !",
-    home_hero_subtitle: "Participez à une initiation et vivez la magie de la glace. Aucune expérience requise !",
-    home_cta_initiation: "Inscrivez-vous à une initiation",
+    home_hero_subtitle: "Commencez par des cours d'initiation au patinage artistique ou demandez 3 cours d'essai de shorttrack. Aucune expérience requise !",
+    home_cta_initiation: "Initiation patinage artistique",
+    home_cta_st_trial: "3 cours d'essai shorttrack",
     home_fs_desc: "Sous une supervision professionnelle, apprenez les subtilités du patinage artistique, des techniques de base gracieuses aux sauts et pirouettes puissants. Nous allions défis sportifs et ambiance de club chaleureuse.",
     home_st_desc: "Découvrez la vitesse avec Ice Diamonds Antwerp ! Nous accueillons des patineurs de tous âges et niveaux, des premiers pas hésitants aux compétiteurs aguerris. Rejoignez les Ice Diamonds et ressentez l'adrénaline.",
-    home_initiation_section_title: "Commencez par une initiation",
-    home_initiation_section_text: "Tout le monde peut apprendre à patiner ! Nos initiations sont le moyen idéal de découvrir la glace dans un environnement sûr et convivial. 70 € pour une carte de 10 séances, patins de location inclus.",
+    home_initiation_section_title: "Commencez par une initiation au patinage artistique",
+    home_initiation_section_text: "Tout le monde peut apprendre le patinage artistique ! Nos initiations sont le moyen idéal de découvrir la glace dans un environnement sûr et convivial. 95 € pour une carte de 10 séances, patins de location inclus.",
     home_initiation_section_btn: "Découvrir nos initiations",
     intro: "Notre club de patinage artistique situé à Anvers, est axé sur le patinage artistique et le shorttrack. Rejoignez notre communauté !",
 
@@ -464,6 +481,9 @@ const translations = {
     contact_placeholder_message: "Votre Message",
     contact_send_btn: "Envoyer",
     contact_or_mail: "Ou écrivez à : ",
+    contact_mail_fs: "Patinage artistique",
+    contact_mail_st: "Shorttrack",
+    contact_mail_general: "Général",
 
     // About Page Values
     about_value_community_title: "Communauté",
@@ -489,12 +509,12 @@ const translations = {
     about_cta_contact_btn: "Contactez-nous",
 
     // Initiations Page
-    initiation_intro_text: "Découvrez la magie du patinage avec nos cours d'initiation pour débutants !",
+    initiation_intro_text: "Découvrez la magie du patinage artistique avec nos cours d'initiation pour débutants !",
     initiation_details_title: "Détails",
     initiation_detail_location: "Lieu : Sportoase Anvers",
-    initiation_detail_cost: "Coût : Gratuit pour les nouveaux membres",
+    initiation_detail_cost: "Coût : 95 €",
     initiation_detail_info_1: "Une initiation comprend une carte de 10 leçons (location de patins + leçon incluse).",
-    initiation_detail_info_2: "Après ces 10 leçons, vous pouvez choisir entre le patinage de vitesse ou artistique.",
+    initiation_detail_info_2: "Après ces 10 leçons, vous pouvez rejoindre un groupe de patinage artistique.",
 
     // Initiation Form
     initiation_form_title: "Demander une initiation",
@@ -514,7 +534,11 @@ const translations = {
     st_footer_intro: "Que vous soyez jeune ou moins jeune, nos entraîneurs expérimentés vous guident à chaque étape. Rejoignez les Ice Diamonds et vivez l'adrénaline du short-track.",
     st_email_pre: "Envoyez un e-mail à ",
     st_email_mid: " avec ",
-    st_email_post: " en cc pour vous inscrire ou demander un cours d'essai.",
+    st_email_post: " pour vous inscrire ou demander 3 cours d'essai.",
+    st_trial_title: "3 cours d'essai shorttrack",
+    st_trial_text: "Envie d'essayer le shorttrack ? Demandez 3 cours d'essai et vivez vous-même la vitesse sur la glace. Aucune expérience requise !",
+    st_trial_btn: "Demander 3 cours d'essai",
+    st_trial_mail_subject: "Demande de 3 cours d'essai shorttrack",
     st_info_sessions: "Séances : Vendredi 18:00 - 20:00",
     st_info_levels: "Niveaux : Tous âges bienvenus",
     st_info_gear: "Équipement : Disponible sur place",
@@ -525,7 +549,7 @@ const translations = {
     fs_desc_sub: "Des débutants aux compétiteurs avancés, tout le monde est le bienvenu pour des cours de patinage artistique.",
     fs_motto_title: "Jeunes et moins jeunes sont les bienvenus chez IDA",
     fs_motto_quote: "Rêvez-vous d'atteindre le sommet absolu ? Ou cherchez-vous plutôt un passe-temps hebdomadaire ?",
-    fs_cta_text: "Inscrivez-vous à nos cours d'initiation pour apprendre à patiner ou contactez notre secrétariat à ",
+    fs_cta_text: "Inscrivez-vous à nos cours d'initiation pour apprendre à patiner ou contactez le secrétariat patinage artistique à ",
 
     // NEW: Schedule & Calendar Disclaimer
     schedule_title: "Horaire",

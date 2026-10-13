@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'; // Added useEffect import
-import { useTranslation } from "../hooks/useTranslation"; 
+import { Link } from 'react-router-dom';
+import { useTranslation } from "../hooks/useTranslation";
 
 function FigureSkating() {
   const t = useTranslation();
@@ -58,16 +59,24 @@ function FigureSkating() {
           </section>
 
           {/* CTA / Contact Section */}
-          <section>
+          <section className="space-y-6">
             <p className="text-lg text-gray-700">
               {t("fs_cta_text")}
               <a
-                href="mailto:secretariaatida@outlook.com "
-                className="font-bold text-blue-600 hover:text-blue-800 hover:underline"
+                href="mailto:secretariaatidakunst@outlook.com"
+                className="font-bold text-blue-600 hover:text-blue-800 hover:underline break-all"
               >
-                secretariaatida@outlook.com 
+                secretariaatidakunst@outlook.com
               </a>
             </p>
+            <div className="text-center">
+              <Link
+                to="/initiations"
+                className="inline-block bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold text-lg py-3 px-8 rounded-full transition duration-300 shadow-lg transform hover:scale-105"
+              >
+                {t("home_cta_initiation")}
+              </Link>
+            </div>
           </section>
 
         </div>

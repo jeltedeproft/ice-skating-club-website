@@ -37,6 +37,20 @@ function ShortTrack() {
             </p>
           </section>
 
+          {/* Trial Lessons CTA */}
+          <section className="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div>
+              <h3 className="text-2xl font-bold text-blue-900 mb-2">{t("st_trial_title")}</h3>
+              <p className="text-gray-700 text-lg">{t("st_trial_text")}</p>
+            </div>
+            <a
+              href={`mailto:secretariaatidashorttrack@outlook.com?subject=${encodeURIComponent(t("st_trial_mail_subject"))}`}
+              className="inline-block flex-shrink-0 text-center bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold text-lg py-3 px-8 rounded-full transition duration-300 shadow-lg transform hover:scale-105"
+            >
+              {t("st_trial_btn")}
+            </a>
+          </section>
+
           {/* Skill Levels Grid */}
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-blue-50 p-6 rounded-lg border border-blue-100 hover:shadow-md transition-shadow">
@@ -68,8 +82,8 @@ function ShortTrack() {
             </p>
             <p className="font-medium bg-white/10 p-4 rounded border border-white/20">
               {t("st_email_pre")}
-              <a href="mailto:secretariaatida@outlook.com" className="text-cyan-300 hover:text-cyan-100 underline">
-                secretariaatida@outlook.com
+              <a href="mailto:secretariaatidashorttrack@outlook.com" className="text-cyan-300 hover:text-cyan-100 underline break-all">
+                secretariaatidashorttrack@outlook.com
               </a>{' '}
               {t("st_email_post")}
             </p>

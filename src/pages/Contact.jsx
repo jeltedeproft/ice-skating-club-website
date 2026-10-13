@@ -186,15 +186,26 @@ function Contact() {
             )}
           </form>
 
-          <p className="text-center mt-4 text-gray-600">
-            {t("contact_or_mail")}
-            <a
-              href="mailto:secretariaatida@outlook.com"
-              className="text-blue-600 hover:text-blue-800 transition duration-200 ml-1"
-            >
-              secretariaatida@outlook.com
-            </a>
-          </p>
+          <div className="text-center mt-4 text-gray-600">
+            <p>{t("contact_or_mail")}</p>
+            <ul className="mt-2 space-y-1">
+              {[
+                ["contact_mail_fs", "secretariaatidakunst@outlook.com"],
+                ["contact_mail_st", "secretariaatidashorttrack@outlook.com"],
+                ["contact_mail_general", "secretariaatida@outlook.com"],
+              ].map(([labelKey, email]) => (
+                <li key={email} className="break-all">
+                  <strong>{t(labelKey)}:</strong>
+                  <a
+                    href={`mailto:${email}`}
+                    className="text-blue-600 hover:text-blue-800 transition duration-200 ml-1"
+                  >
+                    {email}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </div>

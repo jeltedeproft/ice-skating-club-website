@@ -23,12 +23,20 @@ function Home() {
                     <p className="text-lg text-white mb-6 drop-shadow-sm">
                         {t("home_hero_subtitle")}
                     </p>
-                    <Link
-                        to="/initiations"
-                        className="inline-block bg-yellow-400 text-blue-900 font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-yellow-500 transition transform hover:-translate-y-1"
-                    >
-                        {t("home_cta_initiation")}
-                    </Link>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <Link
+                            to="/initiations"
+                            className="inline-block bg-yellow-400 text-blue-900 font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-yellow-500 transition transform hover:-translate-y-1"
+                        >
+                            {t("home_cta_initiation")}
+                        </Link>
+                        <Link
+                            to="/short-track"
+                            className="inline-block bg-yellow-400 text-blue-900 font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-yellow-500 transition transform hover:-translate-y-1"
+                        >
+                            {t("home_cta_st_trial")}
+                        </Link>
+                    </div>
                 </div>
             </div>
 
